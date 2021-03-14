@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class Product {
+    var name: String?
+    var image: String?
+    var fullscreenImage: String?
+    
+    init(name: String, image: String, fullscreenImage: String) {
+        self.name = name
+        self.image = image
+        self.fullscreenImage = fullscreenImage
+    }
+}
