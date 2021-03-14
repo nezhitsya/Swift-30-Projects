@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BsR-sb-fjc" kind="relationship" relationship="viewControllers" id="IzY-t9-vql"/>
-                        <segue destination="w4J-kE-NbJ" kind="relationship" relationship="viewControllers" id="Zd9-nt-4P8"/>
+                        <segue destination="va2-yT-M78" kind="relationship" relationship="viewControllers" id="IkP-8S-4Vu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbo-OP-ISt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,20 +28,103 @@
             <point key="canvasLocation" x="-23.188405797101453" y="75.669642857142847"/>
         </scene>
         <!--Us-->
-        <scene sceneID="mza-Sl-Xl5">
+        <scene sceneID="FFo-4E-sZK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w4J-kE-NbJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Us" image="person.fill" catalog="system" id="quz-8C-Ste"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Szh-su-i79">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H0z-P0-tLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="va2-yT-M78" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJv-m3-3Oa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSw-Bu-ChJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1417"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pw-Rp-xrd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1417"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-an-bFN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erw-Ip-1jk">
+                                                <rect key="frame" x="139" y="653" width="136" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DpU-OB-Loc">
+                                                <rect key="frame" x="37" y="725" width="340" height="332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Vans is an American manufacturer of skateboarding shoes and related apparel, started in Anaheim, California, and owned by VF Corporation. The company also sponsors surf, snowboarding, BMX, and motocross teams.[3] From 1996 to 2019, the company has been the primary sponsor of the annual Vans Warped Tour traveling rock festival.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-Jd-3Nq">
+                                                <rect key="frame" x="125" y="1065" width="164" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="call" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-lC-Grq">
+                                                <rect key="frame" x="32" y="1153" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="HWb-y3-YeC">
+                                                <rect key="frame" x="32" y="1234" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="web" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-rh-Rx0">
+                                                <rect key="frame" x="32" y="1311" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(855) 909-8267" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twK-xl-NF6">
+                                                <rect key="frame" x="110" y="1168" width="126" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="daeun_jeong@vfc.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsU-QK-XWs">
+                                                <rect key="frame" x="110" y="1249" width="176" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://www.vans.co.kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXH-UD-s9V">
+                                                <rect key="frame" x="113" y="1326" width="172" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="X8M-h7-Ij7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0rg-4Q-RWY"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hty-sG-Vqc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CSw-Bu-ChJ" firstAttribute="top" secondItem="VJv-m3-3Oa" secondAttribute="top" id="8O1-Br-GfI"/>
+                            <constraint firstItem="CSw-Bu-ChJ" firstAttribute="bottom" secondItem="hty-sG-Vqc" secondAttribute="bottom" id="X3E-jc-Q1P"/>
+                            <constraint firstItem="CSw-Bu-ChJ" firstAttribute="leading" secondItem="hty-sG-Vqc" secondAttribute="leading" id="YZy-PY-KTQ"/>
+                            <constraint firstItem="CSw-Bu-ChJ" firstAttribute="trailing" secondItem="hty-sG-Vqc" secondAttribute="trailing" id="xgm-Np-BIQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Us" image="person.fill" catalog="system" id="eTY-0D-emG"/>
+                    <size key="freeformSize" width="414" height="1500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBQ-bC-f9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="451"/>
+            <point key="canvasLocation" x="886" y="686"/>
         </scene>
         <!--Product-->
         <scene sceneID="cwN-6K-j8Y">
@@ -94,8 +178,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="237" height="355.5"/>
+        <image name="call" width="256" height="256"/>
+        <image name="mail" width="256" height="256"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <image name="web" width="256" height="256"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
