@@ -15,6 +15,7 @@
 		0B7CE35C25FCB24F0001AFBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7CE35B25FCB24F0001AFBF /* Assets.xcassets */; };
 		0B7CE35F25FCB24F0001AFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7CE35D25FCB24F0001AFBF /* LaunchScreen.storyboard */; };
 		0B7CE36A25FCB4DD0001AFBF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE36925FCB4DD0001AFBF /* Product.swift */; };
+		0BF33E4025FEF34900B090EA /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF33E3F25FEF34900B090EA /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0B7CE35E25FCB24F0001AFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7CE36025FCB24F0001AFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7CE36925FCB4DD0001AFBF /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0BF33E3F25FEF34900B090EA /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0B7CE36025FCB24F0001AFBF /* Info.plist */,
 				0B7CE35825FCB24E0001AFBF /* ShoeShop.xcdatamodeld */,
 				0B7CE36925FCB4DD0001AFBF /* Product.swift */,
+				0BF33E3F25FEF34900B090EA /* ContactViewController.swift */,
 			);
 			path = ShoeShop;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				0B7CE36A25FCB4DD0001AFBF /* Product.swift in Sources */,
 				0B7CE35A25FCB24E0001AFBF /* ShoeShop.xcdatamodeld in Sources */,
 				0B7CE35225FCB24E0001AFBF /* SceneDelegate.swift in Sources */,
+				0BF33E4025FEF34900B090EA /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
