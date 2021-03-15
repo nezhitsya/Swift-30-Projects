@@ -148,40 +148,44 @@
         <!--Product-->
         <scene sceneID="cwN-6K-j8Y">
             <objects>
-                <tableViewController id="BsR-sb-fjc" sceneMemberID="viewController">
+                <tableViewController id="BsR-sb-fjc" customClass="ProductTableViewController" customModule="ShoeShop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gkK-gX-TB3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="115" id="oba-8P-Z9w">
-                                <rect key="frame" x="0.0" y="28" width="414" height="115"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="152" id="oba-8P-Z9w" customClass="ProductTableViewCell" customModule="ShoeShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oba-8P-Z9w" id="RQq-Lh-hlM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnT-Dv-QZB">
+                                            <rect key="frame" x="146" y="64" width="48" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxh-W5-eev">
-                                            <rect key="frame" x="20" y="9" width="90" height="90"/>
+                                            <rect key="frame" x="20" y="31" width="90" height="90"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="iMT-Gy-J0P"/>
                                                 <constraint firstAttribute="height" constant="90" id="qoG-3p-I9v"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnT-Dv-QZB">
-                                            <rect key="frame" x="146" y="45.5" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AnT-Dv-QZB" firstAttribute="centerY" secondItem="RQq-Lh-hlM" secondAttribute="centerY" id="6Q0-LN-hIE"/>
                                         <constraint firstItem="AnT-Dv-QZB" firstAttribute="leading" secondItem="RQq-Lh-hlM" secondAttribute="leading" constant="146" id="OJv-te-p5x"/>
+                                        <constraint firstItem="bxh-W5-eev" firstAttribute="top" secondItem="RQq-Lh-hlM" secondAttribute="top" constant="31" id="SLq-0D-aAR"/>
                                         <constraint firstItem="bxh-W5-eev" firstAttribute="leading" secondItem="RQq-Lh-hlM" secondAttribute="leading" constant="20" symbolic="YES" id="bAj-Ab-EXC"/>
-                                        <constraint firstItem="bxh-W5-eev" firstAttribute="top" secondItem="RQq-Lh-hlM" secondAttribute="top" constant="9" id="nFL-QO-yU0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImage" destination="bxh-W5-eev" id="4LH-YJ-vfD"/>
+                                    <outlet property="productName" destination="AnT-Dv-QZB" id="bhL-Kp-FkP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
