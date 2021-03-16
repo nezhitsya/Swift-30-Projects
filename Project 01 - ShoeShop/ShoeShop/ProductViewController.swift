@@ -8,11 +8,20 @@
 import UIKit
 
 class ProductViewController: UIViewController {
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    
+    var product: Product?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        productName.text = product?.name
+        
+        if let imageName = product?.fullscreenImage {
+            productImage.image = UIImage(named: imageName)
+        }
     }
     
 

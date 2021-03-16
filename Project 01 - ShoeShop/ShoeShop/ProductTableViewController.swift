@@ -16,12 +16,12 @@ class ProductTableViewController: UITableViewController {
         super.viewDidLoad()
 
         products = [
-            Product(name: "oldschool", image: "shoe1", fullscreenImage: "shoe1"),
-            Product(name: "oldschool", image: "shoe2", fullscreenImage: "shoe2"),
-            Product(name: "oldschool", image: "shoe3", fullscreenImage: "shoe3"),
-            Product(name: "oldschool", image: "shoe4", fullscreenImage: "shoe4"),
-            Product(name: "oldschool", image: "shoe5", fullscreenImage: "shoe5"),
-            Product(name: "oldschool", image: "shoe6", fullscreenImage: "shoe6")
+            Product(name: "Vans Oldschool green", image: "shoe1", fullscreenImage: "shoe1"),
+            Product(name: "Vans Oldschool", image: "shoe2", fullscreenImage: "shoe2"),
+            Product(name: "Vans Oldschool white", image: "shoe3", fullscreenImage: "shoe3"),
+            Product(name: "Vans Oldschool black", image: "shoe4", fullscreenImage: "shoe4"),
+            Product(name: "Vans Checkerboard", image: "shoe5", fullscreenImage: "shoe5"),
+            Product(name: "Vans Slip-On", image: "shoe6", fullscreenImage: "shoe6")
         ]
     }
 
@@ -48,6 +48,21 @@ class ProductTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 152
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showProduct" {
+//          if let cell = sender as? UITableViewCell,
+//            let indexPath = tableView.indexPath(for: cell),
+//            let productVC = segue.destination as? ProductViewController {
+//            productVC.product = products?[indexPath.row]
+//          }
+//        }
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                    if let vc = segue.destination as? ProductViewController {
+                        vc.product = products?[indexPath.row]
+                    }
+                }
+      }
 
     /*
     // MARK: - Navigation

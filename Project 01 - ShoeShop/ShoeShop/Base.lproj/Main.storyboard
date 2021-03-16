@@ -104,10 +104,13 @@
                                             <constraint firstItem="LG7-Xz-cxK" firstAttribute="leading" secondItem="NVd-3c-Fzs" secondAttribute="leading" constant="125" id="O1e-3X-CiY"/>
                                             <constraint firstAttribute="trailing" secondItem="czB-iP-587" secondAttribute="trailing" id="PoM-fW-9GP"/>
                                             <constraint firstItem="DV9-7r-Rya" firstAttribute="leading" secondItem="NVd-3c-Fzs" secondAttribute="leading" constant="67" id="V5L-E5-ReC"/>
+                                            <constraint firstAttribute="trailing" secondItem="iIv-r7-uDv" secondAttribute="trailing" constant="139" id="Wli-cd-AeI"/>
                                             <constraint firstItem="n6h-2G-tJ4" firstAttribute="top" secondItem="hFV-he-D8R" secondAttribute="bottom" constant="47" id="ZV9-OG-Jwi"/>
                                             <constraint firstItem="hFV-he-D8R" firstAttribute="leading" secondItem="NVd-3c-Fzs" secondAttribute="leading" constant="57" id="cXK-q8-EOB"/>
                                             <constraint firstItem="IpT-Zb-k4y" firstAttribute="top" secondItem="LG7-Xz-cxK" secondAttribute="bottom" constant="45" id="edZ-eh-7OB"/>
+                                            <constraint firstAttribute="trailing" secondItem="LG7-Xz-cxK" secondAttribute="trailing" constant="125" id="mLw-Kg-XdE"/>
                                             <constraint firstItem="iIv-r7-uDv" firstAttribute="leading" secondItem="NVd-3c-Fzs" secondAttribute="leading" constant="139" id="o0U-Hw-hDh"/>
+                                            <constraint firstAttribute="trailing" secondItem="DV9-7r-Rya" secondAttribute="trailing" constant="67" id="s8a-EW-DS0"/>
                                             <constraint firstItem="iIv-r7-uDv" firstAttribute="top" secondItem="czB-iP-587" secondAttribute="bottom" constant="48" id="u8O-Am-jQj"/>
                                             <constraint firstItem="hFV-he-D8R" firstAttribute="top" secondItem="IpT-Zb-k4y" secondAttribute="bottom" constant="48" id="wwL-zz-J0r"/>
                                             <constraint firstItem="czB-iP-587" firstAttribute="top" secondItem="NVd-3c-Fzs" secondAttribute="top" id="x2Z-Tb-nKV"/>
@@ -197,7 +200,7 @@
                                 <connections>
                                     <outlet property="productImage" destination="bxh-W5-eev" id="roQ-ZJ-sOP"/>
                                     <outlet property="productName" destination="AnT-Dv-QZB" id="bhL-Kp-FkP"/>
-                                    <segue destination="nUi-Sf-S9C" kind="presentation" trigger="accessoryAction" id="Nsb-Rn-F6l"/>
+                                    <segue destination="nUi-Sf-S9C" kind="presentation" identifier="showProduct" id="Y3i-EU-INM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -212,20 +215,46 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="-289.28571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Product View Controller-->
         <scene sceneID="vnj-aw-gnR">
             <objects>
-                <viewController id="nUi-Sf-S9C" sceneMemberID="viewController">
+                <viewController id="nUi-Sf-S9C" customClass="ProductViewController" customModule="ShoeShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJb-vT-xMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Qf-q2-kyt">
+                                <rect key="frame" x="20" y="37" width="374" height="526"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="526" id="BXu-hH-tCF"/>
+                                    <constraint firstAttribute="width" constant="374" id="RhJ-E8-sg3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHy-OM-06z">
+                                <rect key="frame" x="20" y="588" width="353" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qXr-Ek-OUI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Qf-q2-kyt" firstAttribute="top" secondItem="qXr-Ek-OUI" secondAttribute="top" constant="37" id="0ng-3R-FRb"/>
+                            <constraint firstItem="1Qf-q2-kyt" firstAttribute="leading" secondItem="qXr-Ek-OUI" secondAttribute="leading" constant="20" id="3PW-m9-cLg"/>
+                            <constraint firstItem="lHy-OM-06z" firstAttribute="top" secondItem="1Qf-q2-kyt" secondAttribute="bottom" constant="25" id="Y0c-fJ-nyr"/>
+                            <constraint firstItem="lHy-OM-06z" firstAttribute="leading" secondItem="qXr-Ek-OUI" secondAttribute="leading" constant="20" id="ZfQ-UA-nBQ"/>
+                            <constraint firstItem="qXr-Ek-OUI" firstAttribute="trailing" secondItem="1Qf-q2-kyt" secondAttribute="trailing" constant="20" id="wOQ-b9-x7B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productImage" destination="1Qf-q2-kyt" id="kuH-h5-Mop"/>
+                        <outlet property="productName" destination="lHy-OM-06z" id="nVC-2G-jwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0E-8f-KWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="-289"/>
+            <point key="canvasLocation" x="1671.0144927536232" y="-289.28571428571428"/>
         </scene>
     </scenes>
     <resources>
