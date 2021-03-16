@@ -45,15 +45,9 @@ class ProductTableViewController: UITableViewController {
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "productCell" {
-//          if let cell = sender as? UITableViewCell,
-//            let indexPath = tableView.indexPath(for: cell),
-//            let productVC = segue.destination as? ProductViewController {
-//            productVC.product = products?[indexPath.row]
-//          }
-//        }
-//      }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 152
+    }
 
     /*
     // MARK: - Navigation
