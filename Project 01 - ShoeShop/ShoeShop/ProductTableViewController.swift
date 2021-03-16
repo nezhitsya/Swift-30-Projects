@@ -50,13 +50,6 @@ class ProductTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showProduct" {
-//          if let cell = sender as? UITableViewCell,
-//            let indexPath = tableView.indexPath(for: cell),
-//            let productVC = segue.destination as? ProductViewController {
-//            productVC.product = products?[indexPath.row]
-//          }
-//        }
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
                     if let vc = segue.destination as? ProductViewController {
                         vc.product = products?[indexPath.row]
