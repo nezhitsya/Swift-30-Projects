@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "lapsCell", for: indexPath)
         
         if let labelNum = cell.viewWithTag(11) as? UILabel {
-            labelNum.text = "Lap \(laps.count - (indexPath as NSIndexPath).row)"
+            labelNum.text = "⏱ Lap \(laps.count - (indexPath as NSIndexPath).row)"
         }
         
         if let labelTimer = cell.viewWithTag(12) as? UILabel {
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // 화면 회전 처리
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -136,6 +136,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             isPlay = false
             changeButton(playPauseBtn, title: "Start", titleColor: UIColor.green)
             changeButton(lapResetBtn, title: "Reset", titleColor: UIColor.black)
+        }
+    }
+    
+    @IBAction func lapResetTimer(_ sender: AnyObject) {
+        if !isPlay {
+            resetMainTimer()
+            resetLapTimer()
+            changeButton(lapResetBtn, title: "Lap", titleColor: UIColor.lightGray)
+            lapResetBtn.isEnabled = false
+        } else {
+            if let timerText = timer.text {
+                laps.append(timerText)
+            }
+            lapsTable.reloadData()
+            resetLapTimer()
+            unowned let weakSelf = self
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
         }
     }
 }
