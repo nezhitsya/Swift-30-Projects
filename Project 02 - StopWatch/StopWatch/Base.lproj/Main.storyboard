@@ -62,6 +62,9 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.6017873883" green="0.1192299351" blue="0.078378669920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="playPauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XA-iY-krq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

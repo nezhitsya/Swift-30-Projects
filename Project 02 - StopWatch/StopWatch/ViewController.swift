@@ -9,7 +9,10 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private let laps: [String] = []
+    private var laps: [String] = []
+    private let mainStopwatch: Time = Time()
+    private let lapStopwatch: Time = Time()
+    private var isPlay: Bool = false
     
     @IBOutlet weak var timer: UILabel!
     @IBOutlet weak var lapTimer: UILabel!
@@ -64,5 +67,80 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.default
     }
+    
+    private func changeButton(_ button: UIButton, title: String, titleColor: UIColor) {
+        button.setTitle(title, for: UIControl.State())
+        button.setTitleColor(titleColor, for: UIControl.State())
+    }
+    
+    private func resetTimer(_ time: Time, label: UILabel) {
+        time.timer.invalidate()
+        time.counter = 0.0
+        label.text = "00:00.00"
+    }
+    
+    private func resetMainTimer() {
+        resetTimer(mainStopwatch, label: timer)
+        laps.removeAll()
+        lapsTable.reloadData()
+    }
+    
+    private func resetLapTimer() {
+        resetTimer(lapStopwatch, label: lapTimer)
+    }
+    
+    func updateTimer(_ time: Time, label: UILabel) {
+        time.counter = time.counter + 0.035
+        
+        var minutes: String = "\((Int)(time.counter / 60))"
+        
+        if (Int)(time.counter / 60) < 10 {
+            minutes = "0\((Int)(time.counter / 60))"
+        }
+        
+        var seconds: String = String(format: "%.2f", (time.counter.truncatingRemainder(dividingBy: 60)))
+        
+        if time.counter.truncatingRemainder(dividingBy: 60) < 10 {
+            seconds = "0" + seconds
+        }
+        label.text = minutes + ":" + seconds
+    }
+    
+    @objc func updateMainTimer() {
+        updateTimer(mainStopwatch, label: timer)
+    }
+    
+    @objc func updateLapTimer() {
+        updateTimer(lapStopwatch, label: lapTimer)
+    }
+    
+    @IBAction func playPauseTimer(_ sender: AnyObject) {
+        lapResetBtn.isEnabled = true
+        changeButton(lapResetBtn, title: "Lap", titleColor: UIColor.black)
+        
+        if !isPlay {
+            unowned let weakSelf = self
+            
+            mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+            lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
+            
+            RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
+            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
+            
+            isPlay = true
+            
+            changeButton(playPauseBtn, title: "Stop", titleColor: UIColor.red)
+        } else {
+            mainStopwatch.timer.invalidate()
+            lapStopwatch.timer.invalidate()
+            isPlay = false
+            changeButton(playPauseBtn, title: "Start", titleColor: UIColor.green)
+            changeButton(lapResetBtn, title: "Reset", titleColor: UIColor.black)
+        }
+    }
 }
 
+private extension Selector {
+    static let updateMainTimer = #selector(ViewController.updateMainTimer)
+    static let updateLapTimer = #selector(ViewController.updateLapTimer)
+}
