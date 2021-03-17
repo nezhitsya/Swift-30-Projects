@@ -53,7 +53,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // 화면 회전 처리
     override var shouldAutorotate: Bool {
-        return false
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
     }
     
     // 상단 표시 줄
