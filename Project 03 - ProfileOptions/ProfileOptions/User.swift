@@ -12,7 +12,7 @@ class User {
     var nickname: String
     var description: String
     
-    init(name: String, nickname: "랭리자베스", description: String) {
+    init(name: String, nickname: String = "랭리자베스", description: String) {
         self.name = name
         self.nickname = nickname
         self.description = description

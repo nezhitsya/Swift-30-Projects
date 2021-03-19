@@ -13,7 +13,7 @@ public struct TableKey {
     static let ImageName = "imageName"
     static let Title = "title"
     static let SubTitle = "subTitle"
-    static let seeMode = "See More ..."
+    static let seeMore = "See More ..."
     static let addFavorites = "Add Favorites ..."
     static let logout = "Log Out"
     
@@ -21,12 +21,17 @@ public struct TableKey {
         return [
             [
                 TableKey.Rows: [
-                    [TableKey.ImageName: user.nickname, TableKey.Title: user.name, TableKey.SubTitle: "Profile"]
+                    [TableKey.ImageName: user.nickname, TableKey.Title: user.name, TableKey.SubTitle: user.description]
                 ]
             ],
             [
                 TableKey.Rows: [
-                    
+                    [TableKey.Title: "Friends"],
+                    [TableKey.Title: "Events"],
+                    [TableKey.Title: "Groups"],
+                    [TableKey.Title: "Town Hall"],
+                    [TableKey.Title: "Instant Games"],
+                    [TableKey.Title: TableKey.seeMore]
                 ]
             ],
             [
@@ -37,7 +42,9 @@ public struct TableKey {
             ],
             [
                 TableKey.Rows: [
-                    
+                    [TableKey.Title: "Settings"],
+                    [TableKey.Title: "Privacy Shortcuts"],
+                    [TableKey.Title: "Help and Support"]
                 ]
             ],
             [
