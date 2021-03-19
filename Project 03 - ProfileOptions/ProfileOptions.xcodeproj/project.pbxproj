@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B16DDDF26044AD200C40477 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16DDDE26044AD200C40477 /* TableViewCell.swift */; };
+		0B16DDE226045AB700C40477 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16DDE126045AB700C40477 /* Specs.swift */; };
 		0BDDEAEE2602E6CC004B96DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDDEAED2602E6CC004B96DD /* AppDelegate.swift */; };
 		0BDDEAF02602E6CC004B96DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDDEAEF2602E6CC004B96DD /* SceneDelegate.swift */; };
 		0BDDEAF22602E6CC004B96DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDDEAF12602E6CC004B96DD /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0B16DDDE26044AD200C40477 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0B16DDE126045AB700C40477 /* Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specs.swift; sourceTree = "<group>"; };
 		0BDDEAEA2602E6CC004B96DD /* ProfileOptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileOptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BDDEAED2602E6CC004B96DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BDDEAEF2602E6CC004B96DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				0BDDEB062602EE7F004B96DD /* User.swift */,
 				0BDDEB092602EF9F004B96DD /* TableKey.swift */,
 				0B16DDDE26044AD200C40477 /* TableViewCell.swift */,
+				0B16DDE126045AB700C40477 /* Specs.swift */,
 			);
 			path = ProfileOptions;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				0BDDEAF22602E6CC004B96DD /* ViewController.swift in Sources */,
 				0BDDEB0A2602EF9F004B96DD /* TableKey.swift in Sources */,
 				0BDDEAEE2602E6CC004B96DD /* AppDelegate.swift in Sources */,
+				0B16DDE226045AB700C40477 /* Specs.swift in Sources */,
 				0BDDEB072602EE7F004B96DD /* User.swift in Sources */,
 				0B16DDDF26044AD200C40477 /* TableViewCell.swift in Sources */,
 				0BDDEAF02602E6CC004B96DD /* SceneDelegate.swift in Sources */,

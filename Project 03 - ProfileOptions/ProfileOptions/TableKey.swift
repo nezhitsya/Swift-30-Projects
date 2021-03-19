@@ -26,11 +26,11 @@ public struct TableKey {
             ],
             [
                 TableKey.Rows: [
-                    [TableKey.Title: "Friends"],
-                    [TableKey.Title: "Events"],
-                    [TableKey.Title: "Groups"],
-                    [TableKey.Title: "Town Hall"],
-                    [TableKey.Title: "Instant Games"],
+                    [TableKey.ImageName: Specs.imageName.friends, TableKey.Title: "Friends"],
+                    [TableKey.ImageName: Specs.imageName.events, TableKey.Title: "Events"],
+                    [TableKey.ImageName: Specs.imageName.groups, TableKey.Title: "Groups"],
+                    [TableKey.ImageName: Specs.imageName.townHall, TableKey.Title: "Town Hall"],
+                    [TableKey.ImageName: Specs.imageName.instantGames, TableKey.Title: "Instant Games"],
                     [TableKey.Title: TableKey.seeMore]
                 ]
             ],
@@ -42,9 +42,9 @@ public struct TableKey {
             ],
             [
                 TableKey.Rows: [
-                    [TableKey.Title: "Settings"],
-                    [TableKey.Title: "Privacy Shortcuts"],
-                    [TableKey.Title: "Help and Support"]
+                    [TableKey.ImageName: Specs.imageName.settings, TableKey.Title: "Settings"],
+                    [TableKey.ImageName: Specs.imageName.privacyShortcuts, TableKey.Title: "Privacy Shortcuts"],
+                    [TableKey.ImageName: Specs.imageName.helpSupport, TableKey.Title: "Help and Support"]
                 ]
             ],
             [

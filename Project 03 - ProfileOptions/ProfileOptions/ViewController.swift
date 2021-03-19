@@ -20,6 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = user.name + "'s Profile"
+        navigationController?.navigationBar.barTintColor = Specs.color.tint
+        
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
