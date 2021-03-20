@@ -11,8 +11,7 @@ public struct Specs {
     public struct Color {
         public let tint = UIColor(red: 0.77, green: 0.82, blue: 0.86, alpha: 1.00)
         public let red = UIColor.red
-        public let gray = UIColor.lightGray
-        public let blue = UIColor.blue
+        public let blue = UIColor(hex: 0x228aae)
     }
     
     public struct ImageName {
@@ -24,6 +23,7 @@ public struct Specs {
         public let settings = "settings"
         public let privacyShortcuts = "privacy_shortcuts"
         public let helpSupport = "help_and_support"
+        public let placeholder = "placeholder"
     }
     
     public static var color: Color {

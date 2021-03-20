@@ -90,10 +90,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         if title == TableKey.seeMore || title == TableKey.addFavorites {
+            cell.textLabel?.textColor = Specs.color.blue
             cell.accessoryType = .none
         } else if title == TableKey.logout {
             cell.textLabel?.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = Specs.color.red
             cell.accessoryType = .none
         } else {
             cell.accessoryType = .disclosureIndicator
@@ -119,7 +121,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let imageName = modelForRow[TableKey.ImageName] {
             cell.imageView?.image = UIImage(named: imageName)
         } else if title != TableKey.logout {
-            
+            cell.imageView?.image = UIImage(named: Specs.imageName.placeholder)
         }
         
         if title == user.name {
