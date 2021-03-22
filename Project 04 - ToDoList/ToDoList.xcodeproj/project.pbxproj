@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3CFB59260863CE007434A3 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3CFB58260863CE007434A3 /* ToDo.swift */; };
 		0BCD0EAA260765CF00F3BF43 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCD0EA9260765CF00F3BF43 /* AddToDoViewController.swift */; };
 		0BEE2C8C260613B5006CB0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE2C8B260613B5006CB0BC /* AppDelegate.swift */; };
 		0BEE2C8E260613B5006CB0BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE2C8D260613B5006CB0BC /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3CFB58260863CE007434A3 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		0BCD0EA9260765CF00F3BF43 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		0BEE2C88260613B5006CB0BC /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEE2C8B260613B5006CB0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				0BEE2C9C260613B7006CB0BC /* Info.plist */,
 				0BEE2C94260613B5006CB0BC /* ToDoList.xcdatamodeld */,
 				0BCD0EA9260765CF00F3BF43 /* AddToDoViewController.swift */,
+				0B3CFB58260863CE007434A3 /* ToDo.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				0BEE2C90260613B5006CB0BC /* ListViewController.swift in Sources */,
 				0BEE2C8C260613B5006CB0BC /* AppDelegate.swift in Sources */,
 				0BCD0EAA260765CF00F3BF43 /* AddToDoViewController.swift in Sources */,
+				0B3CFB59260863CE007434A3 /* ToDo.swift in Sources */,
 				0BEE2C8E260613B5006CB0BC /* SceneDelegate.swift in Sources */,
 				0BEE2C96260613B5006CB0BC /* ToDoList.xcdatamodeld in Sources */,
 			);

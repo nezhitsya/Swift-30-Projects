@@ -8,12 +8,24 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
 
     @IBOutlet weak var todoListTableView: UITableView!
     
+    var list = [ToDo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        todoListTableView.delegate = self
+        todoListTableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +36,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
 //        cell.textLabel?.text = list[indexPath.row].title
-//        cell.detailTextLabel?.text = list[indexPath.row].content
+//        cell.detailTextLabel?.text = formatter.string(for: list[indexPath.row].date)
 //        if list[indexPath.row].isComplete {
 //            cell.accessoryType = .checkmark
 //        }else{
