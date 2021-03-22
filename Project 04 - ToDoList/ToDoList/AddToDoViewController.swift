@@ -16,7 +16,9 @@ class AddToDoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        todoDescription.layer.borderWidth = 1
+        todoDescription.layer.cornerRadius = 10
+        todoDescription.layer.borderColor = UIColor.secondarySystemBackground.cgColor
     }
 
     @IBAction func save(_ sender: Any) {
@@ -24,7 +26,7 @@ class AddToDoViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     /*
