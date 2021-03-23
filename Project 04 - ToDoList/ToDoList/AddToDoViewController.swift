@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddToDoViewController: UIViewController {
+class AddToDoViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBOutlet weak var todoTitle: UITextField!
     @IBOutlet weak var todoDescription: UITextView!
@@ -21,6 +21,13 @@ class AddToDoViewController: UIViewController {
         todoDescription.layer.borderWidth = 1
         todoDescription.layer.cornerRadius = 10
         todoDescription.layer.borderColor = UIColor.secondarySystemBackground.cgColor
+        
+        todoTitle.delegate = self
+        todoDescription.delegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
     @IBAction func save(_ sender: Any) {
@@ -30,6 +37,8 @@ class AddToDoViewController: UIViewController {
         
         let item: ToDo = ToDo(title: title, description: description, date: date.timeIntervalSince1970, isComplete: false)
         list.append(item)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancel(_ sender: Any) {
