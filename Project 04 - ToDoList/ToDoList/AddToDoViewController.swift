@@ -13,8 +13,6 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var todoDescription: UITextView!
     @IBOutlet weak var todoDate: UIDatePicker!
     
-    var list = [ToDo]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,20 +23,15 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         todoTitle.delegate = self
         todoDescription.delegate = self
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
 
     @IBAction func save(_ sender: Any) {
         let title = todoTitle.text!
         let description = todoDescription.text ?? ""
         let date = todoDate.date
         
-        let item: ToDo = ToDo(title: title, description: description, date: date.timeIntervalSince1970, isComplete: false)
-        list.append(item)
+        DataManager.shared.addNewMemo(title, description, date.timeIntervalSince1970, false)
         
-        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {

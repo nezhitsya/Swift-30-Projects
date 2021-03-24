@@ -19,8 +19,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var todoListTableView: UITableView!
     
-    var list = [ToDoList]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,23 +26,25 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         todoListTableView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        DataManager.shared.fetchMemo()
         todoListTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return DataManager.shared.todoList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = list[indexPath.row].title
-        cell.detailTextLabel?.text = formatter.string(for: list[indexPath.row].date)
-        if list[indexPath.row].isComplete {
+        let target = DataManager.shared.todoList[indexPath.row]
+        
+        cell.textLabel?.text = target.title
+        cell.detailTextLabel?.text = formatter.string(for: target.date)
+        if target.isComplete {
             cell.accessoryType = .checkmark
         }else{
             cell.accessoryType = .none
@@ -63,7 +63,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let target = DataManager.shared.todoList[indexPath.row]
+            DataManager.shared.deleteMemo(target)
+            DataManager.shared.todoList.remove(at: indexPath.row)
             
+            todoListTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 }

@@ -47,12 +47,9 @@ class DataManager {
         saveContext()
     }
     
-    func deleteMemo(_ title: String?, _ descript: String?, _ date: Double?, _ isComplete: Bool) {
-        if let title = title {
-            mainContext.delete(title)
-            mainContext.delete(descript)
-            mainContext.delete(date)
-            mainContext.delete(isComplete)
+    func deleteMemo(_ todo: ToDoList?) {
+        if let todo = todo {
+            mainContext.delete(todo)
             saveContext()
         }
     }
