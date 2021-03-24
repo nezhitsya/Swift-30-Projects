@@ -19,7 +19,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var todoListTableView: UITableView!
     
-    var list = [ToDo]()
+    var list = [ToDoList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

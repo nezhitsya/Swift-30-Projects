@@ -18,6 +18,7 @@
 		0BEE2C9B260613B7006CB0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEE2C99260613B7006CB0BC /* LaunchScreen.storyboard */; };
 		0BEE2CA6260613B7006CB0BC /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE2CA5260613B7006CB0BC /* ToDoListTests.swift */; };
 		0BEE2CB1260613B7006CB0BC /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE2CB0260613B7006CB0BC /* ToDoListUITests.swift */; };
+		0BFD78A0260B00F2001CF9A7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD789F260B00F2001CF9A7 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0BEE2CAC260613B7006CB0BC /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEE2CB0260613B7006CB0BC /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		0BEE2CB2260613B7006CB0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BFD789F260B00F2001CF9A7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				0BEE2C94260613B5006CB0BC /* ToDoList.xcdatamodeld */,
 				0BCD0EA9260765CF00F3BF43 /* AddToDoViewController.swift */,
 				0B3CFB58260863CE007434A3 /* ToDo.swift */,
+				0BFD789F260B00F2001CF9A7 /* DataManager.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0BEE2C90260613B5006CB0BC /* ListViewController.swift in Sources */,
 				0BEE2C8C260613B5006CB0BC /* AppDelegate.swift in Sources */,
 				0BCD0EAA260765CF00F3BF43 /* AddToDoViewController.swift in Sources */,
+				0BFD78A0260B00F2001CF9A7 /* DataManager.swift in Sources */,
 				0B3CFB59260863CE007434A3 /* ToDo.swift in Sources */,
 				0BEE2C8E260613B5006CB0BC /* SceneDelegate.swift in Sources */,
 				0BEE2C96260613B5006CB0BC /* ToDoList.xcdatamodeld in Sources */,

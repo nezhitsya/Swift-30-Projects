@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDo {
+class ToDo {
     var title: String
     var description: String?
     var date: Double?
