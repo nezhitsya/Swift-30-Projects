@@ -11,9 +11,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let formatter: DateFormatter = {
         let f = DateFormatter()
-        f.dateStyle = .long
-        f.timeStyle = .short
-        f.locale = Locale(identifier: "Ko_kr")
+        f.dateFormat = "MM/dd/yyyy hh:mm"
         return f
     }()
 
@@ -24,12 +22,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         todoListTableView.delegate = self
         todoListTableView.dataSource = self
+        
+        self.todoListTableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        DataManager.shared.fetchMemo()
+        DataManager.shared.fetchTodo()
         todoListTableView.reloadData()
     }
     
@@ -41,9 +41,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let target = DataManager.shared.todoList[indexPath.row]
+        let todoDate = Date(timeIntervalSince1970: target.date)
         
         cell.textLabel?.text = target.title
-        cell.detailTextLabel?.text = formatter.string(for: target.date)
+        cell.detailTextLabel?.text = formatter.string(from: todoDate)
+        cell.detailTextLabel?.textColor = UIColor(named: "LabelColor")
+
         if target.isComplete {
             cell.accessoryType = .checkmark
         }else{
@@ -64,7 +67,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let target = DataManager.shared.todoList[indexPath.row]
-            DataManager.shared.deleteMemo(target)
+            DataManager.shared.deleteTodo(target)
             DataManager.shared.todoList.remove(at: indexPath.row)
             
             todoListTableView.deleteRows(at: [indexPath], with: .fade)

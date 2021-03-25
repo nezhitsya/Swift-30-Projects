@@ -29,7 +29,7 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         let description = todoDescription.text ?? ""
         let date = todoDate.date
         
-        DataManager.shared.addNewMemo(title, description, date.timeIntervalSince1970, false)
+        DataManager.shared.addNewTodo(title, description, date.timeIntervalSince1970, false)
         
         dismiss(animated: true, completion: nil)
     }

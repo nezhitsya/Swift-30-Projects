@@ -23,7 +23,7 @@ class DataManager {
     var todoList = [ToDoList]()
     
     // read Data
-    func fetchMemo() {
+    func fetchTodo() {
         let request: NSFetchRequest<ToDoList> = ToDoList.fetchRequest()
         let sortByDateDesc = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
@@ -35,7 +35,7 @@ class DataManager {
         }
     }
     
-    func addNewMemo(_ title: String?, _ descript: String?, _ date: Double?, _ isComplete: Bool) {
+    func addNewTodo(_ title: String?, _ descript: String?, _ date: Double?, _ isComplete: Bool) {
         let newTodo = ToDoList(context: mainContext)
         newTodo.title = title
         newTodo.descript = descript
@@ -47,7 +47,7 @@ class DataManager {
         saveContext()
     }
     
-    func deleteMemo(_ todo: ToDoList?) {
+    func deleteTodo(_ todo: ToDoList?) {
         if let todo = todo {
             mainContext.delete(todo)
             saveContext()
