@@ -7,16 +7,16 @@
 
 import Foundation
 
-class ToDo {
-    var title: String
-    var description: String?
-    var date: Double?
-    var isComplete: Bool
-    
-    init(title: String, description: String? = nil, date: Double? = nil, isComplete: Bool = false) {
-        self.title = title
-        self.description = description
-        self.date = date
-        self.isComplete = isComplete
-    }
-}
+//class ToDo {
+//    var title: String
+//    var description: String?
+//    var date: Double?
+//    var isComplete: Bool
+//    
+//    init(title: String, description: String? = nil, date: Double? = nil, isComplete: Bool = false) {
+//        self.title = title
+//        self.description = description
+//        self.date = date
+//        self.isComplete = isComplete
+//    }
+//}

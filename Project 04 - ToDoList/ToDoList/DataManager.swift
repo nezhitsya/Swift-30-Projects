@@ -25,7 +25,7 @@ class DataManager {
     // read Data
     func fetchMemo() {
         let request: NSFetchRequest<ToDoList> = ToDoList.fetchRequest()
-        let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false)
+        let sortByDateDesc = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
         
         do {
@@ -40,7 +40,7 @@ class DataManager {
         newTodo.title = title
         newTodo.descript = descript
         newTodo.date = date!
-        newTodo.isComplete = false
+        newTodo.isComplete = isComplete
         
         todoList.insert(newTodo, at: 0)
         
@@ -57,7 +57,7 @@ class DataManager {
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let container = NSPersistentContainer(name: "Memo")
+        let container = NSPersistentContainer(name: "ToDoList")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
