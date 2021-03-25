@@ -73,4 +73,19 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             todoListTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard !DataManager.shared.todoList[indexPath.row].isComplete else {
+            return
+        }
+        
+        DataManager.shared.todoList[indexPath.row].isComplete = true
+        
+        let dialog = UIAlertController(title: "Todo List", message: "완료", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        dialog.addAction(action)
+        self.present(dialog, animated: true, completion: nil)
+         
+        todoListTableView.reloadData()
+    }
 }
