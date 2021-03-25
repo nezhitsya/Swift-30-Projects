@@ -17,19 +17,19 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var todoListTableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DataManager.shared.fetchTodo()
+        todoListTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         todoListTableView.delegate = self
         todoListTableView.dataSource = self
         
-        self.todoListTableView.reloadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        DataManager.shared.fetchTodo()
         todoListTableView.reloadData()
     }
     

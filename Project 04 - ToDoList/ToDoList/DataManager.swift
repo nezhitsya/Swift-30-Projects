@@ -25,7 +25,7 @@ class DataManager {
     // read Data
     func fetchTodo() {
         let request: NSFetchRequest<ToDoList> = ToDoList.fetchRequest()
-        let sortByDateDesc = NSSortDescriptor(key: "date", ascending: false)
+        let sortByDateDesc = NSSortDescriptor(key: "date", ascending: true)
         request.sortDescriptors = [sortByDateDesc]
         
         do {
