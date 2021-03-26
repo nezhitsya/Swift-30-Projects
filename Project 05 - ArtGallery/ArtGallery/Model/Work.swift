@@ -11,5 +11,5 @@ struct Work {
     let title: String
     let image: UIImage
     let info: String
-    let isExpanded: Bool
+    var isExpanded: Bool
 }
