@@ -8,6 +8,9 @@
 import UIKit
 
 class ArtistDetailViewController: UIViewController {
+    
+    let moreInfoText = "More Info > "
+    var selectedArtist: Artist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
