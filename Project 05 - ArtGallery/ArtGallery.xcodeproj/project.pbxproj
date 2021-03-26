@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA3A800260E3E460062A8B1 /* ArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3A7FF260E3E460062A8B1 /* ArtTableViewCell.swift */; };
 		0BB0C412260D624E002A8DB9 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C411260D624E002A8DB9 /* Artist.swift */; };
 		0BB0C41A260D62E8002A8DB9 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C419260D62E8002A8DB9 /* Work.swift */; };
 		0BB0C41E260D6698002A8DB9 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA3A7FF260E3E460062A8B1 /* ArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTableViewCell.swift; sourceTree = "<group>"; };
 		0BB0C411260D624E002A8DB9 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0BB0C419260D62E8002A8DB9 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0BCA8268260C223200C86F6F /* ArtGallery.xcdatamodeld */,
 				0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */,
 				0BB0C420260D75AB002A8DB9 /* ArtistTableViewCell.swift */,
+				0BA3A7FF260E3E460062A8B1 /* ArtTableViewCell.swift */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				0BB0C412260D624E002A8DB9 /* Artist.swift in Sources */,
 				0BB0C421260D75AB002A8DB9 /* ArtistTableViewCell.swift in Sources */,
 				0BCA8262260C223200C86F6F /* SceneDelegate.swift in Sources */,
+				0BA3A800260E3E460062A8B1 /* ArtTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

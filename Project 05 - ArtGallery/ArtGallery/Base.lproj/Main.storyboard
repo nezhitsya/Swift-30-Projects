@@ -83,20 +83,45 @@
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail View Controller-->
         <scene sceneID="2NO-fI-TcV">
             <objects>
-                <viewController id="4eu-Oo-9cr" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="4eu-Oo-9cr" customClass="ArtistDetailViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJd-BV-FVv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-Yj-ga2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtCell" id="mnS-6e-2OH">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mnS-6e-2OH" id="zXk-fv-6ci">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5PC-x2-6Cy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Co8-Yj-ga2" firstAttribute="top" secondItem="5PC-x2-6Cy" secondAttribute="top" id="CIK-VS-RpB"/>
+                            <constraint firstAttribute="bottom" secondItem="Co8-Yj-ga2" secondAttribute="bottom" id="doo-5e-ZIk"/>
+                            <constraint firstItem="Co8-Yj-ga2" firstAttribute="leading" secondItem="5PC-x2-6Cy" secondAttribute="leading" id="tzQ-Oq-CvR"/>
+                            <constraint firstItem="Co8-Yj-ga2" firstAttribute="trailing" secondItem="5PC-x2-6Cy" secondAttribute="trailing" id="vol-rB-SCt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artTable" destination="Co8-Yj-ga2" id="WIM-wP-ckI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyS-LJ-sFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="76"/>
+            <point key="canvasLocation" x="805.79710144927537" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
