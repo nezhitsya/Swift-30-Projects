@@ -40,6 +40,17 @@ extension ArtistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath) as! ArtistTableViewCell
+        let artist = artists[indexPath.row]
+        
+        cell.bio.text = artist.bio
+        cell.bio.textColor = UIColor(white: 114/255, alpha: 1)
+        cell.artistImage.image = artist.image
+        cell.name.text = artist.name
+        cell.name.textColor = UIColor.blue
+        cell.name.textAlignment = .center
+        cell.selectionStyle = .none
+        cell.name.font = UIFont.preferredFont(forTextStyle: .headline)
+        cell.bio.font = UIFont.preferredFont(forTextStyle: .body)
         
         return cell
     }
