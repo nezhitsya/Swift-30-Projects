@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		0BB0C412260D624E002A8DB9 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C411260D624E002A8DB9 /* Artist.swift */; };
 		0BB0C41A260D62E8002A8DB9 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C419260D62E8002A8DB9 /* Work.swift */; };
+		0BB0C41E260D6698002A8DB9 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */; };
 		0BCA8260260C223200C86F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA825F260C223200C86F6F /* AppDelegate.swift */; };
 		0BCA8262260C223200C86F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA8261260C223200C86F6F /* SceneDelegate.swift */; };
-		0BCA8264260C223200C86F6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA8263260C223200C86F6F /* ViewController.swift */; };
+		0BCA8264260C223200C86F6F /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA8263260C223200C86F6F /* ArtistViewController.swift */; };
 		0BCA8267260C223200C86F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA8265260C223200C86F6F /* Main.storyboard */; };
 		0BCA826A260C223200C86F6F /* ArtGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA8268260C223200C86F6F /* ArtGallery.xcdatamodeld */; };
 		0BCA826C260C223400C86F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA826B260C223400C86F6F /* Assets.xcassets */; };
@@ -21,10 +22,11 @@
 /* Begin PBXFileReference section */
 		0BB0C411260D624E002A8DB9 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0BB0C419260D62E8002A8DB9 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		0BCA825C260C223200C86F6F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCA825F260C223200C86F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BCA8261260C223200C86F6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0BCA8263260C223200C86F6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0BCA8263260C223200C86F6F /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		0BCA8266260C223200C86F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BCA8269260C223200C86F6F /* ArtGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtGallery.xcdatamodel; sourceTree = "<group>"; };
 		0BCA826B260C223400C86F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,12 +76,13 @@
 				0BB0C410260D6225002A8DB9 /* Model */,
 				0BCA825F260C223200C86F6F /* AppDelegate.swift */,
 				0BCA8261260C223200C86F6F /* SceneDelegate.swift */,
-				0BCA8263260C223200C86F6F /* ViewController.swift */,
+				0BCA8263260C223200C86F6F /* ArtistViewController.swift */,
 				0BCA8265260C223200C86F6F /* Main.storyboard */,
 				0BCA826B260C223400C86F6F /* Assets.xcassets */,
 				0BCA826D260C223400C86F6F /* LaunchScreen.storyboard */,
 				0BCA8270260C223400C86F6F /* Info.plist */,
 				0BCA8268260C223200C86F6F /* ArtGallery.xcdatamodeld */,
+				0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
@@ -154,10 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BCA8264260C223200C86F6F /* ViewController.swift in Sources */,
+				0BCA8264260C223200C86F6F /* ArtistViewController.swift in Sources */,
 				0BCA8260260C223200C86F6F /* AppDelegate.swift in Sources */,
 				0BB0C41A260D62E8002A8DB9 /* Work.swift in Sources */,
 				0BCA826A260C223200C86F6F /* ArtGallery.xcdatamodeld in Sources */,
+				0BB0C41E260D6698002A8DB9 /* ArtistDetailViewController.swift in Sources */,
 				0BB0C412260D624E002A8DB9 /* Artist.swift in Sources */,
 				0BCA8262260C223200C86F6F /* SceneDelegate.swift in Sources */,
 			);
