@@ -16,6 +16,9 @@ class ArtistDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        artTable.delegate = self
+        artTable.dataSource = self
 
         title = selectedArtist.name
         
@@ -47,15 +50,15 @@ extension ArtistDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = artTable.dequeueReusableCell(withIdentifier: "ArtCell", for: indexPath) as! ArtTableViewCell
-        let art = selectedArtist.works[indexPath.row]
+        let work = selectedArtist.works[indexPath.row]
         
-        cell.artTitle.text = art.title
-        cell.artImage.image = art.image
+        cell.artTitle.text = work.title
+        cell.artImage.image = work.image
         cell.artTitle.textAlignment = .center
         cell.moreInfo.textColor = UIColor(white: 114/255, alpha: 1)
         cell.selectionStyle = .none
-        cell.moreInfo.text = art.isExpanded ? art.info : moreInfoText
-        cell.moreInfo.textAlignment = art.isExpanded ? .left : .center
+        cell.moreInfo.text = work.isExpanded ? work.info : moreInfoText
+        cell.moreInfo.textAlignment = work.isExpanded ? .left : .center
         cell.artTitle.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
         cell.moreInfo.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
         
@@ -69,13 +72,13 @@ extension ArtistDetailViewController: UITableViewDelegate {
             return
         }
         
-        var art = selectedArtist.works[indexPath.row]
+        var work = selectedArtist.works[indexPath.row]
         
-        art.isExpanded = !art.isExpanded
-        selectedArtist.works[indexPath.row] = art
+        work.isExpanded = !work.isExpanded
+        selectedArtist.works[indexPath.row] = work
         
-        cell.moreInfo.text = art.isExpanded ? art.info : moreInfoText
-        cell.moreInfo.textAlignment = art.isExpanded ? .left : .center
+        cell.moreInfo.text = work.isExpanded ? work.info : moreInfoText
+        cell.moreInfo.textAlignment = work.isExpanded ? .left : .center
         
         artTable.beginUpdates()
         artTable.endUpdates()

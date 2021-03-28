@@ -54,9 +54,9 @@
 		0BB0C410260D6225002A8DB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BA3A802260E419F0062A8B1 /* artists.json */,
 				0BB0C411260D624E002A8DB9 /* Artist.swift */,
 				0BB0C419260D62E8002A8DB9 /* Work.swift */,
+				0BA3A802260E419F0062A8B1 /* artists.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";

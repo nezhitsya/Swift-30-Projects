@@ -16,6 +16,9 @@ class ArtistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        artistTable.delegate = self
+        artistTable.dataSource = self
+        
         artistTable.rowHeight = UITableView.automaticDimension
         artistTable.estimatedRowHeight = 140
         
@@ -32,26 +35,26 @@ class ArtistViewController: UIViewController {
     }
 }
 
-extension ArtistViewController: UITableViewDataSource {
-    
+extension ArtistViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artists.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath) as! ArtistTableViewCell
         let artist = artists[indexPath.row]
-        
+
         cell.bio.text = artist.bio
         cell.bio.textColor = UIColor(white: 114/255, alpha: 1)
         cell.artistImage.image = artist.image
         cell.name.text = artist.name
-        cell.name.textColor = UIColor.blue
+        cell.name.textColor = UIColor.black
         cell.name.textAlignment = .center
         cell.selectionStyle = .none
         cell.name.font = UIFont.preferredFont(forTextStyle: .headline)
         cell.bio.font = UIFont.preferredFont(forTextStyle: .body)
-        
+
         return cell
     }
 }
