@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BA3A800260E3E460062A8B1 /* ArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3A7FF260E3E460062A8B1 /* ArtTableViewCell.swift */; };
+		0BA3A803260E419F0062A8B1 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA3A802260E419F0062A8B1 /* artists.json */; };
 		0BB0C412260D624E002A8DB9 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C411260D624E002A8DB9 /* Artist.swift */; };
 		0BB0C41A260D62E8002A8DB9 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C419260D62E8002A8DB9 /* Work.swift */; };
 		0BB0C41E260D6698002A8DB9 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0BA3A7FF260E3E460062A8B1 /* ArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTableViewCell.swift; sourceTree = "<group>"; };
+		0BA3A802260E419F0062A8B1 /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 		0BB0C411260D624E002A8DB9 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0BB0C419260D62E8002A8DB9 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		0BB0C41D260D6698002A8DB9 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		0BB0C410260D6225002A8DB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0BA3A802260E419F0062A8B1 /* artists.json */,
 				0BB0C411260D624E002A8DB9 /* Artist.swift */,
 				0BB0C419260D62E8002A8DB9 /* Work.swift */,
 			);
@@ -152,6 +155,7 @@
 			files = (
 				0BCA826F260C223400C86F6F /* LaunchScreen.storyboard in Resources */,
 				0BCA826C260C223400C86F6F /* Assets.xcassets in Resources */,
+				0BA3A803260E419F0062A8B1 /* artists.json in Resources */,
 				0BCA8267260C223200C86F6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

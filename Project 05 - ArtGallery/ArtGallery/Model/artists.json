@@ -1,0 +1,99 @@
+{
+    "artists" : [
+        {
+          "name" : "Frida Kahlo de Rivera",
+          "bio" : "Frida Kahlo de Rivera (July 6, 1907 – July 13, 1954), born Magdalena Carmen Frieda Kahlo y Calderón, was a Mexican painter known for her self-portraits.",
+          "image" : "Frida",
+          "works" : [
+              {"title" : "The Two Fridas",
+              "image" : "Frida1",
+            "info" : "The Two Fridas (Las dos Fridas in Spanish) is an oil painting by Mexican artist Frida Kahlo. The painting was the first large-scale work done by Kahlo and is considered one of her most notable paintings. It is a double self-portrait, depicting two versions of Kahlo seated together. One is wearing a white European-style Victorian dress while the other is wearing a traditional Tehuana dress. The painting is housed at the Museo de Arte Moderno in Mexico City."},
+              {"title" : "The Broken Column",
+              "image" : "Frida2",
+            "info" : "The Broken Column (La Columna Rota in Spanish) is an oil on masonite painting by Mexican artist Frida Kahlo, painted in 1944 shortly after she had spinal surgery to correct on-going problems which had resulted from a serious traffic accident when she was 18 years old. The original is housed in Mark Gibney‘s office in Zaiger Hall at the University of North Carolina Asheville."},
+              {"title" : "Self-Portrait with Thorn Necklace and Hummingbird",
+              "image" : "Frida3",
+            "info" : "Kahlo painted the self-portrait, which includes a black cat and a monkey, after her divorce from Diego Rivera and the end of her affair with photographer Nickolas Muray. Muray bought the portrait shortly after it was painted, and it is currently part of the Nickolas Muray collection at the Harry Ransom Center at the University of Texas at Austin."},
+              {"title" : "What the Water Gave Me",
+              "image" : "Frida4",
+            "info" : "Frida Kahlo’s What the Water Gave Me has been called her biography. As the scholar Natascha Steed points out, 'her paintings were all very honest and she never portrayed herself as being more or less beautiful than she actually was.' With this piece she reflected on her life. Kahlo released her unconscious mind through the use of what seems to be an irrational juxtaposition of images in her bathwater. In this painting, Frida paints herself, precisely her legs and feet, lying in a bath of grey water."}
+          ]
+        },
+        {
+          "name" : "Artemisia Gentileschi",
+          "bio" : "Artemisia Lomi or Artemisia Gentileschi (July 8, 1593 – c. 1656) was an Italian Baroque painter. Artemisia is considered among the most accomplished seventeenth-century artists, initially working in the style of Caravaggio.",
+          "image" : "Artemisia",
+          "works" : [
+              {"title" : "Susanna and the Elders",
+              "image" : "Artemisia1",
+            "info" : "Susanna and the Elders is a 1610 painting by the Italian Baroque artist Artemisia Gentileschi and is her earliest known signed and dated work. It currently hangs in the Schloss Weißenstein collection, in Pommersfelden, Germany. The work shows an uncomfortable Susanna with the two men lurking above her while she is in the bath. This was a popular scene to paint during the time of the Baroque period.[2] This subject matter for this painting comes from the deuterocanonical Book of Susanna in the Additions to Daniel."},
+              {"title" : "Judith Slaying Holofernes",
+              "image" : "Artemisia2",
+            "info" : "Judith Slaying Holofernes is a painting by the Italian early Baroque artist Artemisia Gentileschi, completed in 1612-13 and now at the Museo Capodimonte, Naples, Italy. It is considered one of her iconic works. The canvas shows the scene of Judith beheading Holofernes. Early feminist critics interpreted the painting as a form of visual revenge following Gentileschi's rape by Agostino Tassi in 1611; more recent analysis of the painting has taken a broader view, seeing the painting in the context of Gentileschi's achievement in portraying strong women. The subject takes an episode from the apocryphal Book of Judith in the Old Testament, which recounts the assassination of the Assyrian general Holofernes by the Israelite heroine Judith. The painting shows the moment when Judith, helped by her maidservant Abra, beheads the general after he has fallen asleep drunk."},
+              {"title" : "Judith and Her Maidservant",
+              "image" : "Artemisia3",
+            "info" : "Judith and Her Maidservant is one of four paintings by the Italian baroque artist Artemisia Gentileschi that depicts the biblical story of Judith and Holofernes. This particular work, executed in about 1623 to 1625, now hangs in the Detroit Institute of Arts. The narrative is taken from the deuterocanonical Book of Judith, in which Judith seduces and then murders the general Holofernes. This precise moment illustrates the maidservant Abra wrapping the severed head in a bag, moments after the murder, while Judith keeps watch. The other three paintings are now shown in the Museo di Capodimonte in Naples, the Palazzo Pitti in Florence, and the Musée de la Castre in Cannes."},
+              {"title" : "Lucretia",
+              "image" : "Artemisia4",
+            "info" : "Lucretia is a painting by the Italian baroque artist Artemisia Gentileschi. It depicts Lucretia, the wife of Roman consul and general Tarquinus, at the moment of her suicide. The decision to take her own life was made after she was blackmailed and raped by a fellow soldier of Tarquinus. It is one of a number of paintings of Gentileschi that focus on virtuous women ill-treated by men."}
+          ]
+        },
+        {
+          "name" : "Suzanne Valadon",
+          "bio" : "Artemisia Lomi or Artemisia Gentileschi (July 8, 1593 – c. 1656) was an Italian Baroque painter. Artemisia is considered among the most accomplished seventeenth-century artists, initially working in the style of Caravaggio.",
+          "image" : "Artemisia",
+          "works" : [
+              {"title" : "The Blue Room",
+              "image" : "Suzanne1",
+            "info" : "The Blue Room (La chambre bleue) is a 1923 painting by the French artist Suzanne Valadon, and is one of her most recognizable works. It is painted in oil on canvas. Like many of Valadon's later works, it uses strong colors and emphasizes decorative backgrounds and patterned materials. The painting is housed at Musée National d'Art Moderne, Centre Georges Pompidou in Paris."},
+              {"title" : "Joy of Life",
+              "image" : "Suzanne2",
+            "info" : "Suzanne Valadon's Joy of Life depicts a landscape with four nude and seminude women who are watched by a nude man. The nude male was modeled by Valadon's lover, André Utter. They met through her son, Maurice Utrillo, and Utter modeled nude for several of Valadon's paintings, including Adam and Eve (1909) and Casting the Net (1914)."},
+              {"title" : "The Abandoned Doll",
+              "image" : "Suzanne3",
+            "info" : "In “The Abandoned Doll,” Suzanne Valadon portrays an intimate scene with a strong psychological mood. Seated on a bed, a fully clothed woman towels dry a girl. The girl, clad only in a pink hair ribbon, turns away from the woman and appears to inspect herself in a hand mirror. The pink bow echoes that in the hair of the doll, a symbol of childhood forgotten on the floor near the bed. This visual connection, combined with the girl’s maturing body, suggests that this is a moment of transition in her young life."},
+              {"title" : "Reclining nude",
+              "image" : "Suzanne4",
+            "info" : ""}
+          ]
+        },
+        {
+          "name" : "Marina Abramović",
+          "bio" : "Marina Abramović (born November 30, 1946) is a Serbian conceptual and performance artist, philanthropist, writer, and filmmaker. Her work explores body art, endurance art and feminist art, the relationship between the performer and audience, the limits of the body, and the possibilities of the mind.",
+          "image" : "Marina",
+          "works" : [
+              {"title" : "Rhythm 0",
+              "image" : "Marina1",
+            "info" : "Rhythm 0 (1974) was a six-hour work of performance art by Serbian artist Marina Abramović in Studio Morra, Naples. The work involved Abramović standing still while the audience was invited to do to her whatever they wished, using one of 72 objects she had placed on a table."},
+              {"title" : "The Artist Is Present",
+              "image" : "Marina2",
+            "info" : "During the run of the exhibition, Abramović performed The Artist Is Present, a 736-hour and 30-minute static, silent piece, in which she sat immobile in the museum's atrium while spectators were invited to take turns sitting opposite her. Ulay made a surprise appearance at the opening night of the show. Abramović sat in a rectangle drawn with tape in the floor of the second floor atrium of the MoMA; theater lights shone on her sitting in a chair and a chair opposite her. Visitors waiting in line were invited to sit individually across from the artist while she maintained eye contact with them."},
+              {"title" : "Works with Ulay (Uwe Laysiepen)",
+              "image" : "Marina3",
+            "info" : "Abramović met the West German performance artist Uwe Laysiepen, who went by the single name Ulay when she went there to perform. They fell in love and Abramović decided to run away from home and go live with him. They began living and performing together In 1976, after moving to Amsterdam. When Abramović and Ulay began their collaboration, the main concepts they explored were the ego and artistic identity. They created relation works characterized by constant movement, change, process and art vital. This was the beginning of a decade of influential collaborative work. Each performer was interested in the traditions of their cultural heritage and the individual's desire for ritual. Consequently, they decided to form a collective being called 'The Other', and spoke of themselves as parts of a two-headed body. They dressed and behaved like twins and created a relationship of complete trust. As they defined this phantom identity, their individual identities became less accessible. In an analysis of phantom artistic identities, Charles Green has noted that this allowed a deeper understanding of the artist as performer, for it revealed a way of having the artistic self-made available for self-scrutiny."},
+              {"title" : "Fruit Of Life",
+              "image" : "Marina4",
+            "info" : "Beginning on November 9, 2005, Abramović presented Seven Easy Pieces at the Guggenheim Museum in New York City. On seven consecutive nights for seven hours she recreated the works of five artists first performed in the '60s and '70s, in addition to re-performing her own Lips of Thomas and introducing a new performance on the last night. The performances were arduous, requiring both the physical and the mental concentration of the artist. Included in Abramović's performances were recreations of Gina Pane's The Conditioning, which required lying on a bed frame suspended over a grid of lit candles, and of Vito Acconci's 1972 performance in which the artist masturbated under the floorboards of a gallery as visitors walked overhead. It is argued that Abramović re-performed these works as a series of homages to the past, though many of the performances were altered from their originals."}
+          ]
+        },
+        {
+          "name" : "Oscar-Claude Monet",
+          "bio" : "Oscar-Claude Monet (November 14, 1840 – December 5, 1926) was a French painter, a founder of French Impressionist painting and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein air landscape painting.",
+          "image" : "Monet",
+          "works" : [
+              {"title" : "Woman with a Parasol",
+              "image" : "Monet1",
+            "info" : "Woman with a Parasol – Madame Monet and Her Son, sometimes known as The Stroll (French: La Promenade) is an oil-on-canvas painting by Claude Monet from 1875. The Impressionist work depicts his wife Camille Monet and their son Jean Monet in the period from 1871 to 1877 while they were living in Argenteuil, capturing a moment on a stroll on a windy summer's day"},
+              {"title" : "The Artist's Garden at Giverny",
+              "image" : "Monet2",
+            "info" : "It is one of many works by the artist of his garden at Giverny over the last thirty years of his life. The painting shows rows of irises in various shades of purple and pink set diagonally across the picture plane. The flowers are under trees that in allowing dappled light through change the tone of their colours. Beyond the trees is a glimpse of Monet's house."},
+              {"title" : "Le Déjeuner sur l'herbe",
+              "image" : "Monet3",
+            "info" : "Le Déjeuner sur l'herbe (English: Luncheon on the Grass) is an 1865–1866 oil on canvas painting by Claude Monet, produced in response to the 1863 work of the same title by Édouard Manet. It remained unfinished, but two large fragments are now in the Musée d'Orsay in Paris, whilst a smaller 1866–1867 version is now in the Pushkin Museum in Moscow."},
+              {"title" : "Women in the Garden",
+              "image" : "Monet4",
+            "info" : "Women in the Garden (French: Femmes au jardin) is an oil painting begun in 1866 by French artist Claude Monet when he was 26. It is a large work painted en plein air; the size of the canvas necessitated Monet painting its upper half with the canvas lowered into a trench he had dug, so that he could maintain a single point of view for the entire work. The setting is the garden of a property he was renting. His companion and future wife Camille Doncieux posed for the figures. Monet finished the work indoors, and used magazine illustrations to render fashionable clothing."}
+          ]
+        }
+    ]
+}
