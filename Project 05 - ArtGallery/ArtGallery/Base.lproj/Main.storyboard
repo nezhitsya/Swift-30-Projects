@@ -62,7 +62,7 @@
                                             <outlet property="artistImage" destination="eIP-Qz-OGX" id="gXL-s8-9XJ"/>
                                             <outlet property="bio" destination="vC9-x4-xyF" id="T8n-7K-wBs"/>
                                             <outlet property="name" destination="vdN-e9-cNE" id="apg-bM-sNQ"/>
-                                            <segue destination="4eu-Oo-9cr" kind="presentation" trigger="accessoryAction" id="dKn-pd-ePs"/>
+                                            <segue destination="4eu-Oo-9cr" kind="presentation" identifier="segue" id="6YW-up-ECP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,34 +97,56 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtCell" rowHeight="686" id="mnS-6e-2OH" customClass="ArtTableViewCell" customModule="ArtGallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="686"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtCell" rowHeight="580" id="mnS-6e-2OH" customClass="ArtTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="580"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mnS-6e-2OH" id="zXk-fv-6ci">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZB0-Cq-zZI">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZB0-Cq-zZI">
                                                     <rect key="frame" x="20" y="11" width="374" height="324"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="324" id="UAI-wH-0iI"/>
+                                                        <constraint firstAttribute="width" constant="374" id="rGZ-Mn-1hX"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atO-ga-hX9">
-                                                    <rect key="frame" x="32" y="355" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atO-ga-hX9">
+                                                    <rect key="frame" x="32" y="355" width="362" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="WyN-7p-VRK"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-fL-Nvd">
-                                                    <rect key="frame" x="123" y="355" width="240" height="301"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-fL-Nvd">
+                                                    <rect key="frame" x="32" y="384" width="362" height="166"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="362" id="6ua-At-pBT"/>
+                                                    </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YoZ-fL-Nvd" secondAttribute="trailing" constant="20" symbolic="YES" id="6qk-h2-lJ9"/>
+                                                <constraint firstItem="YoZ-fL-Nvd" firstAttribute="top" secondItem="ZB0-Cq-zZI" secondAttribute="bottom" constant="49" id="9NM-y3-Oqr"/>
+                                                <constraint firstItem="atO-ga-hX9" firstAttribute="leading" secondItem="YoZ-fL-Nvd" secondAttribute="leading" id="Cs7-54-s6g"/>
+                                                <constraint firstItem="ZB0-Cq-zZI" firstAttribute="leading" secondItem="zXk-fv-6ci" secondAttribute="leading" constant="20" symbolic="YES" id="Dpv-ra-hVL"/>
+                                                <constraint firstItem="atO-ga-hX9" firstAttribute="top" secondItem="ZB0-Cq-zZI" secondAttribute="bottom" constant="20" id="OAK-ES-hqd"/>
+                                                <constraint firstItem="atO-ga-hX9" firstAttribute="leading" secondItem="zXk-fv-6ci" secondAttribute="leading" constant="32" id="V3d-v3-YdK"/>
+                                                <constraint firstItem="ZB0-Cq-zZI" firstAttribute="top" secondItem="zXk-fv-6ci" secondAttribute="top" constant="11" id="csf-1P-dqj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZB0-Cq-zZI" secondAttribute="trailing" constant="20" symbolic="YES" id="q3t-db-LDC"/>
+                                                <constraint firstItem="YoZ-fL-Nvd" firstAttribute="leading" secondItem="zXk-fv-6ci" secondAttribute="leading" constant="32" id="qdu-hj-mjk"/>
+                                                <constraint firstItem="atO-ga-hX9" firstAttribute="trailing" secondItem="YoZ-fL-Nvd" secondAttribute="trailing" id="unI-yR-Dk2"/>
+                                                <constraint firstItem="YoZ-fL-Nvd" firstAttribute="top" secondItem="atO-ga-hX9" secondAttribute="bottom" constant="8" symbolic="YES" id="z6b-cL-X43"/>
+                                                <constraint firstItem="ZB0-Cq-zZI" firstAttribute="trailing" secondItem="atO-ga-hX9" secondAttribute="trailing" id="zCN-Z1-bXE"/>
+                                                <constraint firstAttribute="bottom" secondItem="YoZ-fL-Nvd" secondAttribute="bottom" constant="30" id="zCZ-pN-AGU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artImage" destination="ZB0-Cq-zZI" id="jqI-zd-S55"/>

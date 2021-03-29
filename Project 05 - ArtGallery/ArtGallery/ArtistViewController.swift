@@ -28,9 +28,16 @@ class ArtistViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ArtistDetailViewController, let indexPath = artistTable.indexPathForSelectedRow {
-            
-            destination.selectedArtist = artists[indexPath.row]
+//        if let destination = segue.destination as? ArtistDetailViewController, let indexPath = artistTable.indexPathForSelectedRow {
+//
+//            destination.selectedArtist = artists[indexPath.row]
+//        }
+        if segue.identifier == "segue" {
+            if let cell = sender as? UITableViewCell, let indexPath = artistTable.indexPath(for: cell) {
+                if let vc = segue.destination as? ArtistDetailViewController {
+                    vc.selectedArtist = artists[indexPath.row]
+                }
+            }
         }
     }
 }
@@ -56,5 +63,9 @@ extension ArtistViewController: UITableViewDataSource, UITableViewDelegate {
         cell.bio.font = UIFont.preferredFont(forTextStyle: .body)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segue", sender: nil)
     }
 }

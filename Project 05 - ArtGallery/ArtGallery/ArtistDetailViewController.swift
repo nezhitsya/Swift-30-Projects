@@ -20,7 +20,7 @@ class ArtistDetailViewController: UIViewController {
         artTable.delegate = self
         artTable.dataSource = self
 
-        title = selectedArtist.name
+//        title = selectedArtist.name
         
         artTable.rowHeight = UITableView.automaticDimension
         artTable.estimatedRowHeight = 300
