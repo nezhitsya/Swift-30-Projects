@@ -8,9 +8,11 @@
 import UIKit
 
 class SnackTableViewController: UITableViewController {
-    
+
     var snack = [Snack]()
     var filteredSnack = [Snack]()
+    var detailViewController: DetailViewController? = nil
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,64 +36,78 @@ class SnackTableViewController: UITableViewController {
             Snack(category: "Pastries", name: "Scones"),
             Snack(category: "Pastries", name: "Canelé")
         ]
+        
+        setupSearchController()
+        
+        if let splitViewController = splitViewController {
+              let controllers = splitViewController.viewControllers
+              detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
+        }
     }
+    
+    func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        searchController.searchBar.scopeButtonTitles = ["All", "Cookies", "Cakes", "Pastries"]
+        searchController.searchBar.delegate = self
+        
+        if #available(iOS 11, *) {
+            self.navigationItem.searchController = searchController
+            self.navigationItem.searchController?.isActive = true
+            self.navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredSnack = snack.filter { snacks in
+            if !(snacks.category == scope) && scope != "All" {
+                return false
+            }
+            return snacks.name.lowercased().contains(searchText.lowercased()) || searchText == ""
+        }
+        
+        tableView.reloadData()
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+//    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if searchController.isActive {
+            return filteredSnack.count
+        }
+        return snack.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let snacks: Snack
+        
+        if searchController.isActive {
+            snacks = filteredSnack[(indexPath as NSIndexPath).row]
+        } else {
+            snacks = snack[(indexPath as NSIndexPath).row]
+        }
+        
+        cell.textLabel!.text = snacks.name
+        cell.detailTextLabel!.text = snacks.category
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -103,4 +119,19 @@ class SnackTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension SnackTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+    }
+}
+
+extension SnackTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
 }
