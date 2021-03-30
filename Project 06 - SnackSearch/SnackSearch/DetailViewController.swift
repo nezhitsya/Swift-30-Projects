@@ -8,12 +8,30 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var SnackImage: UIImageView!
+    @IBOutlet weak var SnackName: UILabel!
+    
+    var detailSnack: Snack? {
+        didSet {
+            configureView()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configureView()
     }
-
-
+    
+    func configureView() {
+        if let detailSnack = detailSnack {
+            if let SnackName = SnackName, let SnackImage = SnackImage {
+                SnackName.text = detailSnack.name
+                SnackImage.image = UIImage(named: detailSnack.name)
+                title = detailSnack.category
+            }
+        }
+    }
 }
 

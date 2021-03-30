@@ -37,6 +37,9 @@ class SnackTableViewController: UITableViewController {
             Snack(category: "Pastries", name: "Canelé")
         ]
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "Snack"
+        
         setupSearchController()
         
         if let splitViewController = splitViewController {
@@ -74,7 +77,7 @@ class SnackTableViewController: UITableViewController {
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
-//        
+//
 //        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
 //    }
 
@@ -107,6 +110,26 @@ class SnackTableViewController: UITableViewController {
         cell.detailTextLabel!.text = snacks.category
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let snacks: Snack
+                
+                if searchController.isActive {
+                    snacks = filteredSnack[(indexPath as NSIndexPath).row]
+                } else {
+                    snacks = snack[(indexPath as NSIndexPath).row]
+                }
+                
+                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                
+                controller.detailSnack = snacks
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
 
     /*
