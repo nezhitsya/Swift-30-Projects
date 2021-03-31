@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		0BAA551226140B7B002A45EA /* Dictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA551026140B7B002A45EA /* Dictionary.xcdatamodeld */; };
 		0BAA551426140B7C002A45EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAA551326140B7C002A45EA /* Assets.xcassets */; };
 		0BAA551726140B7C002A45EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAA551526140B7C002A45EA /* LaunchScreen.storyboard */; };
+		0BE257CA2614152500DF0107 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE257C92614152500DF0107 /* Animal.swift */; };
 		60204915D75D222CAA72487B /* Pods_Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57FA3D6A13CF62BCFE00F3 /* Pods_Dictionary.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0BAA551326140B7C002A45EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BAA551626140B7C002A45EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BAA551826140B7C002A45EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BE257C92614152500DF0107 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		3D57FA3D6A13CF62BCFE00F3 /* Pods_Dictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7942BCB959987B316EF4E7 /* Pods-Dictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary.release.xcconfig"; path = "Target Support Files/Pods-Dictionary/Pods-Dictionary.release.xcconfig"; sourceTree = "<group>"; };
 		EBEDBFD9783B825615B47351 /* Pods-Dictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary.debug.xcconfig"; path = "Target Support Files/Pods-Dictionary/Pods-Dictionary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0BAA551526140B7C002A45EA /* LaunchScreen.storyboard */,
 				0BAA551826140B7C002A45EA /* Info.plist */,
 				0BAA551026140B7B002A45EA /* Dictionary.xcdatamodeld */,
+				0BE257C92614152500DF0107 /* Animal.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -83,7 +86,6 @@
 				EBEDBFD9783B825615B47351 /* Pods-Dictionary.debug.xcconfig */,
 				AB7942BCB959987B316EF4E7 /* Pods-Dictionary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +215,7 @@
 				0BAA551226140B7B002A45EA /* Dictionary.xcdatamodeld in Sources */,
 				0BAA550826140B7B002A45EA /* AppDelegate.swift in Sources */,
 				0BAA550A26140B7B002A45EA /* SceneDelegate.swift in Sources */,
+				0BE257CA2614152500DF0107 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

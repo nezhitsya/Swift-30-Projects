@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
+protocol SelectionDelegate: class {
+    func animalSelected(_ newAnimal: Animal)
+}
 
 class ViewController: UIViewController {
 
