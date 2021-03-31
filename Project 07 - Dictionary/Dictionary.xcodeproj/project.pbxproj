@@ -16,6 +16,7 @@
 		0BE257CA2614152500DF0107 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE257C92614152500DF0107 /* Animal.swift */; };
 		0BE257CD2614169500DF0107 /* AnimalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE257CC2614169500DF0107 /* AnimalConstants.swift */; };
 		0BE257D1261418CB00DF0107 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE257D0261418CB00DF0107 /* MainTableViewController.swift */; };
+		0BE257D4261420B400DF0107 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE257D3261420B400DF0107 /* MainTableViewCell.swift */; };
 		60204915D75D222CAA72487B /* Pods_Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D57FA3D6A13CF62BCFE00F3 /* Pods_Dictionary.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0BE257C92614152500DF0107 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		0BE257CC2614169500DF0107 /* AnimalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalConstants.swift; sourceTree = "<group>"; };
 		0BE257D0261418CB00DF0107 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		0BE257D3261420B400DF0107 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		3D57FA3D6A13CF62BCFE00F3 /* Pods_Dictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7942BCB959987B316EF4E7 /* Pods-Dictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary.release.xcconfig"; path = "Target Support Files/Pods-Dictionary/Pods-Dictionary.release.xcconfig"; sourceTree = "<group>"; };
 		EBEDBFD9783B825615B47351 /* Pods-Dictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary.debug.xcconfig"; path = "Target Support Files/Pods-Dictionary/Pods-Dictionary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				0BE257C92614152500DF0107 /* Animal.swift */,
 				0BE257CC2614169500DF0107 /* AnimalConstants.swift */,
 				0BE257D0261418CB00DF0107 /* MainTableViewController.swift */,
+				0BE257D3261420B400DF0107 /* MainTableViewCell.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				0BAA551226140B7B002A45EA /* Dictionary.xcdatamodeld in Sources */,
 				0BAA550826140B7B002A45EA /* AppDelegate.swift in Sources */,
 				0BAA550A26140B7B002A45EA /* SceneDelegate.swift in Sources */,
+				0BE257D4261420B400DF0107 /* MainTableViewCell.swift in Sources */,
 				0BE257CA2614152500DF0107 /* Animal.swift in Sources */,
 				0BE257D1261418CB00DF0107 /* MainTableViewController.swift in Sources */,
 				0BE257CD2614169500DF0107 /* AnimalConstants.swift in Sources */,
