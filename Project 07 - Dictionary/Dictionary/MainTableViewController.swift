@@ -14,6 +14,7 @@ import RxCocoa
 class MainTableViewController: UITableViewController {
     
     var filteredAnimals = [Animal]()
+    weak var delegate: AnimalSelectionDelegate?
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var searchBar: UISearchBar!
