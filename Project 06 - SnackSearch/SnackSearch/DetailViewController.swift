@@ -11,6 +11,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var SnackImage: UIImageView!
     @IBOutlet weak var SnackName: UILabel!
+    @IBOutlet weak var SnackCategory: UILabel!
     
     var detailSnack: Snack? {
         didSet {
@@ -29,6 +30,8 @@ class DetailViewController: UIViewController {
             if let SnackName = SnackName, let SnackImage = SnackImage {
                 SnackName.text = detailSnack.name
                 SnackImage.image = UIImage(named: detailSnack.name)
+                SnackCategory.text = detailSnack.category
+                
                 title = detailSnack.category
             }
         }
