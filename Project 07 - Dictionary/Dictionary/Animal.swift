@@ -8,9 +8,11 @@
 import Foundation
 
 enum AnimalType {
-    case Amphibia
-    case Reptile
-    case Mammalia
+    case Amphibia // 양서류
+    case Reptilia // 파충류
+    case Mammalia // 포유류
+    case Birds // 조류
+    case Pisces // 어류
 }
 
 class Animal: NSObject {
