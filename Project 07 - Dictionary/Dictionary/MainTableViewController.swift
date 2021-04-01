@@ -9,7 +9,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
+protocol AnimalSelectionDelegate: class {
+    func aninalSelected(_ newAnimal: Animal)
+}
 
 class MainTableViewController: UITableViewController {
     

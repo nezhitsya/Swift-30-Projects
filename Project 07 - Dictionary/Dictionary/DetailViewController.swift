@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: AnimalSelectionDelegate {
-    func animalSelected(_ newAnimal: Animal) {
+    func aninalSelected(_ newAnimal: Animal) {
         animal = newAnimal
     }
 }
