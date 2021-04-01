@@ -9,6 +9,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var animalImage: UIImageView!
+    
     var animal: Animal! {
         didSet(newAnimal) {
             self.refreshUI()
@@ -22,7 +26,8 @@ class DetailViewController: UIViewController {
     }
     
     func refreshUI() {
-        
+        name?.text = animal.name
+        info?.text = animal.detailInfo
     }
     
 
