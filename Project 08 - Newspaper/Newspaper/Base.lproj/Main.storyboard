@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="138" id="oJU-hO-1rj" customClass="NewsTableViewCell" customModule="Newspaper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="138"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="101" id="oJU-hO-1rj" customClass="NewsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="101"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJU-hO-1rj" id="wpG-NY-bxM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-kH-wsl">
-                                            <rect key="frame" x="20" y="11" width="374" height="27"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY9-kH-wsl">
+                                            <rect key="frame" x="20" y="11" width="374" height="26.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                             <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-ks-1gF">
-                                            <rect key="frame" x="20" y="66" width="374" height="20.5"/>
+                                            <rect key="frame" x="20" y="65.5" width="374" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="374" id="VDP-gs-Jev"/>
                                             </constraints>
@@ -47,11 +47,14 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Bic-ks-1gF" secondAttribute="trailing" constant="20" symbolic="YES" id="6w8-2P-LQv"/>
                                         <constraint firstItem="TtW-uc-9k0" firstAttribute="top" secondItem="kY9-kH-wsl" secondAttribute="bottom" constant="2" id="8BS-XS-qiq"/>
                                         <constraint firstItem="kY9-kH-wsl" firstAttribute="top" secondItem="wpG-NY-bxM" secondAttribute="top" constant="11" id="GtM-ZM-gF6"/>
                                         <constraint firstItem="Bic-ks-1gF" firstAttribute="leading" secondItem="wpG-NY-bxM" secondAttribute="leading" constant="20" symbolic="YES" id="HKI-Cu-XI1"/>
+                                        <constraint firstAttribute="bottom" secondItem="Bic-ks-1gF" secondAttribute="bottom" constant="15" id="J3R-3s-XG1"/>
                                         <constraint firstItem="TtW-uc-9k0" firstAttribute="leading" secondItem="wpG-NY-bxM" secondAttribute="leading" constant="20" symbolic="YES" id="cgk-tI-mJN"/>
                                         <constraint firstItem="Bic-ks-1gF" firstAttribute="top" secondItem="TtW-uc-9k0" secondAttribute="bottom" constant="8" symbolic="YES" id="hVx-pz-bak"/>
+                                        <constraint firstAttribute="trailing" secondItem="kY9-kH-wsl" secondAttribute="trailing" constant="20" symbolic="YES" id="mmN-Wq-wgK"/>
                                         <constraint firstItem="kY9-kH-wsl" firstAttribute="leading" secondItem="wpG-NY-bxM" secondAttribute="leading" constant="20" symbolic="YES" id="ska-sf-p46"/>
                                         <constraint firstItem="TtW-uc-9k0" firstAttribute="leading" secondItem="kY9-kH-wsl" secondAttribute="trailing" constant="-374" id="xpi-sV-N5l"/>
                                     </constraints>
