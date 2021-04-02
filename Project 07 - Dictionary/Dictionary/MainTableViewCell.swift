@@ -15,11 +15,11 @@ class MainTableViewCell: UITableViewCell {
     
     private var indicator: UIActivityIndicatorView!
 
-    func awakeFromNib(_ type: String, name: String, animalImage: String) {
+    func awakeFromNib(_ type: String, name: String, animalImageUrl: String) {
         super.awakeFromNib()
         
         setupUI(type, name: name)
-        setupNotification(animalImage)
+        setupNotification(animalImageUrl)
     }
     
     deinit {
@@ -49,7 +49,7 @@ class MainTableViewCell: UITableViewCell {
         animalImage.addObserver(self, forKeyPath: "image", options: [], context: nil)
     }
     
-    private func setupNotification(_ animalImage: String) {
-        
+    private func setupNotification(_ animalImageUrl: String) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: downloadImageNotification), object: self, userInfo: ["animalImageView": animalImage!, "animalImageUrl": animalImageUrl])
     }
 }

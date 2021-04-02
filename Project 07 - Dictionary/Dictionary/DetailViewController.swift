@@ -26,8 +26,10 @@ class DetailViewController: UIViewController {
     }
     
     func refreshUI() {
-        name?.text = animal.name
-        info?.text = animal.detailInfo
+//        self.title = animal.name
+//        name?.text = animal.name
+//        info?.text = animal.detailInfo
+//        animalImage?.image = LibraryAPI.sharedInstance.downloadImg(animal.animImgUrl)
     }
     
 

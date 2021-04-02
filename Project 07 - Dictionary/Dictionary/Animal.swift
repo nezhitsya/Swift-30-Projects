@@ -19,12 +19,14 @@ class Animal: NSObject {
     let name: String
     let detailInfo: String
     let type: [AnimalType]
+    let stringType: String
     let animImgUrl: String
     
-    init(name: String, detailInfo: String, type: [AnimalType], animImgUrl: String) {
+    init(name: String, detailInfo: String, type: [AnimalType], stringType: String, animImgUrl: String) {
         self.name = name
         self.detailInfo = detailInfo
         self.type = type
+        self.stringType = stringType
         self.animImgUrl = animImgUrl
     }
 }

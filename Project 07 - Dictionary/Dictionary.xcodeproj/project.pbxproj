@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7541AA2616A9F600E7671C /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7541A92616A9F600E7671C /* LibraryAPI.swift */; };
+		0B7541AD2616B0BC00E7671C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7541AC2616B0BC00E7671C /* Constants.swift */; };
 		0BAA550826140B7B002A45EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA550726140B7B002A45EA /* AppDelegate.swift */; };
 		0BAA550A26140B7B002A45EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA550926140B7B002A45EA /* SceneDelegate.swift */; };
 		0BAA550F26140B7B002A45EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAA550D26140B7B002A45EA /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B7541A92616A9F600E7671C /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		0B7541AC2616B0BC00E7671C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BAA550426140B7B002A45EA /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAA550726140B7B002A45EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAA550926140B7B002A45EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				0BE257D3261420B400DF0107 /* MainTableViewCell.swift */,
 				0BE257D62614257600DF0107 /* PersistencyManager.swift */,
 				0BE257D92614274700DF0107 /* DetailViewController.swift */,
+				0B7541A92616A9F600E7671C /* LibraryAPI.swift */,
+				0B7541AC2616B0BC00E7671C /* Constants.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -224,11 +230,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE257DA2614274700DF0107 /* DetailViewController.swift in Sources */,
+				0B7541AD2616B0BC00E7671C /* Constants.swift in Sources */,
 				0BAA551226140B7B002A45EA /* Dictionary.xcdatamodeld in Sources */,
 				0BAA550826140B7B002A45EA /* AppDelegate.swift in Sources */,
 				0BAA550A26140B7B002A45EA /* SceneDelegate.swift in Sources */,
 				0BE257D4261420B400DF0107 /* MainTableViewCell.swift in Sources */,
 				0BE257CA2614152500DF0107 /* Animal.swift in Sources */,
+				0B7541AA2616A9F600E7671C /* LibraryAPI.swift in Sources */,
 				0BE257D1261418CB00DF0107 /* MainTableViewController.swift in Sources */,
 				0BE257CD2614169500DF0107 /* AnimalConstants.swift in Sources */,
 				0BE257D72614257600DF0107 /* PersistencyManager.swift in Sources */,

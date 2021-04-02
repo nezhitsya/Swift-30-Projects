@@ -15,6 +15,7 @@ protocol AnimalSelectionDelegate: class {
 
 class MainTableViewController: UITableViewController {
     
+    var animals = LibraryAPI.sharedInstance.getAnimals()
     var filteredAnimals = [Animal]()
     weak var delegate: AnimalSelectionDelegate?
     private let disposeBag = DisposeBag()
@@ -25,6 +26,7 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
 
         setupUI()
+        filteredAnimals = animals
     }
     
     private func setupUI() {
@@ -32,8 +34,24 @@ class MainTableViewController: UITableViewController {
         
         definesPresentationContext = true
         
-        searchBar
-            .rx.text
+        self.tableView.reloadData()
+        
+//        searchBar
+//            .rx.text
+//            .throttle(0.5, scheduler: MainScheduler.instance)
+//            .subscribe(
+//                onNext: { [unowned self] query in
+//                    if query?.characters.count == 0 {
+//                        self.filteredAnimals = self.animals
+//                    } else {
+//                        self.filteredAnimals = self.animals.filter {
+//                            $0.name.hasPrefix(query!)
+//                        }
+//                    }
+//                    self.tableView.reloadData()
+//                }
+//            )
+//            .addDisposableTo(disposeBag)
     }
     
     func dismissKeyboard() {
@@ -59,13 +77,19 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let animal = self.filteredAnimals[(indexPath as NSIndexPath).row]
         
+        delegate?.aninalSelected(animal)
         
+        if let detailViewController = self.delegate as? DetailViewController {
+            splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MainTableViewCell
         let animal = filteredAnimals[(indexPath as NSIndexPath).row]
+        
+        cell.awakeFromNib(animal.stringType, name: animal.name, animalImageUrl: animal.animImgUrl)
         
         return cell
     }
