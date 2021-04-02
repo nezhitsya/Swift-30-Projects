@@ -20,12 +20,14 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        refreshUI()
         super.viewDidLoad()
 
-        refreshUI()
+//        refreshUI()
     }
     
     func refreshUI() {
+        self.title = "Animal"
 //        self.title = animal.name
 //        name?.text = animal.name
 //        info?.text = animal.detailInfo

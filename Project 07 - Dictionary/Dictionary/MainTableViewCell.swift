@@ -50,6 +50,6 @@ class MainTableViewCell: UITableViewCell {
     }
     
     private func setupNotification(_ animalImageUrl: String) {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: downloadImageNotification), object: self, userInfo: ["animalImageView": animalImage!, "animalImageUrl": animalImageUrl])
+        NotificationCenter.default.post(name: Notification.Name(rawValue: downloadImageNotification), object: self, userInfo: ["animalImageView": animalImage!, "animImageUrl": animalImageUrl])
     }
 }

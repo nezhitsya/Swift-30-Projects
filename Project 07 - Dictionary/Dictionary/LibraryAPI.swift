@@ -36,19 +36,32 @@ class LibraryAPI: NSObject {
     @objc func downloadImage(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo as! [String: AnyObject]
         let animalImageView = userInfo["animalImage"] as! UIImageView?
-        let animalImageUrl = userInfo["animalImageUrl"] as! String
+        let animalImageUrl = userInfo["animImageUrl"] as! String
         
-        if let imageViewUnWrapped = animalImageView {
-            imageViewUnWrapped.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
-            if imageViewUnWrapped.image == nil {
-                DispatchQueue.global().async {
-                    let downloadedImage = self.downloadImg(animalImageUrl as String)
-                    DispatchQueue.main.async {
-                        imageViewUnWrapped.image = downloadedImage
-                        self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
-                    }
+        let imageViewUnWrapped = animalImageView
+        imageViewUnWrapped?.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
+        
+        if imageViewUnWrapped?.image == nil {
+            DispatchQueue.global().async {
+                let downloadedImage = self.downloadImg(animalImageUrl as String)
+                DispatchQueue.main.async {
+                    imageViewUnWrapped?.image = downloadedImage
+                    self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
                 }
             }
         }
+        
+//        if let imageViewUnWrapped = animalImageView {
+//            imageViewUnWrapped.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
+//            if imageViewUnWrapped.image == nil {
+//                DispatchQueue.global().async {
+//                    let downloadedImage = self.downloadImg(animalImageUrl as String)
+//                    DispatchQueue.main.async {
+//                        imageViewUnWrapped.image = downloadedImage
+//                        self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
+//                    }
+//                }
+//            }
+//        }
     }
 }
