@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B70D78B26177E05005ED04F /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70D78A26177E05005ED04F /* NewsTableViewController.swift */; };
+		0B70D78E26178025005ED04F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70D78D26178025005ED04F /* NewsTableViewCell.swift */; };
 		0B7541BC2616DB4300E7671C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7541BB2616DB4300E7671C /* AppDelegate.swift */; };
 		0B7541BE2616DB4300E7671C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7541BD2616DB4300E7671C /* SceneDelegate.swift */; };
 		0B7541C32616DB4300E7671C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7541C12616DB4300E7671C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0B70D78A26177E05005ED04F /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		0B70D78D26178025005ED04F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		0B7541B82616DB4300E7671C /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7541BB2616DB4300E7671C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7541BD2616DB4300E7671C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				0B7541C42616DB4300E7671C /* Newspaper.xcdatamodeld */,
 				0B7541D42616DC2D00E7671C /* RSSParser.swift */,
 				0B70D78A26177E05005ED04F /* NewsTableViewController.swift */,
+				0B70D78D26178025005ED04F /* NewsTableViewCell.swift */,
 			);
 			path = Newspaper;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				0B7541BC2616DB4300E7671C /* AppDelegate.swift in Sources */,
 				0B7541BE2616DB4300E7671C /* SceneDelegate.swift in Sources */,
+				0B70D78E26178025005ED04F /* NewsTableViewCell.swift in Sources */,
 				0B7541C62616DB4300E7671C /* Newspaper.xcdatamodeld in Sources */,
 				0B70D78B26177E05005ED04F /* NewsTableViewController.swift in Sources */,
 				0B7541D52616DC2D00E7671C /* RSSParser.swift in Sources */,

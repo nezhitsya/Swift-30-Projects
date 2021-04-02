@@ -11,7 +11,7 @@ class NewsTableViewController: UITableViewController {
     
     private let feedParser = RSSParser()
     private let feedURL = "http://www.apple.com/main/rss/hotnews/hotnews.rss"
-    private var rssItems: [(title: String, description: String, pubDate: String)]
+    private var rssItems: [(title: String, description: String, pubDate: String)]?
     private var cellStates: [CellState]?
 
     override func viewDidLoad() {
@@ -48,20 +48,27 @@ class NewsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
 
-        // Configure the cell...
-
+        if let item = rssItems?[indexPath.row] {
+            (cell.title.text, cell.descript.text, cell.date.text) = (item.title, item.description, item.pubDate)
+            
+            if let cellState = cellStates?[indexPath.row] {
+                cell.descript.numberOfLines = cellState == .expanded ? 0 : 4
+            }
+        }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let cell = tableView.cellForRow(at: indexPath)
+        let cell = tableView.cellForRow(at: indexPath) as! NewsTableViewCell
         
         tableView.beginUpdates()
-        
+        cell.descript.numberOfLines = cell.descript.numberOfLines == 4 ? 0 : 4
+        cellStates?[indexPath.row] = cell.descript.numberOfLines == 4 ? .collapsed : .expanded
         tableView.endUpdates()
     }
     

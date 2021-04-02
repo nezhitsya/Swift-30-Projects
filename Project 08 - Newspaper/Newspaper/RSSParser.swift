@@ -31,7 +31,7 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     private var parserCompletionHandler: (([(title: String, description: String, pubDate: String)]) -> Void)?
     
-    func parseFeed(feedURL: String, completionHandler: (([(title: String, descripton: String, pubDate: String)]) -> Void)?) -> Void {
+    func parseFeed(feedURL: String, completionHandler: (([(title: String, description: String, pubDate: String)]) -> Void)?) -> Void {
         parserCompletionHandler = completionHandler
         
         guard let feedURL = URL(string: feedURL) else {
