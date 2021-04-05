@@ -23,7 +23,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -32,8 +32,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         if let cell = sender as? UICollectionViewCell,
            let indexPath = collectionView?.indexPath(for: cell),
            let zoomImageViewController = segue.destination as? ZoomImageViewController {
-            
-            
+            zoomImageViewController.imageName = "\(indexPath.row + 1)"
         }
     }
 
@@ -69,7 +68,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: UICollectionViewDelegateFlowLayout
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
