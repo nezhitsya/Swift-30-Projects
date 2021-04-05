@@ -9,7 +9,7 @@ import UIKit
 
 //private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDelegate {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let reuseIdentifier = "cell"
     private let thumbnailSize: CGFloat = 70.0
@@ -55,7 +55,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         let fullSizeImage = UIImage(named: photos[indexPath.row])
         
-        
+        cell.imageView.image = fullSizeImage?.thumbnailOfSize(thumbnailSize)
     
         return cell
     }
