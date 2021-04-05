@@ -12,7 +12,7 @@ import UIKit
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let reuseIdentifier = "cell"
-    private let thumbnailSize: CGFloat = 70.0
+    private let thumbnailSize: CGFloat = 120.0
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 5.0, bottom: 10.0, right: 5.0)
     private let photos = ["1", "2", "3", "4", "5"]
 
