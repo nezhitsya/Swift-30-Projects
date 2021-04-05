@@ -27,6 +27,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UICollectionViewCell,
+           let indexPath = collectionView?.indexPath(for: cell),
+           let zoomImageViewController = segue.destination as? ZoomImageViewController {
+            
+            
+        }
+    }
 
     /*
     // MARK: - Navigation
