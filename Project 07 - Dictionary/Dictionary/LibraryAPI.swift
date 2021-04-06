@@ -30,7 +30,8 @@ class LibraryAPI: NSObject {
         let aUrl = URL(string: url)
         let data = try? Data(contentsOf: aUrl!)
         let image = UIImage(data: data!)
-        return image!
+        let im = UIImage(named: "default")
+        return im!
     }
     
     @objc func downloadImage(_ notification: Notification) {
@@ -44,6 +45,7 @@ class LibraryAPI: NSObject {
         if imageViewUnWrapped?.image == nil {
             DispatchQueue.global().async {
                 let downloadedImage = self.downloadImg(animalImageUrl as String)
+                
                 DispatchQueue.main.async {
                     imageViewUnWrapped?.image = downloadedImage
                     self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
