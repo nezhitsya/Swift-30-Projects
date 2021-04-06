@@ -27,7 +27,7 @@ class ZoomImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        
+        updateMinZoomScale(forSize: view.bounds.size)
     }
     
     private func updateConstraints(forSize size: CGSize) {
