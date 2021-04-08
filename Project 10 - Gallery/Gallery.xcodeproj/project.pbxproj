@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B9F011D261CD05200623F61 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F011C261CD05200623F61 /* Collections.swift */; };
+		0B9F0120261CD40700623F61 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F011F261CD40700623F61 /* CollectionViewCell.swift */; };
 		0BEB77B3261BF0DC008C1C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB77B2261BF0DC008C1C1C /* AppDelegate.swift */; };
 		0BEB77B5261BF0DC008C1C1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB77B4261BF0DC008C1C1C /* SceneDelegate.swift */; };
 		0BEB77B7261BF0DC008C1C1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB77B6261BF0DC008C1C1C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0B9F011C261CD05200623F61 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
+		0B9F011F261CD40700623F61 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		0BEB77AF261BF0DC008C1C1C /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEB77B2261BF0DC008C1C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEB77B4261BF0DC008C1C1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				0BEB77C3261BF0DD008C1C1C /* Info.plist */,
 				0BEB77BB261BF0DC008C1C1C /* Gallery.xcdatamodeld */,
 				0B9F011C261CD05200623F61 /* Collections.swift */,
+				0B9F011F261CD40700623F61 /* CollectionViewCell.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				0BEB77BD261BF0DC008C1C1C /* Gallery.xcdatamodeld in Sources */,
 				0BEB77B7261BF0DC008C1C1C /* ViewController.swift in Sources */,
+				0B9F0120261CD40700623F61 /* CollectionViewCell.swift in Sources */,
 				0BEB77B3261BF0DC008C1C1C /* AppDelegate.swift in Sources */,
 				0BEB77B5261BF0DC008C1C1C /* SceneDelegate.swift in Sources */,
 				0B9F011D261CD05200623F61 /* Collections.swift in Sources */,
