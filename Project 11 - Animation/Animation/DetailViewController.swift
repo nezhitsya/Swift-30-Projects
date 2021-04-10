@@ -28,21 +28,42 @@ class DetailViewController: UIViewController {
     
     private func setupRect() {
         if barTitle == "BezierCurve Position" {
-            
+            animateView = drawCircleView()
+        } else if barTitle == "View Fade In" {
+            animateView = UIImageView(image: UIImage(named: "1"))
+            animateView.frame = generalFrame
+            animateView.center = generalCenter
+        } else {
+            animateView = drawRectView(UIColor.lightGray, frame: generalFrame, center: generalCenter)
         }
+        view.addSubview(animateView)
+    }
+    
+    private func changeColor(_ color: UIColor) {
+        UIView.animate(withDuration: self.duration, animations: {
+            self.animateView.backgroundColor = color
+        }, completion: nil)
     }
     
     @IBAction func didTapTanimate(_ sender: AnyObject) {
-        switch bartitle {
+        switch barTitle {
         case "2-Color":
             changeColor(UIColor.gray)
+
+//        case "Simple 2D Rotation":
+//            rotateView(Double.pi)
+//
+//        case "Multicolor":
+//            multiColor(UIColor.black, UIColor.gray)
         
-        case "Simple 2D Rotation":
-            rotateView(Double.pi)
-            
-        case "Multicolor":
-            multiColor(UIColor.black, UIColor.gray)
+        default:
+            let alert = makeAlert("Alert", message: "Error", actionTitle: "OK")
+            self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     /*

@@ -84,7 +84,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k0N-UA-kR4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="RW5-xo-xky"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="RW5-xo-xky">
+                            <connections>
+                                <action selector="done:" destination="hAN-FD-9Sb" id="nFo-2C-Vn9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vv-I0-DDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

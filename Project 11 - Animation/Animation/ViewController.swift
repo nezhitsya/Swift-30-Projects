@@ -35,12 +35,19 @@ class ViewController: UIViewController {
         }
         
         var index = 0
+        
+        for cell in cells {
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            }, completion: nil)
+            index += 1
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AnimationDetail" {
             if let cell = sender as? UITableViewCell, let indexPath = masterTable.indexPath(for: cell) {
-                if let vc = segue.destination as? DetailViewController {
+                if let vc = segue.destination.children.first as? DetailViewController {
                     vc.barTitle = items[(indexPath as NSIndexPath).row]
                 }
             }
