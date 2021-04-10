@@ -8,12 +8,64 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var masterTable: UITableView!
+    
+    private let items = ["2-Color", "Simple 2D Rotation", "Multicolor", "Multi Point Position", "BezierCurve Position", "Color and Frame Change", "View Fade In", "Pop"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        masterTable.delegate = self
+        masterTable.dataSource = self
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        animateTable()
+    }
+    
+    func animateTable() {
+        masterTable.reloadData()
+        
+        let cells = masterTable.visibleCells
+        let tableHeight = masterTable.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        
+        var index = 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(50.0)
+    }
+    
+    internal func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Basic Animations"
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = self.items[(indexPath as NSIndexPath).row]
+        
+        return cell
+    }
+}
