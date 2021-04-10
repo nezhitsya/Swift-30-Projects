@@ -36,6 +36,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="HL9-pU-cjf" kind="presentation" identifier="AnimationDetail" modalPresentationStyle="fullScreen" id="9mw-8L-8a1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -56,6 +59,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="abf-7S-T7C">
+            <objects>
+                <viewController id="hAN-FD-9Sb" customClass="DetailViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hiv-8N-QSG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSn-Yg-GGn">
+                                <rect key="frame" x="178.5" y="699" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="didTapTanimate:" destination="hAN-FD-9Sb" eventType="touchUpInside" id="uJD-nQ-oXI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Tf-HT-agV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Tf-HT-agV" firstAttribute="bottom" secondItem="oSn-Yg-GGn" secondAttribute="bottom" constant="133" id="AjC-je-2Fd"/>
+                            <constraint firstItem="oSn-Yg-GGn" firstAttribute="centerX" secondItem="hiv-8N-QSG" secondAttribute="centerX" id="bB4-FR-3EX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k0N-UA-kR4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="RW5-xo-xky"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vv-I0-DDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KOe-4L-Ffw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HL9-pU-cjf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ENG-XW-km7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hAN-FD-9Sb" kind="relationship" relationship="rootViewController" id="LNP-N2-rnv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEE-VC-GKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="76"/>
         </scene>
     </scenes>
     <resources>

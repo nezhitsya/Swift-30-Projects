@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3591FA262141E4009B8F36 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3591F9262141E4009B8F36 /* DetailViewController.swift */; };
 		0B6D52752620242300628E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D52742620242300628E9B /* AppDelegate.swift */; };
 		0B6D52772620242300628E9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D52762620242300628E9B /* SceneDelegate.swift */; };
 		0B6D52792620242300628E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D52782620242300628E9B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3591F9262141E4009B8F36 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0B6D52712620242300628E9B /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6D52742620242300628E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B6D52762620242300628E9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0B6D52822620242500628E9B /* LaunchScreen.storyboard */,
 				0B6D52852620242500628E9B /* Info.plist */,
 				0B6D527D2620242300628E9B /* Animation.xcdatamodeld */,
+				0B3591F9262141E4009B8F36 /* DetailViewController.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				0B6D52792620242300628E9B /* ViewController.swift in Sources */,
 				0B6D52752620242300628E9B /* AppDelegate.swift in Sources */,
+				0B3591FA262141E4009B8F36 /* DetailViewController.swift in Sources */,
 				0B6D527F2620242300628E9B /* Animation.xcdatamodeld in Sources */,
 				0B6D52772620242300628E9B /* SceneDelegate.swift in Sources */,
 			);

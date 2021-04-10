@@ -38,7 +38,13 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "AnimationDetail" {
+            if let cell = sender as? UITableViewCell, let indexPath = masterTable.indexPath(for: cell) {
+                if let vc = segue.destination as? DetailViewController {
+                    vc.barTitle = items[(indexPath as NSIndexPath).row]
+                }
+            }
+        }
     }
 }
 
