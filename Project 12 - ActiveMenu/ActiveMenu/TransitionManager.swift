@@ -27,30 +27,30 @@ extension TransitionManager: UIViewControllerAnimatedTransitioning {
         container.addSubview(bottomView!)
         container.addSubview(menuView!)
     }
-}
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.5
+    }
 
-func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-    return 0.5
-}
+    func offStage(_ amount: CGFloat) -> CGAffineTransform {
+        return CGAffineTransform(translationX: amount, y: 0)
+    }
 
-func offStage(_ amount: CGFloat) -> CGAffineTransform {
-    return CGAffineTransform(translationX: amount, y: 0)
-}
+    func offStageMenuController(_ menuViewController: MenuViewController) {
+        menuViewController.view.alpha = 0
+        
+        let topRowOffset: CGFloat = 300
+        let middleRowOffset: CGFloat = 150
+        let bottomRowOffset: CGFloat = 50
+        
+        
+    }
 
-func offStageMenuController(_ menuViewController: MenuViewController) {
-    menuViewController.view.alpha = 0
-    
-    let topRowOffset: CGFloat = 300
-    let middleRowOffset: CGFloat = 150
-    let bottomRowOffset: CGFloat = 50
-    
-    
-}
-
-func onStageMenuControoler(_ menuViewController: MenuViewController) {
-    menuViewController.view.alpha = 1
-    
-    
+    func onStageMenuControoler(_ menuViewController: MenuViewController) {
+        menuViewController.view.alpha = 1
+        
+        
+    }
 }
 
 extension TransitionManager: UIViewControllerTransitioningDelegate {
