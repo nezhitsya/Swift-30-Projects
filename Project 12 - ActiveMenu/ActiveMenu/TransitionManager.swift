@@ -21,11 +21,25 @@ extension TransitionManager: UIViewControllerAnimatedTransitioning {
         let bottomView = bottomViewController.view
         
         if (self.presenting) {
-            
+            offStageMenuController(menuViewController)
         }
         
         container.addSubview(bottomView!)
         container.addSubview(menuView!)
+        
+        let duration = self.transitionDuration(using: transitionContext)
+        
+        UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: {
+            
+            if (self.presenting) {
+                self.onStageMenuControoler(menuViewController)
+            } else {
+                self.offStageMenuController(menuViewController)
+            }
+        }, completion: { finished in
+            transitionContext.completeTransition(true)
+            UIApplication.shared.keyWindow?.addSubview(screens.to.view)
+        })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -43,13 +57,23 @@ extension TransitionManager: UIViewControllerAnimatedTransitioning {
         let middleRowOffset: CGFloat = 150
         let bottomRowOffset: CGFloat = 50
         
-        
+        menuViewController.camera.transform = self.offStage(-topRowOffset)
+        menuViewController.text.transform = self.offStage(-middleRowOffset)
+        menuViewController.call.transform = self.offStage(-bottomRowOffset)
+        menuViewController.search.transform = self.offStage(topRowOffset)
+        menuViewController.alarm.transform = self.offStage(middleRowOffset)
+        menuViewController.setting.transform = self.offStage(bottomRowOffset)
     }
 
     func onStageMenuControoler(_ menuViewController: MenuViewController) {
         menuViewController.view.alpha = 1
         
-        
+        menuViewController.camera.transform = CGAffineTransform.identity
+        menuViewController.text.transform = CGAffineTransform.identity
+        menuViewController.call.transform = CGAffineTransform.identity
+        menuViewController.search.transform = CGAffineTransform.identity
+        menuViewController.alarm.transform = CGAffineTransform.identity
+        menuViewController.setting.transform = CGAffineTransform.identity
     }
 }
 

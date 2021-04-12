@@ -60,32 +60,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-5n-hHd">
-                                <rect key="frame" x="244" y="134" width="150" height="150"/>
+                                <rect key="frame" x="221" y="149" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="lCU-WY-P9U">
-                                <rect key="frame" x="20" y="134" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="lrf-yi-Xlh">
-                                <rect key="frame" x="20" y="373" width="150" height="150"/>
+                                <rect key="frame" x="62" y="149" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="D6T-JJ-YYE">
-                                <rect key="frame" x="244" y="373" width="150" height="150"/>
+                                <rect key="frame" x="221" y="354" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="KqH-rz-c0I">
-                                <rect key="frame" x="20" y="602" width="150" height="150"/>
+                                <rect key="frame" x="62" y="550" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-ck-oSX">
-                                <rect key="frame" x="244" y="602" width="150" height="150"/>
+                                <rect key="frame" x="221" y="550" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-yq-Lao">
-                                <rect key="frame" x="185" y="821" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-yq-Lao">
+                                <rect key="frame" x="184.5" y="821" width="45" height="30"/>
                                 <state key="normal" title="cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -93,9 +88,17 @@
                                     <action selector="cancel:" destination="M8O-hR-Lze" eventType="touchUpInside" id="v2f-S9-mtR"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="lrf-yi-Xlh">
+                                <rect key="frame" x="62" y="354" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s2Y-dP-L87"/>
                         <color key="backgroundColor" red="0.19212910529999999" green="0.1882318258" blue="0.18823555110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="s2Y-dP-L87" firstAttribute="bottom" secondItem="fDg-yq-Lao" secondAttribute="bottom" constant="11" id="FFe-V8-vqh"/>
+                            <constraint firstItem="fDg-yq-Lao" firstAttribute="centerX" secondItem="aH0-Gr-GET" secondAttribute="centerX" id="aXZ-bb-kfi"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="alarm" destination="D6T-JJ-YYE" id="93k-ZI-EXf"/>
