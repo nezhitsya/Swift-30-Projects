@@ -8,14 +8,26 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
+    let transitionManager = TransitionManager()
+    
+    @IBOutlet weak var camera: UIImageView!
+    @IBOutlet weak var search: UIImageView!
+    @IBOutlet weak var text: UIImageView!
+    @IBOutlet weak var alarm: UIImageView!
+    @IBOutlet weak var call: UIImageView!
+    @IBOutlet weak var setting: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.transitioningDelegate = self.transitionManager
     }
     
-
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
