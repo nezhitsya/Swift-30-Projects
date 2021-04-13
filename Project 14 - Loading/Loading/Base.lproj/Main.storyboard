@@ -17,38 +17,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-zV-6Jt">
-                                <rect key="frame" x="122" y="278" width="170" height="170"/>
+                                <rect key="frame" x="122" y="150" width="170" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="4zw-kH-908"/>
-                                    <constraint firstAttribute="width" constant="170" id="5ck-ea-fWo"/>
+                                    <constraint firstAttribute="width" constant="170" id="SlT-g0-uC9"/>
+                                    <constraint firstAttribute="height" constant="170" id="UDb-3x-Vvs"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="vXR-QZ-p9c">
-                                <rect key="frame" x="122" y="278" width="170" height="170"/>
+                                <rect key="frame" x="122" y="363" width="170" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="NXF-Z5-75B"/>
-                                    <constraint firstAttribute="height" constant="170" id="bmX-Gp-DJA"/>
+                                    <constraint firstAttribute="height" constant="170" id="CrA-Jx-ZkO"/>
+                                    <constraint firstAttribute="width" constant="170" id="Sm2-B8-lkF"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="3dM-xR-jre">
-                                <rect key="frame" x="122" y="278" width="170" height="170"/>
+                                <rect key="frame" x="122" y="581" width="170" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="6us-b8-8tU"/>
-                                    <constraint firstAttribute="width" constant="170" id="UxN-By-TLY"/>
+                                    <constraint firstAttribute="height" constant="170" id="7Sp-ho-C2I"/>
+                                    <constraint firstAttribute="width" constant="170" id="ZaK-vG-o5a"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3dM-xR-jre" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="F1r-x1-FaQ"/>
-                            <constraint firstItem="vXR-QZ-p9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F86-Z2-Jrv"/>
-                            <constraint firstItem="3dM-xR-jre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gjx-Tp-Sis"/>
-                            <constraint firstItem="aTB-zV-6Jt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="JwB-sx-0AG"/>
-                            <constraint firstItem="aTB-zV-6Jt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qt9-4L-eaH"/>
-                            <constraint firstItem="vXR-QZ-p9c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="w1b-BQ-xsQ"/>
+                            <constraint firstItem="vXR-QZ-p9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jpy-oq-tjQ"/>
+                            <constraint firstItem="3dM-xR-jre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLg-i1-doA"/>
+                            <constraint firstItem="vXR-QZ-p9c" firstAttribute="top" secondItem="aTB-zV-6Jt" secondAttribute="bottom" constant="43" id="UYs-9F-mWF"/>
+                            <constraint firstItem="aTB-zV-6Jt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="elk-A5-9Yl"/>
+                            <constraint firstItem="3dM-xR-jre" firstAttribute="top" secondItem="vXR-QZ-p9c" secondAttribute="bottom" constant="48" id="gI3-XX-Byg"/>
+                            <constraint firstItem="aTB-zV-6Jt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvG-h7-q5A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image1" destination="aTB-zV-6Jt" id="xbk-wB-Lqf"/>
+                        <outlet property="image2" destination="vXR-QZ-p9c" id="H5m-UJ-gS4"/>
+                        <outlet property="image3" destination="3dM-xR-jre" id="y10-r3-2cn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
