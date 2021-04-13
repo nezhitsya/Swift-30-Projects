@@ -21,7 +21,19 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-2K-VZx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAK-E3-YCY">
+                                                <rect key="frame" x="192" y="437.5" width="30" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="MAK-E3-YCY" firstAttribute="centerX" secondItem="MOF-2K-VZx" secondAttribute="centerX" id="gft-XX-csn"/>
+                                            <constraint firstItem="MAK-E3-YCY" firstAttribute="centerY" secondItem="MOF-2K-VZx" secondAttribute="centerY" id="lP0-ba-V6F"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
