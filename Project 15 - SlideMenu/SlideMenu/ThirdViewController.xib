@@ -18,23 +18,28 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fourth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-mA-NMk">
-                    <rect key="frame" x="184" y="437.5" width="46.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="ukj-rc-y8X">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="896" id="SfU-Sb-4ey"/>
+                        <constraint firstAttribute="width" constant="414" id="UQu-QH-8US"/>
+                        <constraint firstAttribute="width" secondItem="ukj-rc-y8X" secondAttribute="height" multiplier="207:448" id="r11-SO-mbz"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OdE-mA-NMk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZoY-NA-Zyq"/>
-                <constraint firstItem="OdE-mA-NMk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ru5-Y0-g8g"/>
+                <constraint firstItem="ukj-rc-y8X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R50-fC-wfd"/>
+                <constraint firstItem="ukj-rc-y8X" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aeT-jp-aWg"/>
+                <constraint firstItem="ukj-rc-y8X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="e03-Am-aRg"/>
+                <constraint firstAttribute="bottom" secondItem="ukj-rc-y8X" secondAttribute="bottom" id="iSO-u9-Re1"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="86"/>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </view>
     </objects>
     <resources>
+        <image name="4" width="237" height="448"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

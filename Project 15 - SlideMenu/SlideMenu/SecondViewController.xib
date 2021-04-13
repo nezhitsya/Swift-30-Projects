@@ -18,23 +18,28 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="third" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-aK-OUb">
-                    <rect key="frame" x="189.5" y="437.5" width="35" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="eUB-b6-x17">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="896" id="aF4-AC-aYm"/>
+                        <constraint firstAttribute="width" secondItem="eUB-b6-x17" secondAttribute="height" multiplier="207:448" id="bBU-pe-aZ5"/>
+                        <constraint firstAttribute="width" constant="414" id="mc7-0E-1aV"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Hgm-aK-OUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cca-TG-VxL"/>
-                <constraint firstItem="Hgm-aK-OUb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f0W-5a-25U"/>
+                <constraint firstItem="eUB-b6-x17" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Iba-Zw-Xed"/>
+                <constraint firstAttribute="bottom" secondItem="eUB-b6-x17" secondAttribute="bottom" id="MHk-n6-atB"/>
+                <constraint firstItem="eUB-b6-x17" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="adT-XY-wD0"/>
+                <constraint firstItem="eUB-b6-x17" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iei-5p-gIg"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="86"/>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </view>
     </objects>
     <resources>
+        <image name="3" width="282" height="483"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
