@@ -59,7 +59,10 @@ class VideoSplashViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        moviePlayer.view.frame = videoFrame
+        moviePlayer.showsPlaybackControls = false
+        view.addSubview(moviePlayer.view)
+        view.sendSubviewToBack(moviePlayer.view)
     }
     
     private func setMoviePlayer(_ url: URL) {

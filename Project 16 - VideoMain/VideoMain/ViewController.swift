@@ -18,6 +18,13 @@ class ViewController: VideoSplashViewController {
     func setupVideoBackground() {
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "background", ofType: "mp4")!)
         
+        videoFrame = view.frame
+        alwaysRepeat = true
+        sound = true
+        startTime = 0.0
+        alpha = 0.8
+        contentURL = url
+        
         view.isUserInteractionEnabled = false
     }
     
