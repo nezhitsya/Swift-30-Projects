@@ -19,6 +19,7 @@ class ViewController: VideoSplashViewController {
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "background", ofType: "mp4")!)
         
         videoFrame = view.frame
+        fillMode = .resizeAspectFill
         alwaysRepeat = true
         sound = true
         startTime = 0.0

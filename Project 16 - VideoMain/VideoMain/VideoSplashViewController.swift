@@ -9,6 +9,12 @@ import UIKit
 import MediaPlayer
 import AVKit
 
+public enum ScalingMode {
+    case resize
+    case resizeAspect
+    case resizeAspectFill
+}
+
 class VideoSplashViewController: UIViewController {
     
     private let moviePlayer = AVPlayerViewController()
@@ -45,6 +51,18 @@ class VideoSplashViewController: UIViewController {
         didSet {
             if alwaysRepeat {
                 NotificationCenter.default.addObserver(self, selector: #selector(VideoSplashViewController.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: moviePlayer.player?.currentItem)
+            }
+        }
+    }
+    open var fillMode: ScalingMode = .resizeAspectFill {
+        didSet {
+            switch fillMode {
+            case .resize:
+                moviePlayer.videoGravity = convertToAVLayerVideoGravity(AVLayerVideoGravity.resize.rawValue)
+            case .resizeAspect:
+                moviePlayer.videoGravity = convertToAVLayerVideoGravity(AVLayerVideoGravity.resizeAspect.rawValue)
+            case .resizeAspectFill:
+                moviePlayer.videoGravity = convertToAVLayerVideoGravity(AVLayerVideoGravity.resizeAspectFill.rawValue)
             }
         }
     }
@@ -86,4 +104,8 @@ class VideoSplashViewController: UIViewController {
     }
     */
 
+}
+
+private func convertToAVLayerVideoGravity(_ input: String) -> AVLayerVideoGravity {
+    return AVLayerVideoGravity(rawValue: input)
 }
