@@ -15,6 +15,7 @@
 		0B3AE01026262102008A307E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3AE00F26262102008A307E /* Assets.xcassets */; };
 		0B3AE01326262102008A307E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3AE01126262102008A307E /* LaunchScreen.storyboard */; };
 		0BF3F7ED26275D280094B61C /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF3F7EC26275D280094B61C /* VideoSplashViewController.swift */; };
+		0BF3F7F0262762020094B61C /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF3F7EF262761EE0094B61C /* background.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0B3AE01226262102008A307E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B3AE01426262102008A307E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BF3F7EC26275D280094B61C /* VideoSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
+		0BF3F7EF262761EE0094B61C /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0B3AE01426262102008A307E /* Info.plist */,
 				0B3AE00C26262100008A307E /* VideoMain.xcdatamodeld */,
 				0BF3F7EC26275D280094B61C /* VideoSplashViewController.swift */,
+				0BF3F7EF262761EE0094B61C /* background.mp4 */,
 			);
 			path = VideoMain;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3AE01326262102008A307E /* LaunchScreen.storyboard in Resources */,
+				0BF3F7F0262762020094B61C /* background.mp4 in Resources */,
 				0B3AE01026262102008A307E /* Assets.xcassets in Resources */,
 				0B3AE00B26262100008A307E /* Main.storyboard in Resources */,
 			);
