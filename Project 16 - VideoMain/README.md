@@ -1,4 +1,4 @@
-# Slide Menu
+# Video Main
 
 This app includes the video background of page.
 
