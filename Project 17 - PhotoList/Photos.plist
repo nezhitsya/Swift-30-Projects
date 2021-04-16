@@ -10,8 +10,6 @@
 	<string>https://user-images.githubusercontent.com/60697742/115075957-daa18180-9f36-11eb-8b08-695845144578.jpg</string>
 	<key>Bread</key>
 	<string>https://user-images.githubusercontent.com/60697742/115075960-dbd2ae80-9f36-11eb-9e9d-3af0004e8838.jpg</string>
-	<key>Winter</key>
-	<string>http://www.freeimages.com/pic/m/u/u_/u_01_c/310610_winter.jpg</string>
 	<key>Pancake</key>
 	<string>https://user-images.githubusercontent.com/60697742/115076060-fe64c780-9f36-11eb-9c03-4b313e0223a7.jpg</string>
 	<key>Smore</key>
@@ -48,5 +46,13 @@
 	<string>https://user-images.githubusercontent.com/60697742/115076935-3ae4f300-9f38-11eb-9b06-055974fa0142.jpg</string>
 	<key>Radio</key>
 	<string>https://user-images.githubusercontent.com/60697742/115077000-4f28f000-9f38-11eb-92db-e72a004c0753.jpg</string>
+	<key>Car</key>
+	<string>https://user-images.githubusercontent.com/60697742/115077651-60bec780-9f39-11eb-85f4-21609d2c9e32.jpg</string>
+	<key>Chocolate</key>
+	<string>https://user-images.githubusercontent.com/60697742/115077715-77fdb500-9f39-11eb-80e3-c3f3b74f43a5.jpg</string>
+	<key>Pizza</key>
+	<string>https://user-images.githubusercontent.com/60697742/115077749-89df5800-9f39-11eb-916c-d16638bcb8a2.jpg</string>
+	<key>Coke</key>
+	<string>https://user-images.githubusercontent.com/60697742/115077797-95328380-9f39-11eb-898d-dcb1e501ad0e.jpg</string>
 </dict>
 </plist>
