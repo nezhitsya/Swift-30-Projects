@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j4O-fU-It1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +22,30 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J0b-cA-ghG" id="yCy-DA-9u6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-dG-it3">
+                                            <rect key="frame" x="20" y="11" width="102" height="102"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="102" id="25g-iD-C8Q"/>
+                                                <constraint firstAttribute="width" constant="102" id="xgf-DF-a7W"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkI-y0-0Cb">
+                                            <rect key="frame" x="154" y="51.5" width="44.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UkI-y0-0Cb" firstAttribute="leading" secondItem="BdE-dG-it3" secondAttribute="trailing" constant="32" id="6yE-wT-cQe"/>
+                                        <constraint firstItem="UkI-y0-0Cb" firstAttribute="top" secondItem="yCy-DA-9u6" secondAttribute="topMargin" constant="40.5" id="CBe-Co-0oj"/>
+                                        <constraint firstItem="UkI-y0-0Cb" firstAttribute="centerY" secondItem="yCy-DA-9u6" secondAttribute="centerY" id="FOO-Vc-ROw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UkI-y0-0Cb" secondAttribute="bottom" constant="40.5" id="UWi-3S-gZu"/>
+                                        <constraint firstItem="BdE-dG-it3" firstAttribute="top" secondItem="yCy-DA-9u6" secondAttribute="topMargin" id="bPY-9K-FEK"/>
+                                        <constraint firstItem="BdE-dG-it3" firstAttribute="leading" secondItem="yCy-DA-9u6" secondAttribute="leadingMargin" id="hey-Fb-TCg"/>
+                                        <constraint firstItem="BdE-dG-it3" firstAttribute="bottom" secondItem="yCy-DA-9u6" secondAttribute="bottomMargin" id="xhW-AL-SQc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
