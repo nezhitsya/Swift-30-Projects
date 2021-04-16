@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Book</key>
+	<string>https://user-images.githubusercontent.com/60697742/115075767-8d251480-9f36-11eb-90d3-9fc4aa943ceb.jpg</string>
+	<key>Film photos</key>
+	<string>https://user-images.githubusercontent.com/60697742/115075771-8eeed800-9f36-11eb-925b-eb588d181260.jpg</string>
+	<key>Letter</key>
+	<string>https://user-images.githubusercontent.com/60697742/115075957-daa18180-9f36-11eb-8b08-695845144578.jpg</string>
+	<key>Bread</key>
+	<string>https://user-images.githubusercontent.com/60697742/115075960-dbd2ae80-9f36-11eb-9e9d-3af0004e8838.jpg</string>
+	<key>Winter</key>
+	<string>http://www.freeimages.com/pic/m/u/u_/u_01_c/310610_winter.jpg</string>
+	<key>Pancake</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076060-fe64c780-9f36-11eb-9c03-4b313e0223a7.jpg</string>
+	<key>Smore</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076064-002e8b00-9f37-11eb-90c4-0637428f6154.jpg</string>
+	<key>Milk</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076134-163c4b80-9f37-11eb-8645-f14b36f9001f.jpg</string>
+	<key>Diary</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076140-18060f00-9f37-11eb-87a8-25e3a0be7545.jpg</string>
+	<key>Mail</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076227-3966fb00-9f37-11eb-9259-daa123fa77d9.jpg</string>
+	<key>CDs</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076231-3a982800-9f37-11eb-9c86-e096c98be524.jpg</string>
+	<key>Breakfast</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076285-526fac00-9f37-11eb-8a90-8202e244e2ae.jpg</string>
+	<key>Camera</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076289-54396f80-9f37-11eb-8103-508c9859a949.jpg</string>
+	<key>Cookie Jar</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076474-92cf2a00-9f37-11eb-9e94-23d60e381e9b.jpg</string>
+	<key>Teddy Bear</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076538-aaa6ae00-9f37-11eb-83ec-3bd803689db3.jpg</string>
+	<key>Cupcake</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076543-abd7db00-9f37-11eb-951e-bf8d91823e71.jpg</string>
+	<key>Coffee</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076623-ca3dd680-9f37-11eb-85e1-c5efd49a4f8e.jpg</string>
+	<key>Cake</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076630-cc079a00-9f37-11eb-8e37-d44653ecc4a1.jpg</string>
+	<key>Tart</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076819-0e30db80-9f38-11eb-9e8b-d49dd200d142.jpg</string>
+	<key>Phone</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076822-0ec97200-9f38-11eb-944c-af9983e90daf.jpg</string>
+	<key>Cart</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076931-39b3c600-9f38-11eb-9de5-6062bad924dc.jpg</string>
+	<key>Computer</key>
+	<string>https://user-images.githubusercontent.com/60697742/115076935-3ae4f300-9f38-11eb-9b06-055974fa0142.jpg</string>
+	<key>Radio</key>
+	<string>https://user-images.githubusercontent.com/60697742/115077000-4f28f000-9f38-11eb-92db-e72a004c0753.jpg</string>
+</dict>
+</plist>

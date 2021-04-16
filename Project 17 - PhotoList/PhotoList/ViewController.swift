@@ -39,7 +39,7 @@ class ViewController: UITableViewController {
     }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        <#code#>
+        
     }
 }
 
