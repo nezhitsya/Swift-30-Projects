@@ -97,5 +97,30 @@ class ImageFiltration: Operation {
         
         filter?.setValue(inputImage, forKey: kCIInputImageKey)
         filter?.setValue(0.8, forKey: "inputIntensity")
+        
+        if isCancelled {
+            return nil
+        }
+        
+        if let outputImage = filter?.outputImage, let outImage = context.createCGImage(outputImage, from: outputImage.extent) {
+            return UIImage(cgImage: outImage)
+        } else {
+            return nil
+        }
+    }
+    
+    override func main() {
+        if isCancelled {
+            return
+        }
+        
+        if self.photoRecord.state != .Downloaded {
+            return
+        }
+        
+        if let image = photoRecord.image, let filteredImage = applySepiaFilter(image: image) {
+            photoRecord.image = filteredImage
+            photoRecord.state = .Filtered
+        }
     }
 }
