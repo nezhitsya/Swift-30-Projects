@@ -8,7 +8,7 @@
 import UIKit
 import CoreImage
 
-let imageURL = URL(string: "")
+let imageURL = URL(string: "https://downgit.github.io/#/home?url=https://github.com/nezhitsya/Swift-30-Projects/blob/master/Project%2017%20-%20PhotoList/Photos.plist")
 
 class ViewController: UITableViewController {
 
