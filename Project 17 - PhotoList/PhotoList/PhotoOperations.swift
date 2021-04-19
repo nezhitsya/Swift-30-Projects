@@ -96,7 +96,7 @@ class ImageFiltration: Operation {
         let filter = CIFilter(name: "CISepiaTone")
         
         filter?.setValue(inputImage, forKey: kCIInputImageKey)
-        filter?.setValue(0.8, forKey: "inputIntensity")
+        filter?.setValue(0.1, forKey: "inputIntensity")
         
         if isCancelled {
             return nil
