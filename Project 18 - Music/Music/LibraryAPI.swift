@@ -71,6 +71,10 @@ class LibraryAPI: NSObject {
             }
         }
     }
+    
+    func saveAlbums() {
+        persistencyManager.saveAlbums()
+    }
 }
 
 extension Selector {
