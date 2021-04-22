@@ -18,11 +18,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAA-Cg-ay9">
                                 <rect key="frame" x="0.0" y="818" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem systemItem="reply" id="UpZ-8q-5G3"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CBc-nB-bvO"/>
-                                    <barButtonItem systemItem="trash" id="UPq-Ie-ywm"/>
-                                </items>
+                                <items/>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-kP-Rcb">
                                 <rect key="frame" x="20" y="366" width="374" height="334"/>

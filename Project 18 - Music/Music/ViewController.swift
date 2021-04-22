@@ -31,7 +31,16 @@ class ViewController: UIViewController {
         
         func setComponents() {
             dataTable.backgroundView = nil
+            loadPreviousState()
             
+            let undoButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: Selector.undoAction)
+            undoButton.isEnabled = false
+            
+            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            let trachButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: Selector.deleteAlbum)
+            let toolbarButtonItems = [undoButton, space, trachButton]
+            
+            toolbar.setItems(toolbarButtonItems, animated: true)
         }
         
         setUI()
@@ -51,10 +60,41 @@ class ViewController: UIViewController {
         }
         dataTable.reloadData()
     }
+    
+    func loadPreviousState() {
+        currentAlbumIndex = UserDefaults.standard.integer(forKey: Constants.indexRestorationKey)
+        showDataForAlbum(at: currentAlbumIndex)
+    }
+    
+    func reloadScroller() {
+        allAlbums = LibraryAPI.sharedInstance.getAlbum()
+        
+        if currentAlbumIndex < 0 {
+            currentAlbumIndex = 0
+        } else if currentAlbumIndex >= allAlbums.count {
+            currentAlbumIndex = allAlbums.count - 1
+        }
+        
+        showDataForAlbum(at: currentAlbumIndex)
+    }
+    
+    func addAlbumAtIndex(_ album: Album, index: Int) {
+        LibraryAPI.sharedInstance.addAlbum(album, index: index)
+        currentAlbumIndex = index
+        reloadScroller()
+    }
 
     @objc func saveCurrentState() {
         UserDefaults.standard.set(currentAlbumIndex, forKey: Constants.indexRestorationKey)
         LibraryAPI.sharedInstance.saveAlbums()
+    }
+    
+    @objc func deleteAlbum() {
+        
+    }
+    
+    @objc func undoAction() {
+        
     }
 }
 
@@ -65,4 +105,6 @@ private enum Constants {
 
 private extension Selector {
     static let saveCurrentState = #selector(ViewController.saveCurrentState)
+    static let undoAction = #selector(ViewController.undoAction)
+    static let deleteAlbum = #selector(ViewController.deleteAlbum)
 }
