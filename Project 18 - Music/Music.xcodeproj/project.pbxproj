@@ -14,6 +14,7 @@
 		0B00F904262E6412001B8AFA /* Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B00F902262E6412001B8AFA /* Music.xcdatamodeld */; };
 		0B00F906262E6413001B8AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B00F905262E6413001B8AFA /* Assets.xcassets */; };
 		0B00F909262E6413001B8AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B00F907262E6413001B8AFA /* LaunchScreen.storyboard */; };
+		0BD0AE9D26310E860063CE08 /* album.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0AE9C26310E860063CE08 /* album.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0B00F905262E6413001B8AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B00F908262E6413001B8AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B00F90A262E6413001B8AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD0AE9C26310E860063CE08 /* album.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = album.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		0B00F8F8262E6412001B8AFA /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				0BD0AE9C26310E860063CE08 /* album.json */,
 				0B00F8F9262E6412001B8AFA /* AppDelegate.swift */,
 				0B00F8FB262E6412001B8AFA /* SceneDelegate.swift */,
 				0B00F8FD262E6412001B8AFA /* ViewController.swift */,
@@ -130,6 +133,7 @@
 				0B00F909262E6413001B8AFA /* LaunchScreen.storyboard in Resources */,
 				0B00F906262E6413001B8AFA /* Assets.xcassets in Resources */,
 				0B00F901262E6412001B8AFA /* Main.storyboard in Resources */,
+				0BD0AE9D26310E860063CE08 /* album.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Everything I Wanted",
+    "artist": "Billie Eilish",
+    "genre": "Pop",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115642929-c99da980-a356-11eb-9911-50ae4882a56c.PNG",
+    "year": "2019"
+  },
+  {
+    "artist": "zedd & kehlani",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643239-5a748500-a357-11eb-8a8a-2c1b4d406990.jpg",
+    "genre": "Pop",
+    "title": "Good Thing",
+    "year": "2019"
+  },
+  {
+    "artist": "NOTD, Daya",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643357-960f4f00-a357-11eb-9013-abab91f96aff.jpg",
+    "genre": "Pop",
+    "title": "Wanted",
+    "year": "2019"
+  },
+  {
+    "artist": "Ed Sheeran",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643467-c951de00-a357-11eb-94f2-b3620cedc72e.jpg",
+    "genre": "Pop",
+    "title": "Afterglow",
+    "year": "2020"
+  },
+  {
+    "artist": "Q",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643602-04541180-a358-11eb-8c0e-c7606a609b2a.jpeg",
+    "genre": "Pop",
+    "title": "Take Me Where Your Heart Is",
+    "year": "2020"
+  },
+  {
+    "artist": "The Vamps",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643705-3c5b5480-a358-11eb-8ba1-59ebcafa7c15.jpg",
+    "genre": "Pop",
+    "title": "Better",
+    "year": "2020"
+  },
+  {
+    "artist": "Justin Bieber",
+    "coverUrl": "https://user-images.githubusercontent.com/60697742/115643986-b986c980-a358-11eb-9e3c-5de9ccd2f894.jpg",
+    "genre": "Pop",
+    "title": "Holy",
+    "year": "2020"
+  }
+]
