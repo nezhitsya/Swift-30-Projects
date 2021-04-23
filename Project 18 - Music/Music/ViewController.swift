@@ -36,6 +36,11 @@ class ViewController: UIViewController {
             dataTable.backgroundView = nil
             loadPreviousState()
             
+            scroller.delegate = self
+            scroller.dataSource = self
+            reloadScroller()
+            scroller.scrollToView(at: currentAlbumIndex)
+            
             let undoButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: Selector.undoAction)
             undoButton.isEnabled = false
             
@@ -78,6 +83,7 @@ class ViewController: UIViewController {
             currentAlbumIndex = allAlbums.count - 1
         }
         
+        scroller.reload()
         showDataForAlbum(at: currentAlbumIndex)
     }
     
@@ -158,4 +164,36 @@ private extension Selector {
     static let saveCurrentState = #selector(ViewController.saveCurrentState)
     static let undoAction = #selector(ViewController.undoAction)
     static let deleteAlbum = #selector(ViewController.deleteAlbum)
+}
+
+extension ViewController: HorizontalScrollerDataSource {
+    func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int {
+        return allAlbums.count
+    }
+    
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView {
+        let album = allAlbums[index]
+        let albumView = AlbumView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), coverUrl: album.coverUrl)
+        
+        if currentAlbumIndex == index {
+            albumView.highlightAlbum(true)
+        } else {
+            albumView.highlightAlbum(false)
+        }
+        return albumView
+    }
+}
+
+extension ViewController: HorizontalScrollerDelegate {
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int) {
+        let previousAlbumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
+        
+        previousAlbumView.highlightAlbum(false)
+        currentAlbumIndex = index
+        
+        let albumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
+        
+        albumView.highlightAlbum(true)
+        showDataForAlbum(at: currentAlbumIndex)
+    }
 }

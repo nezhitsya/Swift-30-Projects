@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HorizontalScrollerDataSource: class {
-    func numberOfVies(in horizontalScrollerView: HorizontalScrollerView) -> Int
+    func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int
     
     func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView
 }
@@ -90,7 +90,7 @@ class HorizontalScrollerView: UIView {
         
         var xValue = ViewConstants.Offset
         
-        contentViews = (0..<dataSource.numberOfVies(in: self)).map { index in
+        contentViews = (0..<dataSource.numberOfViews(in: self)).map { index in
             xValue += ViewConstants.Padding
             
             let view = dataSource.horizontalScrollerView(self, viewAt: index)

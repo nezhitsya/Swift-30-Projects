@@ -52,6 +52,14 @@ class AlbumView: UIView {
             }
         }
     }
+    
+    func highlightAlbum(_ didHighlightView: Bool) {
+        if didHighlightView == true {
+            backgroundColor = .white
+        } else {
+            backgroundColor = .black
+        }
+    }
 }
 
 extension Notification.Name {
