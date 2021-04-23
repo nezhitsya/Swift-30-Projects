@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="width" secondItem="dFz-kP-Rcb" secondAttribute="height" multiplier="187:167" id="W94-jZ-R4a"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="RVL-Az-PTG" detailTextLabel="fY7-Ie-vRz" style="IBUITableViewCellStyleValue1" id="XoQ-bs-1WW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="RVL-Az-PTG" detailTextLabel="fY7-Ie-vRz" style="IBUITableViewCellStyleValue1" id="XoQ-bs-1WW">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XoQ-bs-1WW" id="VQ3-pj-Mlu">
@@ -55,6 +55,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-nT-lKy" customClass="HorizontalScrollerView" customModule="Music" customModuleProvider="target">
+                                <rect key="frame" x="20" y="154" width="374" height="170"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="OFx-Qn-tfB"/>
+                                    <constraint firstAttribute="height" constant="170" id="ZuX-Dj-UBT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,13 +72,17 @@
                             <constraint firstItem="dFz-kP-Rcb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="278" id="JxA-Ca-CYr"/>
                             <constraint firstItem="dFz-kP-Rcb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mp5-PU-iBW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFz-kP-Rcb" secondAttribute="trailing" constant="20" id="Nzx-92-RoI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U6h-nT-lKy" secondAttribute="trailing" constant="20" id="XQ5-cy-z7f"/>
+                            <constraint firstItem="U6h-nT-lKy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="bqq-h1-vVb"/>
                             <constraint firstItem="tAA-Cg-ay9" firstAttribute="top" secondItem="dFz-kP-Rcb" secondAttribute="bottom" constant="118" id="l2H-PQ-xZh"/>
                             <constraint firstItem="dFz-kP-Rcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tRG-dj-jQD"/>
+                            <constraint firstItem="U6h-nT-lKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vph-dQ-TBF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Music" id="DgS-lt-cmq"/>
                     <connections>
                         <outlet property="dataTable" destination="dFz-kP-Rcb" id="2Dv-1I-6ce"/>
+                        <outlet property="scroller" destination="U6h-nT-lKy" id="GVx-EP-wll"/>
                         <outlet property="toolbar" destination="tAA-Cg-ay9" id="OJo-TT-zzQ"/>
                     </connections>
                 </viewController>

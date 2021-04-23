@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var dataTable: UITableView!
     @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var scroller: HorizontalScrollerView!
     
     private var allAlbums = [Album]()
     private var currentAlbumData: [AlbumData]?
