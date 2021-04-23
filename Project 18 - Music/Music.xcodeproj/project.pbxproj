@@ -19,6 +19,7 @@
 		0B22142E2631E33800EC545E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22142D2631E33800EC545E /* LibraryAPI.swift */; };
 		0B2214312631E6DD00EC545E /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2214302631E6DD00EC545E /* AlbumView.swift */; };
 		0B2214342631E85700EC545E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2214332631E85700EC545E /* Constants.swift */; };
+		0BA5163226331D9E000BAA42 /* HorizontalScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5163126331D9E000BAA42 /* HorizontalScroller.swift */; };
 		0BD0AE9D26310E860063CE08 /* album.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0AE9C26310E860063CE08 /* album.json */; };
 		0BD0AEA026310ED80063CE08 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0AE9F26310ED80063CE08 /* Album.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		0B22142D2631E33800EC545E /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		0B2214302631E6DD00EC545E /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		0B2214332631E85700EC545E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0BA5163126331D9E000BAA42 /* HorizontalScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScroller.swift; sourceTree = "<group>"; };
 		0BD0AE9C26310E860063CE08 /* album.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = album.json; sourceTree = "<group>"; };
 		0BD0AE9F26310ED80063CE08 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				0B22142D2631E33800EC545E /* LibraryAPI.swift */,
 				0B2214302631E6DD00EC545E /* AlbumView.swift */,
 				0B2214332631E85700EC545E /* Constants.swift */,
+				0BA5163126331D9E000BAA42 /* HorizontalScroller.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				0B22142E2631E33800EC545E /* LibraryAPI.swift in Sources */,
 				0B2214312631E6DD00EC545E /* AlbumView.swift in Sources */,
 				0B00F8FA262E6412001B8AFA /* AppDelegate.swift in Sources */,
+				0BA5163226331D9E000BAA42 /* HorizontalScroller.swift in Sources */,
 				0B2214342631E85700EC545E /* Constants.swift in Sources */,
 				0B22142B2631E27300EC545E /* HTTPClient.swift in Sources */,
 				0B00F8FC262E6412001B8AFA /* SceneDelegate.swift in Sources */,
