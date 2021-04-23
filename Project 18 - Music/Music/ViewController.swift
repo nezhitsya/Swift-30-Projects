@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.dataTable.dataSource = self
+        
         func setUI() {
             navigationController?.navigationBar.isTranslucent = false
         }
@@ -90,11 +92,59 @@ class ViewController: UIViewController {
     }
     
     @objc func deleteAlbum() {
+        let deletedAlbum: Album = allAlbums[currentAlbumIndex]
+        let undoAction = (deletedAlbum, currentAlbumIndex)
         
+        undoStack.insert(undoAction, at: 0)
+        LibraryAPI.sharedInstance.deleteAlbum(currentAlbumIndex)
+        reloadScroller()
+        
+        let barButtonItems = toolbar.items! as [UIBarButtonItem]
+        let undoButton: UIBarButtonItem = barButtonItems[0]
+        undoButton.isEnabled = true
+        
+        if (allAlbums.count == 0) {
+            let trashButton: UIBarButtonItem = barButtonItems[2]
+            trashButton.isEnabled = false
+        }
     }
     
     @objc func undoAction() {
+        let barButtonItems = toolbar.items! as [UIBarButtonItem]
         
+        if undoStack.count > 0 {
+            let (deletedAlbum, index) = undoStack.remove(at: 0)
+            addAlbumAtIndex(deletedAlbum, index: index)
+        }
+        
+        if undoStack.count == 0 {
+            let undoButton: UIBarButtonItem = barButtonItems[0]
+            undoButton.isEnabled = false
+        }
+        
+        let trashButton: UIBarButtonItem = barButtonItems[2]
+        trashButton.isEnabled = true
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let albumData = currentAlbumData {
+            return albumData.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+        
+        if let albumData = currentAlbumData {
+            cell.textLabel?.text = albumData[(indexPath as NSIndexPath).row].title
+            cell.detailTextLabel?.text = albumData[(indexPath as NSIndexPath).row].value
+        }
+        
+        return cell
     }
 }
 
