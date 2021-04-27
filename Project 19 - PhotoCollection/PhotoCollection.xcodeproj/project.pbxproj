@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B1E7020263793F50008E4EC /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E701F263793F50008E4EC /* Photos.plist */; };
 		0B1E70232637945F0008E4EC /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E70222637945F0008E4EC /* Photos.xcassets */; };
+		0B1E70262637951E0008E4EC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E70252637951E0008E4EC /* Photo.swift */; };
 		0B317BF126367EF300DCE664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF026367EF300DCE664 /* AppDelegate.swift */; };
 		0B317BF326367EF300DCE664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF226367EF300DCE664 /* SceneDelegate.swift */; };
 		0B317BF526367EF300DCE664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF426367EF300DCE664 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		0B1E701F263793F50008E4EC /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		0B1E70222637945F0008E4EC /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		0B1E70252637951E0008E4EC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0B317BED26367EF300DCE664 /* PhotoCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B317BF026367EF300DCE664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B317BF226367EF300DCE664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0B317C0126367EF400DCE664 /* Info.plist */,
 				0B317BF926367EF300DCE664 /* PhotoCollection.xcdatamodeld */,
 				0B1E70222637945F0008E4EC /* Photos.xcassets */,
+				0B1E70252637951E0008E4EC /* Photo.swift */,
 			);
 			path = PhotoCollection;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0B317BF126367EF300DCE664 /* AppDelegate.swift in Sources */,
 				0B317BFB26367EF300DCE664 /* PhotoCollection.xcdatamodeld in Sources */,
 				0B317BF326367EF300DCE664 /* SceneDelegate.swift in Sources */,
+				0B1E70262637951E0008E4EC /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
