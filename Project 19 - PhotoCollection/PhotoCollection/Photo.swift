@@ -35,7 +35,7 @@ class Photo {
         let caption = dictionary["Caption"] as? String
         let comment = dictionary["Comment"] as? String
         let photo = dictionary["Photo"] as? String
-        let image = UIImage(named: photo!)
+        let image = UIImage(named: photo!)?.decompressedImage
         
         self.init(caption: caption!, comment: comment!, image: image!)
     }
