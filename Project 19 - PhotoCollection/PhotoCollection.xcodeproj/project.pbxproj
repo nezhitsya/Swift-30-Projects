@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1E7020263793F50008E4EC /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E701F263793F50008E4EC /* Photos.plist */; };
 		0B317BF126367EF300DCE664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF026367EF300DCE664 /* AppDelegate.swift */; };
 		0B317BF326367EF300DCE664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF226367EF300DCE664 /* SceneDelegate.swift */; };
 		0B317BF526367EF300DCE664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF426367EF300DCE664 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1E701F263793F50008E4EC /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		0B317BED26367EF300DCE664 /* PhotoCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B317BF026367EF300DCE664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B317BF226367EF300DCE664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		0B317BEF26367EF300DCE664 /* PhotoCollection */ = {
 			isa = PBXGroup;
 			children = (
+				0B1E701F263793F50008E4EC /* Photos.plist */,
 				0B317BF026367EF300DCE664 /* AppDelegate.swift */,
 				0B317BF226367EF300DCE664 /* SceneDelegate.swift */,
 				0B317BF426367EF300DCE664 /* ViewController.swift */,
@@ -130,6 +133,7 @@
 				0B317C0026367EF400DCE664 /* LaunchScreen.storyboard in Resources */,
 				0B317BFD26367EF400DCE664 /* Assets.xcassets in Resources */,
 				0B317BF826367EF300DCE664 /* Main.storyboard in Resources */,
+				0B1E7020263793F50008E4EC /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
