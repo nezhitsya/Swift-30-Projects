@@ -20,6 +20,7 @@
 		0B317BFD26367EF400DCE664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B317BFC26367EF400DCE664 /* Assets.xcassets */; };
 		0B317C0026367EF400DCE664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B317BFE26367EF400DCE664 /* LaunchScreen.storyboard */; };
 		0B619E632638DD9B003CFA61 /* CollectionLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */; };
+		0B619E662638E39C003CFA61 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B619E652638E39C003CFA61 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0B317BFF26367EF400DCE664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B317C0126367EF400DCE664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayoutAttributes.swift; sourceTree = "<group>"; };
+		0B619E652638E39C003CFA61 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				0B1E7028263797EB0008E4EC /* RoundedCornersView.swift */,
 				0B1E702B263798780008E4EC /* UIImage+Decompression.swift */,
 				0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */,
+				0B619E652638E39C003CFA61 /* CollectionViewCell.swift */,
 			);
 			path = PhotoCollection;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				0B619E632638DD9B003CFA61 /* CollectionLayoutAttributes.swift in Sources */,
 				0B317BF526367EF300DCE664 /* ViewController.swift in Sources */,
+				0B619E662638E39C003CFA61 /* CollectionViewCell.swift in Sources */,
 				0B317BF126367EF300DCE664 /* AppDelegate.swift in Sources */,
 				0B317BFB26367EF300DCE664 /* PhotoCollection.xcdatamodeld in Sources */,
 				0B317BF326367EF300DCE664 /* SceneDelegate.swift in Sources */,
