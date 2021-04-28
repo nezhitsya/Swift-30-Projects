@@ -19,6 +19,7 @@
 		0B317BFB26367EF300DCE664 /* PhotoCollection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B317BF926367EF300DCE664 /* PhotoCollection.xcdatamodeld */; };
 		0B317BFD26367EF400DCE664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B317BFC26367EF400DCE664 /* Assets.xcassets */; };
 		0B317C0026367EF400DCE664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B317BFE26367EF400DCE664 /* LaunchScreen.storyboard */; };
+		0B619E632638DD9B003CFA61 /* CollectionLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0B317BFC26367EF400DCE664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B317BFF26367EF400DCE664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B317C0126367EF400DCE664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayoutAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				0B1E70252637951E0008E4EC /* Photo.swift */,
 				0B1E7028263797EB0008E4EC /* RoundedCornersView.swift */,
 				0B1E702B263798780008E4EC /* UIImage+Decompression.swift */,
+				0B619E622638DD9B003CFA61 /* CollectionLayoutAttributes.swift */,
 			);
 			path = PhotoCollection;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B619E632638DD9B003CFA61 /* CollectionLayoutAttributes.swift in Sources */,
 				0B317BF526367EF300DCE664 /* ViewController.swift in Sources */,
 				0B317BF126367EF300DCE664 /* AppDelegate.swift in Sources */,
 				0B317BFB26367EF300DCE664 /* PhotoCollection.xcdatamodeld in Sources */,
