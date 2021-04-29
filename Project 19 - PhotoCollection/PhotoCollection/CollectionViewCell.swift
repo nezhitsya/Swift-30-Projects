@@ -27,7 +27,7 @@ class CollectionViewCell: UICollectionViewCell {
         super.apply(layoutAttributes)
         
         if let attributes = layoutAttributes as? CollectionLayoutAttributes {
-            imageViewHeightLayoutConstraint.constant = attributes.photoHeight
+            //imageViewHeightLayoutConstraint.constant = attributes.photoHeight
         }
     }
 }

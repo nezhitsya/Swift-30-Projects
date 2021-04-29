@@ -21,14 +21,14 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="upJ-Qp-RRE" customClass="CollectionViewCell" customModule="PhotoCollection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="185" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ivC-AV-hHy">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ivC-AV-hHy" customClass="RoundedCornersView" customModule="PhotoCollection" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="185" height="386"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-Z1-kSI">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="316"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="316" id="AD7-vK-uPi"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="316" id="AD7-vK-uPi"/>
                                                 <constraint firstAttribute="width" constant="185" id="FGg-LO-JrY"/>
                                             </constraints>
                                         </imageView>
@@ -68,7 +68,7 @@
                                     <outlet property="caption" destination="CaU-oy-Clx" id="eJr-Nw-SAq"/>
                                     <outlet property="comment" destination="8l4-6T-5Ut" id="ZuI-8U-4yH"/>
                                     <outlet property="imageView" destination="hLI-Z1-kSI" id="T5s-Dr-DEO"/>
-                                    <outlet property="imageViewHeightLayoutConstraint" destination="hLI-Z1-kSI" id="yAb-Dn-DGD"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="hLI-Z1-kSI" id="HZ6-u4-h5N"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

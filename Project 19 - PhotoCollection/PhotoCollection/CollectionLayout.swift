@@ -63,7 +63,7 @@ class CollectionLayout: UICollectionViewLayout {
                 let indexPath = IndexPath(item: item, section: 0)
                 let width = columnWidth - cellPadding * 2
                 let photoHeight = delegate.collectionView(collectionView!, heightForPhotoAtIndexPath: indexPath, withWidth: width)
-                let annotationHeight = delegate.collectionView(collectionView!, heightForPhotoAtIndexPath: indexPath, withWidth: width)
+                let annotationHeight = delegate.collectionView(collectionView!, heightForAnnotationAtIndexPath: indexPath, withWidth: width)
                 let height = cellPadding + photoHeight + annotationHeight + cellPadding
                 let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
                 let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
