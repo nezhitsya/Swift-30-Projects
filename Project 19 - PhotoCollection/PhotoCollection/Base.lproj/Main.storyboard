@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ucv-3U-IqP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="upJ-Qp-RRE" customClass="CollectionViewCell" customModule="PhotoCollection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="185" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ivC-AV-hHy" customClass="RoundedCornersView" customModule="PhotoCollection" customModuleProvider="target">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ivC-AV-hHy">
                                     <rect key="frame" x="0.0" y="0.0" width="185" height="386"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -53,6 +53,7 @@
                                         <constraint firstItem="hLI-Z1-kSI" firstAttribute="top" secondItem="ivC-AV-hHy" secondAttribute="top" id="VCE-T8-dxF"/>
                                         <constraint firstItem="8l4-6T-5Ut" firstAttribute="top" secondItem="CaU-oy-Clx" secondAttribute="bottom" constant="4.5" id="VRE-mp-sdj"/>
                                         <constraint firstItem="8l4-6T-5Ut" firstAttribute="leading" secondItem="ivC-AV-hHy" secondAttribute="leading" constant="19" id="h6k-14-O0S"/>
+                                        <constraint firstAttribute="bottom" secondItem="8l4-6T-5Ut" secondAttribute="bottom" constant="15" id="rCu-7n-EJg"/>
                                         <constraint firstAttribute="trailing" secondItem="hLI-Z1-kSI" secondAttribute="trailing" id="xdZ-f0-lXj"/>
                                         <constraint firstAttribute="trailing" secondItem="CaU-oy-Clx" secondAttribute="trailing" constant="17" id="zD6-92-rdb"/>
                                     </constraints>
@@ -64,10 +65,10 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="185" height="386"/>
                                 <connections>
-                                    <outlet property="caption" destination="CaU-oy-Clx" id="KB0-zr-45c"/>
-                                    <outlet property="comment" destination="8l4-6T-5Ut" id="hry-MW-Vsd"/>
-                                    <outlet property="imageView" destination="hLI-Z1-kSI" id="Hbs-M9-Bmx"/>
-                                    <outlet property="imageViewHeightLayoutConstraint" destination="AD7-vK-uPi" id="RAr-cr-dUz"/>
+                                    <outlet property="caption" destination="CaU-oy-Clx" id="eJr-Nw-SAq"/>
+                                    <outlet property="comment" destination="8l4-6T-5Ut" id="ZuI-8U-4yH"/>
+                                    <outlet property="imageView" destination="hLI-Z1-kSI" id="T5s-Dr-DEO"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="hLI-Z1-kSI" id="yAb-Dn-DGD"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
