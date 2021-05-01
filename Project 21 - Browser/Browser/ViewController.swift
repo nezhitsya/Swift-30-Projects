@@ -11,6 +11,11 @@ import WebKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var urlField: UITextField!
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var forwardButton: UIBarButtonItem!
+    @IBOutlet weak var reloadButton: UIButton!
     
     var urlStr: String = "http://www.apple.com"
 

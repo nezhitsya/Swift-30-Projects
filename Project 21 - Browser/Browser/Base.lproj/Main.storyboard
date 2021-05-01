@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-fC-oFz">
-                                <rect key="frame" x="0.0" y="72" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -25,11 +25,72 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0c-Aq-Cao">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2h4-8p-3ie"/>
+                                    <constraint firstAttribute="width" constant="414" id="4zj-ZS-dGU"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lec-Bb-1oI">
+                                <rect key="frame" x="20" y="86" width="374" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="bGp-93-DeN"/>
+                                </constraints>
+                            </progressView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ws-er-NlK">
+                                <rect key="frame" x="20" y="44" width="330" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GT6-ST-9qR"/>
+                                    <constraint firstAttribute="width" constant="330" id="Lm6-VW-wSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-FL-0q5">
+                                <rect key="frame" x="369" y="50" width="36" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ZrO-av-ztE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ws-er-NlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0xZ-Ue-0Kq"/>
+                            <constraint firstItem="Lec-Bb-1oI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Bi-ac-MbO"/>
+                            <constraint firstItem="s0c-Aq-Cao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3LE-2W-Qti"/>
+                            <constraint firstItem="6ws-er-NlK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O08-O4-68K"/>
+                            <constraint firstItem="Xhr-FL-0q5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Ofl-6i-9Vs"/>
+                            <constraint firstAttribute="bottom" secondItem="s0c-Aq-Cao" secondAttribute="bottom" id="Z6l-uM-xDJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lec-Bb-1oI" secondAttribute="trailing" constant="20" id="c46-00-S1P"/>
+                            <constraint firstItem="Xhr-FL-0q5" firstAttribute="leading" secondItem="6ws-er-NlK" secondAttribute="trailing" constant="19" id="deV-gH-BgI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xhr-FL-0q5" secondAttribute="trailing" constant="9" id="ha4-So-ZDX"/>
+                            <constraint firstItem="s0c-Aq-Cao" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iqd-D3-Uy4"/>
+                            <constraint firstItem="Lec-Bb-1oI" firstAttribute="top" secondItem="6ws-er-NlK" secondAttribute="bottom" constant="8" symbolic="YES" id="iqd-Wd-ALX"/>
+                            <constraint firstItem="Xhr-FL-0q5" firstAttribute="leading" secondItem="6ws-er-NlK" secondAttribute="trailing" constant="19" id="knR-Z7-EXQ"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="&lt;" id="mqr-Nh-c3h"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="rau-Df-5Ht"/>
+                        <barButtonItem title="&gt;" id="fYm-Yk-ZZn"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="n0q-0b-1k1"/>
+                        <barButtonItem systemItem="action" id="yfF-0j-9g4"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Uay-Bz-tGz"/>
+                        <barButtonItem systemItem="bookmarks" id="Ryt-rS-M6k"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dqI-4J-yU5"/>
+                        <barButtonItem systemItem="organize" id="TLg-Eo-S5m"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="mqr-Nh-c3h" id="tF2-DG-QB2"/>
+                        <outlet property="forwardButton" destination="fYm-Yk-ZZn" id="xmz-Rp-eRr"/>
+                        <outlet property="progressBar" destination="Lec-Bb-1oI" id="rbC-lr-3OB"/>
+                        <outlet property="reloadButton" destination="Xhr-FL-0q5" id="HRL-wX-3qh"/>
+                        <outlet property="urlField" destination="6ws-er-NlK" id="CYc-rr-V8O"/>
                         <outlet property="webView" destination="5W3-fC-oFz" id="JnE-KX-bgG"/>
                     </connections>
                 </viewController>
@@ -39,6 +100,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
