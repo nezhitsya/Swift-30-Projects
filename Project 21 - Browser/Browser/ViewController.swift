@@ -22,10 +22,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        urlField.delegate = self
+        
+        backButton.isEnabled = false
+        forwardButton.isEnabled = false
+        
         webView.navigationDelegate = self
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
         webView.load(urlStr)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "loading" {
+            backButton.isEnabled = webView.canGoBack
+            forwardButton.isEnabled = webView.canGoForward
+        } else if keyPath == "estimatedProgress" {
+            progressBar.isHidden = webView.estimatedProgress == 1
+            progressBar.setProgress(Float(webView.estimatedProgress), animated: true)
+        }
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        webView.goBack()
+    }
+    
+    @IBAction func forward(_ sender: Any) {
+        webView.goForward()
+    }
+    
+    @IBAction func reload(_ sender: Any) {
+        webView.reload()
     }
 }
 
@@ -35,10 +62,17 @@ extension ViewController: WKNavigationDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        urlField.text = webView.url?.absoluteString
+        progressBar.setProgress(0.0, animated: false)
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        urlField.resignFirstResponder()
+        
         if let str = textField.text {
             urlStr = "https://" + str
             webView.load(urlStr)

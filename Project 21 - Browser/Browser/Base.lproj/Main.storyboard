@@ -54,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="22" id="ZrO-av-ztE"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VSm-8t-W9G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,9 +77,17 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="&lt;" id="mqr-Nh-c3h"/>
+                        <barButtonItem title="&lt;" id="mqr-Nh-c3h">
+                            <connections>
+                                <action selector="back:" destination="BYZ-38-t0r" id="qIN-RP-8wR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="rau-Df-5Ht"/>
-                        <barButtonItem title="&gt;" id="fYm-Yk-ZZn"/>
+                        <barButtonItem title="&gt;" id="fYm-Yk-ZZn">
+                            <connections>
+                                <action selector="forward:" destination="BYZ-38-t0r" id="OMg-0D-mc7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="n0q-0b-1k1"/>
                         <barButtonItem systemItem="action" id="yfF-0j-9g4"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Uay-Bz-tGz"/>
