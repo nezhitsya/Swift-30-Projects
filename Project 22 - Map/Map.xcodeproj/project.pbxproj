@@ -15,6 +15,7 @@
 		0B867870263F9A230041D27B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B86786F263F9A230041D27B /* Assets.xcassets */; };
 		0B867873263F9A230041D27B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B867871263F9A230041D27B /* LaunchScreen.storyboard */; };
 		0B86787D263F9AEA0041D27B /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B86787C263F9AEA0041D27B /* PublicArt.json */; };
+		0B867880263F9B1A0041D27B /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86787F263F9B1A0041D27B /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0B867872263F9A230041D27B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B867874263F9A230041D27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B86787C263F9AEA0041D27B /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		0B86787F263F9B1A0041D27B /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0B867871263F9A230041D27B /* LaunchScreen.storyboard */,
 				0B867874263F9A230041D27B /* Info.plist */,
 				0B86786C263F9A220041D27B /* Map.xcdatamodeld */,
+				0B86787F263F9B1A0041D27B /* json.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				0B867868263F9A220041D27B /* ViewController.swift in Sources */,
 				0B867864263F9A220041D27B /* AppDelegate.swift in Sources */,
+				0B867880263F9B1A0041D27B /* json.swift in Sources */,
 				0B86786E263F9A220041D27B /* Map.xcdatamodeld in Sources */,
 				0B867866263F9A220041D27B /* SceneDelegate.swift in Sources */,
 			);
