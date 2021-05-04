@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         centerMapOnLocation(location: initialLocation)
         loadInitialData()
         
-        mapView.addAnnotation(artworks)
+        mapView.addAnnotations(artworks)
     }
     
     override func viewDidAppear(_ animated: Bool) {
