@@ -21,10 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         mapView.delegate = self
-        mapView.addAnnotation(artworks)
         
         centerMapOnLocation(location: initialLocation)
         loadInitialData()
+        
+        mapView.addAnnotation(artworks)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,11 +42,36 @@ class ViewController: UIViewController {
     }
     
     private func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     private func loadInitialData() {
+        let fileName = Bundle.main.path(forResource: "PublicArt", ofType: "json")
+        var data: Data?
         
+        do {
+            data = try Data(contentsOf: URL(fileURLWithPath: fileName!), options: NSData.ReadingOptions(rawValue: 0))
+        } catch _ {
+            data = nil
+        }
+        
+        if let data = data {
+            do {
+                if let jsonObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? [String: AnyObject],
+                   let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
+                    for artworkJSON in jsonData {
+                        if let artworkJSON = artworkJSON.array,
+                           let artwork = Artwork.fromJSON(json: artworkJSON) {
+                            artworks.append(artwork)
+                        }
+                    }
+                }
+            } catch let error as NSError {
+                print(error.description)
+            }
+        }
     }
 }
 
