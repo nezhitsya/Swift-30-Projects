@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if authorizationStatus == CNAuthorizationStatus.denied {
                         DispatchQueue.main.async {
                             let message = "\(accessError!.localizedDescription)\n\nPlease allow the app to access your contacts."
-                            
+                            Helper.show(message: message)
                         }
                     }
                 }

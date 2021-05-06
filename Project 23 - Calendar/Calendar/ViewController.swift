@@ -47,7 +47,7 @@ extension ViewController: UITableViewDataSource {
             refetch(contact: currentContact, atIndexPath: indexPath)
         } else {
             if let birthday = currentContact.birthday {
-                cell.date.text = DateFormatter().string(for: birthday)
+                cell.date.text = birthday.asString
             } else {
                 cell.date.text = "Not available birthday date"
             }

@@ -16,6 +16,7 @@
 		0B2DA7202643936200074B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA71E2643936200074B1C /* LaunchScreen.storyboard */; };
 		0B2DA72B2643940500074B1C /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DA7292643940500074B1C /* CalendarTableViewCell.swift */; };
 		0B2DA72C2643940500074B1C /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */; };
+		0B6EF33A2644B6D4007BC8A4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EF3392644B6D4007BC8A4 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0B2DA7212643936200074B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2DA7292643940500074B1C /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarTableViewCell.xib; sourceTree = "<group>"; };
+		0B6EF3392644B6D4007BC8A4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				0B2DA7192643936100074B1C /* Calendar.xcdatamodeld */,
 				0B2DA7292643940500074B1C /* CalendarTableViewCell.swift */,
 				0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */,
+				0B6EF3392644B6D4007BC8A4 /* Helper.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0B2DA7132643936100074B1C /* SceneDelegate.swift in Sources */,
 				0B2DA72B2643940500074B1C /* CalendarTableViewCell.swift in Sources */,
 				0B2DA71B2643936100074B1C /* Calendar.xcdatamodeld in Sources */,
+				0B6EF33A2644B6D4007BC8A4 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
