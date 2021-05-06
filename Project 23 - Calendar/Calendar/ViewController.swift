@@ -76,7 +76,23 @@ extension ViewController: UITableViewDataSource {
     }
     
     private func refetch(contact: CNContact, atIndexPath indexPath: IndexPath) {
-        
+        AppDelegate.appDelegate.requestForAccess { (accessGranted) -> Void in
+            if accessGranted {
+                let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey] as [Any]
+                
+                do {
+                    let contactRefetched = try AppDelegate.appDelegate.contactStore.unifiedContact(withIdentifier: contact.identifier, keysToFetch: keys as! [CNKeyDescriptor])
+                    
+                    self.contacts[indexPath.row] = contactRefetched
+                    
+                    DispatchQueue.main.async {
+                        self.contactsTable.reloadRows(at: [indexPath], with: .automatic)
+                    }
+                } catch {
+                    print("Unable to refetch the contact: \(contact)", separator: "", terminator: "\n")
+                }
+            }
+        }
     }
 }
 
