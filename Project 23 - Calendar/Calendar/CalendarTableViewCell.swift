@@ -8,10 +8,16 @@
 import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var contactImage: UIImageView!
+    @IBOutlet weak var email: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        contactImage.layer.cornerRadius = 25.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
