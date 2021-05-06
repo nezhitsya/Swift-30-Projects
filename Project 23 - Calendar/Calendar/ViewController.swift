@@ -39,8 +39,44 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CalendarTableViewCell
+        let currentContact = contacts[indexPath.row]
+        
+        cell.fullName.text = CNContactFormatter.string(from: currentContact, style: .fullName)
+        
+        if !currentContact.isKeyAvailable(CNContactBirthdayKey) || !currentContact.isKeyAvailable(CNContactImageDataKey) || !currentContact.isKeyAvailable(CNContactEmailAddressesKey) {
+            refetch(contact: currentContact, atIndexPath: indexPath)
+        } else {
+            if let birthday = currentContact.birthday {
+                cell.date.text = DateFormatter().string(for: birthday)
+            } else {
+                cell.date.text = "Not available birthday date"
+            }
+            
+            if let imageData = currentContact.imageData {
+                cell.contactImage.image = UIImage(data: imageData)
+            }
+            
+            var homeEmailAddress: String!
+            
+            for emailAddress in currentContact.emailAddresses {
+                if emailAddress.label == CNLabelHome {
+                    homeEmailAddress = emailAddress.value as String
+                    break
+                }
+            }
+            
+            if let homeEmailAddress = homeEmailAddress {
+                cell.email.text = homeEmailAddress
+            } else {
+                cell.email.text = "Not available email address"
+            }
+        }
         
         return cell
+    }
+    
+    private func refetch(contact: CNContact, atIndexPath indexPath: IndexPath) {
+        
     }
 }
 

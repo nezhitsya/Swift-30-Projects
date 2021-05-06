@@ -56,6 +56,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contactImage" destination="vf5-ik-1kh" id="4Ta-qg-aj1"/>
                 <outlet property="date" destination="fwa-yU-mgR" id="gPs-Ja-gYl"/>
                 <outlet property="email" destination="2b3-EG-kOg" id="fLp-du-f77"/>
                 <outlet property="fullName" destination="DQ8-9a-aE4" id="KGR-w7-Aao"/>
