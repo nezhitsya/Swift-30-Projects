@@ -18,6 +18,7 @@
 		0B2DA72C2643940500074B1C /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */; };
 		0B6EF33A2644B6D4007BC8A4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EF3392644B6D4007BC8A4 /* Helper.swift */; };
 		0B739C0D2646397300183470 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B739C0C2646397300183470 /* AddContactViewController.swift */; };
+		0B739C10264641B300183470 /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B739C0F264641B300183470 /* CreateContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarTableViewCell.xib; sourceTree = "<group>"; };
 		0B6EF3392644B6D4007BC8A4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		0B739C0C2646397300183470 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		0B739C0F264641B300183470 /* CreateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */,
 				0B6EF3392644B6D4007BC8A4 /* Helper.swift */,
 				0B739C0C2646397300183470 /* AddContactViewController.swift */,
+				0B739C0F264641B300183470 /* CreateContactViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2DA7152643936100074B1C /* ViewController.swift in Sources */,
+				0B739C10264641B300183470 /* CreateContactViewController.swift in Sources */,
 				0B2DA7112643936100074B1C /* AppDelegate.swift in Sources */,
 				0B739C0D2646397300183470 /* AddContactViewController.swift in Sources */,
 				0B2DA7132643936100074B1C /* SceneDelegate.swift in Sources */,
