@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,18 @@
                             <constraint firstItem="MJ5-NG-d6M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v4r-Zu-hrg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Calendar" id="ct2-H7-9SE"/>
+                    <navigationItem key="navigationItem" id="ct2-H7-9SE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="yIJ-qq-QQb">
+                            <connections>
+                                <segue destination="NkG-gs-Hc9" kind="presentation" id="bU9-ud-EUw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="IDJ-h4-lAu">
+                            <connections>
+                                <segue destination="StX-hH-9lL" kind="presentation" id="pAt-zL-M8R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactsTable" destination="MJ5-NG-d6M" id="D2m-iO-3mZ"/>
                     </connections>
@@ -48,6 +59,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zWi-Dg-yf5">
+            <objects>
+                <viewController id="NkG-gs-Hc9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Td5-Hk-dwb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jjL-66-4Ka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5me-dv-qyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="-324"/>
+        </scene>
+        <!--Add Contact View Controller-->
+        <scene sceneID="ETW-Gn-guU">
+            <objects>
+                <viewController id="StX-hH-9lL" customClass="AddContactViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJY-Kh-Xlt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o70-e1-lzd">
+                                <rect key="frame" x="46" y="302" width="322" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="rUo-H8-VIg"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-tS-JBS">
+                                <rect key="frame" x="46" y="245" width="135" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ASQ-kh-wG3"/>
+                                    <constraint firstAttribute="width" constant="135" id="Koe-Ri-SvY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="09h-PG-mrS">
+                                <rect key="frame" x="46" y="147" width="322" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-96-pHn">
+                                <rect key="frame" x="46" y="90" width="55" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="EZm-pF-rot"/>
+                                    <constraint firstAttribute="width" constant="55" id="SVe-qC-2Al"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O9b-J1-DZq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f9U-tS-JBS" firstAttribute="leading" secondItem="O9b-J1-DZq" secondAttribute="leading" constant="46" id="7Vt-B8-vd1"/>
+                            <constraint firstItem="f9U-tS-JBS" firstAttribute="top" secondItem="09h-PG-mrS" secondAttribute="bottom" constant="64" id="AbG-si-jdb"/>
+                            <constraint firstItem="o70-e1-lzd" firstAttribute="leading" secondItem="O9b-J1-DZq" secondAttribute="leading" constant="46" id="Af9-oR-Mzd"/>
+                            <constraint firstItem="QU4-96-pHn" firstAttribute="top" secondItem="O9b-J1-DZq" secondAttribute="top" constant="90" id="AkE-F4-0ns"/>
+                            <constraint firstItem="09h-PG-mrS" firstAttribute="top" secondItem="QU4-96-pHn" secondAttribute="bottom" constant="33" id="FRr-OB-qhW"/>
+                            <constraint firstItem="O9b-J1-DZq" firstAttribute="trailing" secondItem="o70-e1-lzd" secondAttribute="trailing" constant="46" id="KQL-Xm-xvw"/>
+                            <constraint firstItem="QU4-96-pHn" firstAttribute="leading" secondItem="O9b-J1-DZq" secondAttribute="leading" constant="46" id="PoP-sk-bUs"/>
+                            <constraint firstItem="09h-PG-mrS" firstAttribute="leading" secondItem="O9b-J1-DZq" secondAttribute="leading" constant="46" id="tTj-Hw-hih"/>
+                            <constraint firstItem="O9b-J1-DZq" firstAttribute="trailing" secondItem="09h-PG-mrS" secondAttribute="trailing" constant="46" id="udV-PA-plg"/>
+                            <constraint firstItem="o70-e1-lzd" firstAttribute="top" secondItem="f9U-tS-JBS" secondAttribute="bottom" constant="33" id="zKl-qs-nB8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmN-Lh-cnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698.5507246376812" y="426.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NlG-y4-iA0">
@@ -69,6 +155,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
