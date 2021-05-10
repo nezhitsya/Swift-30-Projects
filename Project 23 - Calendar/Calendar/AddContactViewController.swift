@@ -77,12 +77,62 @@ extension AddContactViewController: UIPickerViewDelegate {
 
 extension AddContactViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        
+        AppDelegate.appDelegate.requestForAccess { (accessGranted) -> Void in
+            if accessGranted {
+                let predicate = CNContact.predicateForContacts(matchingName: self.nameText.text!)
+                let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey] as [Any]
+                let contactsStore = AppDelegate.appDelegate.contactStore
+                var contacts = [CNContact]()
+                var warningMessage: String!
+                
+                do {
+                    contacts = try contactsStore.unifiedContacts(matching: predicate, keysToFetch: keys as! [CNKeyDescriptor])
+                    
+                    if contacts.count == 0 {
+                        warningMessage = "No contacts were found matching the given name."
+                    }
+                } catch {
+                    warningMessage = "Unable to fetch contacts."
+                }
+                
+                if let warningMessage = warningMessage {
+                    DispatchQueue.main.async {
+                        Helper.show(message: warningMessage)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.delegate.didFetchContacts(contacts)
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+        }
         return true
     }
     
     @objc func performSaveItemTap() {
-        
+        AppDelegate.appDelegate.requestForAccess { (accessGranted) -> Void in
+            if accessGranted {
+                var contacts = [CNContact]()
+                let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey] as [Any]
+                
+                do {
+                    let contactStore = AppDelegate.appDelegate.contactStore
+                    
+                    try contactStore.enumerateContacts(with: CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])) { [weak self] (contact, pointer) -> Void in
+                        
+                        if contact.birthday != nil && contact.birthday!.month == self?.currentlySelectedMonthIndex {
+                            contacts.append(contact)
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        self.delegate.didFetchContacts(contacts)
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                } catch let error as NSError {
+                    print(error.description, separator: "", terminator: "\n")
+                }
+            }
+        }
     }
 }
