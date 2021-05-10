@@ -46,9 +46,14 @@ class CreateContactViewController: UIViewController {
             try AppDelegate.appDelegate.contactStore.execute(saveRequest)
             
             navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
         } catch {
             Helper.show(message: "Unable to save the new contact.")
         }
+    }
+    
+    @IBAction func back() {
+        dismiss(animated: true, completion: nil)
     }
 
     /*

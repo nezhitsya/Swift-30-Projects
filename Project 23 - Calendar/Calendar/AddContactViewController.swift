@@ -26,10 +26,15 @@ class AddContactViewController: UIViewController {
         super.viewDidLoad()
         
         monthPicker.delegate = self
+        monthPicker.dataSource = self
         nameText.delegate = self
         
         let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(AddContactViewController.performSaveItemTap))
         navigationItem.rightBarButtonItem = saveBarButtonItem
+    }
+    
+    @IBAction func back() {
+        dismiss(animated: true, completion: nil)
     }
 
     /*
@@ -61,7 +66,11 @@ extension AddContactViewController: CNContactPickerDelegate {
     }
 }
 
-extension AddContactViewController: UIPickerViewDelegate {
+extension AddContactViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return months.count
     }
@@ -128,6 +137,7 @@ extension AddContactViewController: UITextFieldDelegate {
                     DispatchQueue.main.async {
                         self.delegate.didFetchContacts(contacts)
                         self.navigationController?.popViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 } catch let error as NSError {
                     print(error.description, separator: "", terminator: "\n")

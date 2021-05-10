@@ -15,7 +15,7 @@
 		0B2DA71D2643936200074B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA71C2643936200074B1C /* Assets.xcassets */; };
 		0B2DA7202643936200074B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA71E2643936200074B1C /* LaunchScreen.storyboard */; };
 		0B2DA72B2643940500074B1C /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DA7292643940500074B1C /* CalendarTableViewCell.swift */; };
-		0B2DA72C2643940500074B1C /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */; };
+		0B62A7BB2649006D00547A1E /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2DA72A2643940500074B1C /* CalendarTableViewCell.xib */; };
 		0B6EF33A2644B6D4007BC8A4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EF3392644B6D4007BC8A4 /* Helper.swift */; };
 		0B739C0D2646397300183470 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B739C0C2646397300183470 /* AddContactViewController.swift */; };
 		0B739C10264641B300183470 /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B739C0F264641B300183470 /* CreateContactViewController.swift */; };
@@ -145,7 +145,7 @@
 				0B2DA7202643936200074B1C /* LaunchScreen.storyboard in Resources */,
 				0B2DA71D2643936200074B1C /* Assets.xcassets in Resources */,
 				0B2DA7182643936100074B1C /* Main.storyboard in Resources */,
-				0B2DA72C2643940500074B1C /* CalendarTableViewCell.xib in Resources */,
+				0B62A7BB2649006D00547A1E /* CalendarTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

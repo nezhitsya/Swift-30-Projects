@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="N2d-fK-28L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="N2d-fK-28L" customClass="CalendarTableViewCell" customModule="Calendar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N2d-fK-28L" id="QUw-uN-b0o">
@@ -91,7 +91,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-uc-Bci">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-uc-Bci">
                                 <rect key="frame" x="45" y="473" width="324" height="241"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="241" id="AOt-bE-nNq"/>
@@ -125,7 +125,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5S3-yw-5mD">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="XeT-Ak-JNg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="XeT-Ak-JNg">
+                            <connections>
+                                <action selector="back" destination="NkG-gs-Hc9" id="QUf-aE-GUc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySH-oE-Jgq"/>
                     </navigationItem>
                     <connections>
@@ -207,7 +211,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mJY-WT-fVm">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="QVr-fq-nQH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QVr-fq-nQH">
+                            <connections>
+                                <action selector="back" destination="StX-hH-9lL" id="Wrh-8P-uW6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="KRb-Hp-2JY"/>
                     </navigationItem>
                     <connections>

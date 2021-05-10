@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     func configureTableView() {
         contactsTable.delegate = self
         contactsTable.dataSource = self
-        contactsTable.register(UINib(nibName: "ContactCalendarCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        contactsTable.register(UINib(nibName: "CalendarTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
     
     @IBAction func addContact(_ sender: AnyObject) {
@@ -34,8 +34,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "AddContact" {
-                let addContactViewController = segue.destination as! AddContactViewController
-                addContactViewController.delegate = self
+                let addContactViewController = segue.destination as! UINavigationController
+                let destinationController = addContactViewController.viewControllers[0] as! AddContactViewController
+                destinationController.delegate = self
             }
         }
     }
