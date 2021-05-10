@@ -48,7 +48,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="IDJ-h4-lAu">
                             <connections>
-                                <segue destination="Xp0-y6-z0g" kind="presentation" modalPresentationStyle="fullScreen" id="pAt-zL-M8R"/>
+                                <action selector="addContact:" destination="BYZ-38-t0r" id="6MH-q1-csj"/>
+                                <segue destination="Xp0-y6-z0g" kind="presentation" identifier="AddContact" modalPresentationStyle="fullScreen" id="pAt-zL-M8R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Contact View Controller-->
         <scene sceneID="zWi-Dg-yf5">
             <objects>
-                <viewController id="NkG-gs-Hc9" sceneMemberID="viewController">
+                <viewController id="NkG-gs-Hc9" customClass="CreateContactViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Td5-Hk-dwb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +128,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="XeT-Ak-JNg"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySH-oE-Jgq"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="Osc-uc-Bci" id="Joq-OE-vTN"/>
+                        <outlet property="emailText" destination="n9h-QB-6jH" id="V4Z-jN-eb3"/>
+                        <outlet property="nameText" destination="dps-Cj-A18" id="19r-gh-Gxp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5me-dv-qyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

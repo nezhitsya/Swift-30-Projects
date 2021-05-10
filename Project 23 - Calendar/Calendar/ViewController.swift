@@ -26,6 +26,19 @@ class ViewController: UIViewController {
         contactsTable.dataSource = self
         contactsTable.register(UINib(nibName: "ContactCalendarCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
+    
+    @IBAction func addContact(_ sender: AnyObject) {
+        performSegue(withIdentifier: "AddContact", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "AddContact" {
+                let addContactViewController = segue.destination as! AddContactViewController
+                addContactViewController.delegate = self
+            }
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -110,5 +123,45 @@ extension ViewController: UITableViewDelegate {
             contacts.remove(at: indexPath.row)
             contactsTable.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedContact = contacts[indexPath.row]
+        let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey] as [Any]
+        
+        if selectedContact.areKeysAvailable([CNContactViewController.descriptorForRequiredKeys()]) {
+            let contactViewController = CNContactViewController(for: selectedContact)
+            
+            contactViewController.contactStore = AppDelegate.appDelegate.contactStore
+            contactViewController.displayedPropertyKeys = keys
+            navigationController?.pushViewController(contactViewController, animated: true)
+        } else {
+            AppDelegate.appDelegate.requestForAccess(completionHandler: { (accessGranted) -> Void in
+                if accessGranted {
+                    do {
+                        let contactRefetched = try AppDelegate.appDelegate.contactStore.unifiedContact(withIdentifier: selectedContact.identifier, keysToFetch: [CNContactViewController.descriptorForRequiredKeys()])
+                        
+                        DispatchQueue.main.async {
+                            let contactViewController = CNContactViewController(for: contactRefetched)
+                            
+                            contactViewController.contactStore = AppDelegate.appDelegate.contactStore
+                            contactViewController.displayedPropertyKeys = keys
+                            self.navigationController?.pushViewController(contactViewController, animated: true)
+                        }
+                    } catch {
+                        print("Unable to refetch the selected contact.", separator: "", terminator: "\n")
+                    }
+                }
+            })
+        }
+    }
+}
+
+extension ViewController: AddContactViewControllerDelegate {
+    func didFetchContacts(_ contacts: [CNContact]) {
+        for contact in contacts {
+            self.contacts.append(contact)
+        }
+        contactsTable.reloadData()
     }
 }

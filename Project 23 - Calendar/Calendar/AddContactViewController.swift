@@ -27,6 +27,9 @@ class AddContactViewController: UIViewController {
         
         monthPicker.delegate = self
         nameText.delegate = self
+        
+        let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(AddContactViewController.performSaveItemTap))
+        navigationItem.rightBarButtonItem = saveBarButtonItem
     }
 
     /*
@@ -77,5 +80,9 @@ extension AddContactViewController: UITextFieldDelegate {
         
         
         return true
+    }
+    
+    @objc func performSaveItemTap() {
+        
     }
 }
