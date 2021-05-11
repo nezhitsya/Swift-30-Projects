@@ -47,6 +47,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let managedContext = appDelegate.persistentContainer.viewContext
+            managedContext.delete(memos[indexPath.row] as NSManagedObject)
+            
+            do {
+                try managedContext.save()
+                memos.remove(at: indexPath.row)
+            } catch let error as NSError {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+            
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        default:
+            return
+        }
+    }
+    
     func saveMemo(_ content: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
