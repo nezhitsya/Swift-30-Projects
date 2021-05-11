@@ -42,9 +42,45 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let memo = memos[indexPath.row]
         
-        cell.textLabel!.text = memo.value(forKey: "name") as? String
+        cell.textLabel!.text = memo.value(forKey: "content") as? String
         
         return cell
+    }
+    
+    func saveMemo(_ content: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity =  NSEntityDescription.entity(forEntityName: "Memo", in: managedContext)
+        let memo = NSManagedObject(entity: entity!, insertInto: managedContext)
+        
+        memo.setValue(content, forKey: "content")
+        
+        do {
+            try managedContext.save()
+            memos.append(memo)
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    @IBAction func addMemo(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "New Memo", message: "Add a new memo", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {(action: UIAlertAction) -> Void in
+            let textField = alert.textFields!.first
+            
+            self.saveMemo(textField!.text!)
+            self.tableView.reloadData()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(action: UIAlertAction) -> Void in })
+        
+        alert.addTextField {
+            (textField: UITextField) -> Void in
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 

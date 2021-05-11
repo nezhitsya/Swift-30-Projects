@@ -51,7 +51,11 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="DII-ox-5ll"/>
-                        <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="qEP-zw-MEx"/>
+                        <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="qEP-zw-MEx">
+                            <connections>
+                                <action selector="addMemo:" destination="BYZ-38-t0r" id="WFr-qW-KXj"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Memo" id="RFK-Cf-CKE"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
