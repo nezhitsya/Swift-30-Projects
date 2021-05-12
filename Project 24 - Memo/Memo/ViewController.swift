@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var memos: [NSManagedObject] = []
     
@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
+        
+        tableView.dataSource = self
+        tableView.delegate = self
         
         self.fetchCoreData(managedContext)
     }

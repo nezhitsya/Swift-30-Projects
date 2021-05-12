@@ -49,15 +49,14 @@
                             <constraint firstItem="gPf-2d-trB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y7d-bv-cvX"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="DII-ox-5ll"/>
-                        <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="qEP-zw-MEx">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Memo" id="RFK-Cf-CKE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="gU8-A8-IPN">
                             <connections>
-                                <action selector="addMemo:" destination="BYZ-38-t0r" id="WFr-qW-KXj"/>
+                                <action selector="addMemo:" destination="BYZ-38-t0r" id="2bu-WS-iXc"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Memo" id="RFK-Cf-CKE"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gPf-2d-trB" id="5aW-gP-v5D"/>
