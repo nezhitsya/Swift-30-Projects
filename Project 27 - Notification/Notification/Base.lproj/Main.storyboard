@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="vkq-MJ-KmA">
+                                <rect key="frame" x="20" y="511" width="374" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Smb-H5-Z3N"/>
+                                    <constraint firstAttribute="height" constant="230" id="v4X-aI-fKk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="datePickerDidSelectNewDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="zBW-GY-dyZ"/>
+                                </connections>
+                            </datePicker>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="GyM-ya-jrq">
+                                <rect key="frame" x="66" y="202" width="282" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="0BI-qi-zAf"/>
+                                    <constraint firstAttribute="height" constant="179" id="bg7-Zt-s06"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-6F-FnR">
+                                <rect key="frame" x="155" y="134" width="104" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GyM-ya-jrq" firstAttribute="top" secondItem="Sxd-6F-FnR" secondAttribute="bottom" constant="40" id="1oR-Ti-H9T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vkq-MJ-KmA" secondAttribute="trailing" constant="20" id="Ebj-pf-qNd"/>
+                            <constraint firstItem="GyM-ya-jrq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XIo-vG-51b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GyM-ya-jrq" secondAttribute="trailing" constant="66" id="Ztv-Um-e4p"/>
+                            <constraint firstItem="vkq-MJ-KmA" firstAttribute="top" secondItem="GyM-ya-jrq" secondAttribute="bottom" constant="130" id="cbM-Hu-cHY"/>
+                            <constraint firstItem="Sxd-6F-FnR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="fD2-wc-Jmc"/>
+                            <constraint firstItem="vkq-MJ-KmA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nSh-g0-Pqm"/>
+                            <constraint firstItem="Sxd-6F-FnR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rxq-lA-ooC"/>
+                            <constraint firstItem="GyM-ya-jrq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="yHf-AY-g6Q"/>
+                            <constraint firstItem="vkq-MJ-KmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yqr-Iu-fIt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="282" height="282"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
