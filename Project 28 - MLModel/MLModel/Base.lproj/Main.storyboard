@@ -16,20 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-qo-UvP">
-                                <rect key="frame" x="20" y="124" width="374" height="426"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-qo-UvP">
+                                <rect key="frame" x="20" y="124" width="374" height="403"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="403" id="4t9-aX-Otp"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-kI-nHv">
-                                <rect key="frame" x="178" y="609" width="44" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-kI-nHv">
+                                <rect key="frame" x="185" y="609" width="44" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-s5-0q3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-s5-0q3">
                                 <rect key="frame" x="186" y="812" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Image"/>
                                 <connections>
                                     <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPr-RY-zYu"/>
@@ -38,6 +38,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JHk-kI-nHv" firstAttribute="top" secondItem="ee5-qo-UvP" secondAttribute="bottom" constant="82" id="2fg-2c-ZQ7"/>
+                            <constraint firstItem="4ri-s5-0q3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5tc-3Z-5Wq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4ri-s5-0q3" secondAttribute="bottom" constant="20" id="Y1t-3b-B0r"/>
+                            <constraint firstItem="ee5-qo-UvP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="aX3-AF-q3W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee5-qo-UvP" secondAttribute="trailing" constant="20" id="m5c-2O-qI0"/>
+                            <constraint firstItem="JHk-kI-nHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skj-Og-SRw"/>
+                            <constraint firstItem="ee5-qo-UvP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xNR-rq-mw8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="answer" destination="JHk-kI-nHv" id="CF5-Jv-WWX"/>
