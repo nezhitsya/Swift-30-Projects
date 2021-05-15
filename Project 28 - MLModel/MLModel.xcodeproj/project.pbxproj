@@ -14,6 +14,7 @@
 		0B858D27264FB1E500B590D7 /* MLModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B858D25264FB1E500B590D7 /* MLModel.xcdatamodeld */; };
 		0B858D29264FB1E500B590D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B858D28264FB1E500B590D7 /* Assets.xcassets */; };
 		0B858D2C264FB1E500B590D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B858D2A264FB1E500B590D7 /* LaunchScreen.storyboard */; };
+		0B858D37264FB29400B590D7 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B858D36264FB29400B590D7 /* GoogLeNetPlaces.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0B858D28264FB1E500B590D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B858D2B264FB1E500B590D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B858D2D264FB1E500B590D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B858D36264FB29400B590D7 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		0B858D1B264FB1E500B590D7 /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
+				0B858D35264FB28200B590D7 /* Resources */,
 				0B858D1C264FB1E500B590D7 /* AppDelegate.swift */,
 				0B858D1E264FB1E500B590D7 /* SceneDelegate.swift */,
 				0B858D20264FB1E500B590D7 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				0B858D25264FB1E500B590D7 /* MLModel.xcdatamodeld */,
 			);
 			path = MLModel;
+			sourceTree = "<group>";
+		};
+		0B858D35264FB28200B590D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B858D36264FB29400B590D7 /* GoogLeNetPlaces.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B858D21264FB1E500B590D7 /* ViewController.swift in Sources */,
+				0B858D37264FB29400B590D7 /* GoogLeNetPlaces.mlmodel in Sources */,
 				0B858D1D264FB1E500B590D7 /* AppDelegate.swift in Sources */,
 				0B858D27264FB1E500B590D7 /* MLModel.xcdatamodeld in Sources */,
 				0B858D1F264FB1E500B590D7 /* SceneDelegate.swift in Sources */,
