@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol AnimalSelectionDelegate: class {
+protocol AnimalSelectionDelegate: AnyObject {
     func aninalSelected(_ newAnimal: Animal)
 }
 
@@ -34,6 +34,7 @@ class MainTableViewController: UITableViewController {
         
         definesPresentationContext = true
         
+        self.filteredAnimals = self.animals
         self.tableView.reloadData()
         
 //        searchBar
@@ -49,8 +50,7 @@ class MainTableViewController: UITableViewController {
 //                        }
 //                    }
 //                    self.tableView.reloadData()
-//                }
-//            )
+//                })
 //            .addDisposableTo(disposeBag)
     }
     
@@ -78,6 +78,7 @@ class MainTableViewController: UITableViewController {
         let animal = self.filteredAnimals[(indexPath as NSIndexPath).row]
         
         delegate?.aninalSelected(animal)
+        print(delegate?.aninalSelected(animal) as Any)
         
         if let detailViewController = self.delegate as? DetailViewController {
             splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)

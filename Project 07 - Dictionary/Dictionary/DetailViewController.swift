@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
     
+    weak var delegate: AnimalSelectionDelegate?
+    
     var animal: Animal! {
         didSet(newAnimal) {
             self.refreshUI()
@@ -20,17 +22,19 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        refreshUI()
+//        refreshUI()
         super.viewDidLoad()
     }
     
     func refreshUI() {
-        self.title = "Animal"
 //        self.title = animal.name
-        name?.text = "Snake"
-        info?.text = "뱀은 뱀아목에 속하는 파충류의 총칭으로 다리가 퇴화한 것이 특징이다. 거의 대부분 전체 길이가 1~2m이지만 큰 것은 10m, 작은 것은 10cm인 것도 있다. 현재 456속의 약 2,900종으로 남극과 아일랜드섬을 제외한 세계의 각 대륙에 널리 분포하며, 일부는 북극권 부근까지 서식하고 있다."
-//        animalImage?.image = LibraryAPI.sharedInstance.downloadImg(animal.animImgUrl)
-        animalImage?.image = UIImage(named: "default")
+        self.title = "Animal"
+        name?.text = animal.name
+//        name?.text = "Snake"
+        info?.text = animal.detailInfo
+//        info?.text = "뱀은 뱀아목에 속하는 파충류의 총칭으로 다리가 퇴화한 것이 특징이다. 거의 대부분 전체 길이가 1~2m이지만 큰 것은 10m, 작은 것은 10cm인 것도 있다. 현재 456속의 약 2,900종으로 남극과 아일랜드섬을 제외한 세계의 각 대륙에 널리 분포하며, 일부는 북극권 부근까지 서식하고 있다."
+        animalImage?.image = LibraryAPI.sharedInstance.downloadImg(animal.animImgUrl)
+//        animalImage?.image = UIImage(named: "default")
     }
     
 

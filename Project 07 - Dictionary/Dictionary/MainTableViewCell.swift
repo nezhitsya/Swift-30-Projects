@@ -25,21 +25,15 @@ class MainTableViewCell: UITableViewCell {
     deinit {
         animalImage.removeObserver(self, forKeyPath: "image")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "image" {
-            indicator.stopAnimating()
-        }
+    
+    private func setupNotification(_ animalImageUrl: String) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: downloadImageNotification), object: self, userInfo: ["animalImageView": animalImage!, "animImageUrl": animalImageUrl])
     }
     
     private func setupUI(_ type: String, name: String) {
         animalName.text = name
         animalType.text = type
-        animalImage.image = UIImage(named: "default")
+//        animalImage.image = UIImage(named: "default")
         
         indicator = UIActivityIndicatorView()
         indicator.center = CGPoint(x: animalImage.bounds.midX, y: animalImage.bounds.midY)
@@ -49,7 +43,14 @@ class MainTableViewCell: UITableViewCell {
         animalImage.addObserver(self, forKeyPath: "image", options: [], context: nil)
     }
     
-    private func setupNotification(_ animalImageUrl: String) {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: downloadImageNotification), object: self, userInfo: ["animalImageView": animalImage!, "animImageUrl": animalImageUrl])
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "image" {
+            indicator.stopAnimating()
+        }
+    }
+
 }

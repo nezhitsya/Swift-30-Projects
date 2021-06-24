@@ -15,7 +15,7 @@ class LibraryAPI: NSObject {
     fileprivate override init() {
       super.init()
       
-      NotificationCenter.default.addObserver(self, selector:#selector(LibraryAPI.downloadImage(_:)), name: NSNotification.Name(rawValue: downloadImageNotification), object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(LibraryAPI.downloadImage(_:)), name: NSNotification.Name(rawValue: downloadImageNotification), object: nil)
     }
     
     deinit {
@@ -30,8 +30,7 @@ class LibraryAPI: NSObject {
         let aUrl = URL(string: url)
         let data = try? Data(contentsOf: aUrl!)
         let image = UIImage(data: data!)
-        let im = UIImage(named: "default")
-        return im!
+        return image!
     }
     
     @objc func downloadImage(_ notification: Notification) {
@@ -39,31 +38,31 @@ class LibraryAPI: NSObject {
         let animalImageView = userInfo["animalImage"] as! UIImageView?
         let animalImageUrl = userInfo["animImageUrl"] as! String
         
-        let imageViewUnWrapped = animalImageView
-        imageViewUnWrapped?.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
-        
-        if imageViewUnWrapped?.image == nil {
-            DispatchQueue.global().async {
-                let downloadedImage = self.downloadImg(animalImageUrl as String)
-                
-                DispatchQueue.main.async {
-                    imageViewUnWrapped?.image = downloadedImage
-                    self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
-                }
-            }
-        }
-        
-//        if let imageViewUnWrapped = animalImageView {
-//            imageViewUnWrapped.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
-//            if imageViewUnWrapped.image == nil {
-//                DispatchQueue.global().async {
-//                    let downloadedImage = self.downloadImg(animalImageUrl as String)
-//                    DispatchQueue.main.async {
-//                        imageViewUnWrapped.image = downloadedImage
-//                        self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
-//                    }
+//        let imageViewUnWrapped = animalImageView
+//        imageViewUnWrapped?.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
+//
+//        if imageViewUnWrapped?.image == nil {
+//            DispatchQueue.global().async {
+//                let downloadedImage = self.downloadImg(animalImageUrl as String)
+//
+//                DispatchQueue.main.async {
+//                    imageViewUnWrapped?.image = downloadedImage
+//                    self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
 //                }
 //            }
 //        }
+        
+        if let imageViewUnWrapped = animalImageView {
+            imageViewUnWrapped.image = persistencyManager.getImage(URL(string: animalImageUrl)!.lastPathComponent)
+            if imageViewUnWrapped.image == nil {
+                DispatchQueue.global().async {
+                    let downloadedImage = self.downloadImg(animalImageUrl as String)
+                    DispatchQueue.main.async {
+                        imageViewUnWrapped.image = downloadedImage
+                        self.persistencyManager.saveImage(downloadedImage, filename: URL(string: animalImageUrl)!.lastPathComponent)
+                    }
+                }
+            }
+        }
     }
 }
