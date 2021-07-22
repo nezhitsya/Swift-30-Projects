@@ -10,14 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var mainPoster: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var dramaCollectionView: UICollectionView!
+    @IBOutlet weak var horrorCollectionView: UICollectionView!
+    @IBOutlet weak var scifiCollectionView: UICollectionView!
     
     private var contents = [Contents]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
+        dramaCollectionView.dataSource = self
         
         mainPoster.addBlackGradientLayerInForeground(frame: mainPoster.frame, colors: [.clear, .black])
     }
