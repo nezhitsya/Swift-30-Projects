@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         dramaCollectionView.dataSource = self
+        horrorCollectionView.dataSource = self
+        scifiCollectionView.dataSource = self
         
         mainPoster.addBlackGradientLayerInForeground(frame: mainPoster.frame, colors: [.clear, .black])
     }
@@ -65,15 +67,35 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dramaList.count
+        if collectionView == self.dramaCollectionView {
+            return self.dramaList.count
+        } else if collectionView == self.horrorCollectionView {
+            return self.horrorList.count
+        } else {
+            return self.scifiList.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let dramaCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        
-        dramaCell.posterImage.image = UIImage(named: "poster")
-        
-        return dramaCell
+        if collectionView == self.dramaCollectionView {
+            let dramaCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dramaCell", for: indexPath) as! CollectionViewCell
+            
+            dramaCell.posterImage.image = UIImage(named: "poster")
+            
+            return dramaCell
+        } else if collectionView == self.horrorCollectionView {
+            let horrorCell = collectionView.dequeueReusableCell(withReuseIdentifier: "horrorCell", for: indexPath) as! CollectionViewCell
+            
+            horrorCell.posterImage.image = UIImage(named: "logo")
+            
+            return horrorCell
+        } else {
+            let scifiCell = collectionView.dequeueReusableCell(withReuseIdentifier: "scifiCell", for: indexPath) as! CollectionViewCell
+            
+            scifiCell.posterImage.image = UIImage(named: "logoN")
+            
+            return scifiCell
+        }
     }
     
 }
