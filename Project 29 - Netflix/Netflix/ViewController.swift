@@ -82,7 +82,7 @@ extension ViewController: UICollectionViewDataSource {
             
             for i in 0...self.dramaList.count {
                 if self.contentsList.title == self.dramaList[i] {
-                    
+                    dramaCell.posterImage.image = UIImage(named: "logo")
                 }
             }
             
