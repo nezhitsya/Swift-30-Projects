@@ -37,29 +37,38 @@ class ViewController: UIViewController {
     }
     
     func parseJSON() {
+        
         guard let url = URL(string: "https://raw.githubusercontent.com/nezhitsya/Swift-30-Projects/master/Project%2029%20-%20Netflix/contents.json") else {
             print("api is down")
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil && data != nil {
                 do {
-                    if let response = try? JSONDecoder().decode(Contents.self, from: data!) {
-                        DispatchQueue.main.async {
-                            self.contentsList = response
-                            if self.contentsList.genre == "drama" {
-                                self.dramaList.append(self.contentsList.title)
-                            } else if self.contentsList.genre == "horror" {
-                                self.horrorList.append(self.contentsList.title)
-                            } else {
-                                self.scifiList.append(self.contentsList.title)
-                            }
-                        }
+                    DispatchQueue.main.async {
+                        print(String(data: data!, encoding: .utf8) ?? "")
+                        
+                        let response = try? JSONDecoder().decode(Contents.self, from: data!)
+                        print(response?.title)
+                        
+//                        if let response = try? JSONDecoder().decode(Contents.self, from: data!) {
+//                            DispatchQueue.main.async {
+//                                print(String(data: data!, encoding: .utf8) ?? "")
+//                                self.contentsList = response
+//                                if self.contentsList.genre == "drama" {
+//                                    self.dramaList.append(self.contentsList.title)
+//                                } else if self.contentsList.genre == "horror" {
+//                                    self.horrorList.append(self.contentsList.title)
+//                                } else {
+//                                    self.scifiList.append(self.contentsList.title)
+//                                }
+//                            }
+//                        }
                     }
                 }
             }
-        }
+        }.resume()
     }
     
 }

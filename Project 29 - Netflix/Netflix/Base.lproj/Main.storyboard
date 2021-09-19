@@ -251,7 +251,7 @@
         <!--검색-->
         <scene sceneID="rgs-Gh-RPi">
             <objects>
-                <viewController id="r0E-MU-kJi" sceneMemberID="viewController">
+                <viewController id="r0E-MU-kJi" customClass="SearchViewController" customModule="Netflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6O9-aJ-a2E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,5 +12,5 @@ struct Contents: Codable {
     var casting: String
     var genre: String
     var poster: String
-    var description: String
+    var explain: String
 }
