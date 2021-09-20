@@ -1,0 +1,127 @@
+{
+    "Drama": [
+        {
+            "title": "Elite",
+            "casting": "Itzan Escamilla",
+            "genre": "Drama",
+            "poster": "https://user-images.githubusercontent.com/60697742/126490607-4777d1b5-0f23-4939-b0a5-21be6212a675.jpg",
+            "explain": "When three working-class teenagers begin attending an exclusive private school in Spain, the clash between them and the wealthy students leads to murder."
+        },
+        {
+            "title": "Friends",
+            "casting": "Jennifer Aniston",
+            "genre": "Drama",
+            "poster": "https://user-images.githubusercontent.com/60697742/126492386-45fa7d56-aa38-4819-a2f9-27f2c9aff2b4.jpg",
+            "explain": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan."
+        },
+        {
+            "title": "Stranger Things",
+            "casting": "Millie Bobby Brown",
+            "genre": "Drama",
+            "poster": "https://user-images.githubusercontent.com/60697742/126492964-9ea8a915-abee-4a25-bc69-b3217e53fe87.jpg",
+            "explain": "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back."
+        },
+        {
+            "title": "American Horror Stories",
+            "casting": "Sierra McCormick",
+            "genre": "Drama",
+            "poster": "https://user-images.githubusercontent.com/60697742/126493572-5038ed5d-55eb-4cd0-85b5-9cc673482b0e.jpg",
+            "explain": "An anthology series of stand alone episodes delving into horror myths, legends and lore."
+        },
+        {
+            "title": "The Walking Dead",
+            "casting": "Andrew Lincoln",
+            "genre": "Drama",
+            "poster": "https://user-images.githubusercontent.com/60697742/126493725-e9d7a49e-dbf1-4fea-b971-cd3c9442156e.jpg",
+            "explain": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive."
+        }
+    ],
+    "Horror": [
+        {
+            "title": "Midsommar",
+            "casting": "Florence Pugh",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126491355-5d3dc9f5-aa1d-441f-a107-098dddd138e1.jpg",
+            "explain": "A couple travels to Scandinavia to visit a rural hometown's fabled Swedish mid-summer festival. What begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult."
+        },
+        {
+            "title": "A Quiet Plase",
+            "casting": "Emily Blunt",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126491750-e2a03390-9e96-4039-bc64-a6e34fe93141.jpg",
+            "explain": "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing."
+        },
+        {
+            "title": "IT",
+            "casting": "Bill Skarsgard",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126494040-03c1b5d4-2bdf-497e-a67e-b2b169d1abce.jpg",
+            "explain": "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town."
+        },
+        {
+            "title": "Us",
+            "casting": "Lupita Nyong'o",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126494233-c1a617b2-4681-4fd8-bf77-cf00f07f551e.jpg",
+            "explain": "A family's serene beach vacation turns to chaos when their doppelgängers appear and begin to terrorize them."
+        },
+        {
+            "title": "Get Out",
+            "casting": "Daniel Kaluuya",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126494431-bb51027d-c4ad-4a4c-806f-7348bdb0ff41.jpg",
+            "explain": "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point."
+        },
+        {
+            "title": "Hereditary",
+            "casting": "Toni Collette",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126494633-e17bb84c-5d68-419f-a15a-6f708b00106c.jpg",
+            "explain": "A grieving family is haunted by tragic and disturbing occurrences."
+        },
+        {
+            "title": "기생충",
+            "casting": "송강호",
+            "genre": "Horror",
+            "poster": "https://user-images.githubusercontent.com/60697742/126495711-901e4381-6f3a-4b61-b4bd-91c69781fddb.jpg",
+            "explain": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+        }
+    ],
+    "SciFi": [
+        {
+            "title": "Inception",
+            "casting": "Leonardo DiCaprio",
+            "genre": "Sci-Fi",
+            "poster": "https://user-images.githubusercontent.com/60697742/126492756-4b3d4e13-f51c-49be-99d8-7a6969189374.jpg",
+            "explain": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+        },
+        {
+            "title": "The Matrix",
+            "casting": "Keanu Reeves",
+            "genre": "Sci-Fi",
+            "poster": "https://user-images.githubusercontent.com/60697742/126495138-f5fd893b-8cad-4422-a261-46c8f4535cec.jpg",
+            "explain": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence."
+        },
+        {
+            "title": "Interstellar",
+            "casting": "Matthew McConaughey",
+            "genre": "Sci-Fi",
+            "poster": "https://user-images.githubusercontent.com/60697742/126495439-c3cd4e76-e4d7-4772-9b4b-125f8325301d.jpg",
+            "explain": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+        },
+        {
+            "title": "Tenet",
+            "casting": "John David Washington",
+            "genre": "Sci-Fi",
+            "poster": "https://user-images.githubusercontent.com/60697742/126496082-598dc1b5-dcbb-4969-8136-bd55255189a3.jpg",
+            "explain": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."
+        },
+        {
+            "title": "The Martian",
+            "casting": "Matt Damon",
+            "genre": "Sci-Fi",
+            "poster": "https://user-images.githubusercontent.com/60697742/126496492-848fb446-bb10-4720-9ebd-8e986271d34e.jpg",
+            "explain": "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive."
+        }
+    ]
+}

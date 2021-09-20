@@ -7,18 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var mainPoster: UIImageView!
     @IBOutlet weak var dramaCollectionView: UICollectionView!
     @IBOutlet weak var horrorCollectionView: UICollectionView!
     @IBOutlet weak var scifiCollectionView: UICollectionView!
     
-    private var contents = [Contents]()
-    var contentsList: Contents!
-    var dramaList: [String] = []
-    var scifiList: [String] = []
-    var horrorList: [String] = []
+    private var contentsList: Movies!
+    private var dramaList = [Drama]()
+    private var scifiList = [SciFi]()
+    private var horrorList = [Horror]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +36,8 @@ class ViewController: UIViewController {
     }
     
     func parseJSON() {
-        
-        guard let url = URL(string: "https://raw.githubusercontent.com/nezhitsya/Swift-30-Projects/master/Project%2029%20-%20Netflix/contents.json") else {
+
+        guard let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/reactnative-a1712.appspot.com/o/movies.json?alt=media&token=6b700211-da8f-426d-bf3a-fe0b106dcb71") else {
             print("api is down")
             return
         }
@@ -47,24 +46,18 @@ class ViewController: UIViewController {
             if error == nil && data != nil {
                 do {
                     DispatchQueue.main.async {
-                        print(String(data: data!, encoding: .utf8) ?? "")
+//                        print(String(data: data!, encoding: .utf8) ?? "")
                         
-                        let response = try? JSONDecoder().decode(Contents.self, from: data!)
-                        print(response?.title)
-                        
-//                        if let response = try? JSONDecoder().decode(Contents.self, from: data!) {
-//                            DispatchQueue.main.async {
-//                                print(String(data: data!, encoding: .utf8) ?? "")
-//                                self.contentsList = response
-//                                if self.contentsList.genre == "drama" {
-//                                    self.dramaList.append(self.contentsList.title)
-//                                } else if self.contentsList.genre == "horror" {
-//                                    self.horrorList.append(self.contentsList.title)
-//                                } else {
-//                                    self.scifiList.append(self.contentsList.title)
-//                                }
-//                            }
-//                        }
+                        if let response = try? JSONDecoder().decode(Movies.self, from: data!) {
+                            DispatchQueue.main.async {
+                                self.contentsList = response
+                                self.dramaList = self.contentsList.Drama
+                                self.horrorList = self.contentsList.Horror
+                                self.scifiList = self.contentsList.SciFi
+                                
+                                print(self.dramaList[1].casting)
+                            }
+                        }
                     }
                 }
             }
@@ -90,8 +83,9 @@ extension ViewController: UICollectionViewDataSource {
             let dramaCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dramaCell", for: indexPath) as! CollectionViewCell
             
             for i in 0...self.dramaList.count {
-                if self.contentsList.title == self.dramaList[i] {
-                    dramaCell.posterImage.image = UIImage(named: "logo")
+                let imageURL = URL(string: self.dramaList[i].poster)
+                if let imageData = try? Data(contentsOf: imageURL!) {
+                    dramaCell.posterImage.image = UIImage(data: imageData)
                 }
             }
             
