@@ -15,16 +15,12 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var scifiCollectionView: UICollectionView!
     
     private var contentsList: Movies!
-    private var dramaList = [Drama]()
-    private var scifiList = [SciFi]()
-    private var horrorList = [Horror]()
+    var dramaList = [Drama]()
+    var scifiList = [SciFi]()
+    var horrorList = [Horror]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dramaCollectionView.dataSource = self
-        horrorCollectionView.dataSource = self
-        scifiCollectionView.dataSource = self
         
         mainPoster.addBlackGradientLayerInForeground(frame: mainPoster.frame, colors: [.clear, .black])
     }
@@ -35,9 +31,31 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         parseJSON()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "drama" {
+            if let cell = sender as? UICollectionViewCell,
+               let indexPath = dramaCollectionView?.indexPath(for: cell),
+               let detail = segue.destination as? DetailViewController {
+                detail.dramaList = self.dramaList[indexPath.row]
+            }
+        } else if segue.identifier == "horror" {
+            if let cell = sender as? UICollectionViewCell,
+               let indexPath = horrorCollectionView?.indexPath(for: cell),
+               let detail = segue.destination as? DetailViewController {
+                detail.horrorList = self.horrorList[indexPath.row]
+            }
+        } else {
+            if let cell = sender as? UICollectionViewCell,
+               let indexPath = scifiCollectionView?.indexPath(for: cell),
+               let detail = segue.destination as? DetailViewController {
+                detail.scifiList = self.scifiList[indexPath.row]
+            }
+        }
+    }
+    
     func parseJSON() {
 
-        guard let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/reactnative-a1712.appspot.com/o/movies.json?alt=media&token=6b700211-da8f-426d-bf3a-fe0b106dcb71") else {
+        guard let url = URL(string: "https://raw.githubusercontent.com/nezhitsya/Swift-30-Projects/master/Project%2029%20-%20Netflix/movies.json") else {
             print("api is down")
             return
         }
@@ -55,13 +73,19 @@ class ViewController: UIViewController, UICollectionViewDelegate {
                                 self.horrorList = self.contentsList.Horror
                                 self.scifiList = self.contentsList.SciFi
                                 
-                                print(self.dramaList[1].casting)
+                                self.dramaCollectionView.dataSource = self
+                                self.horrorCollectionView.dataSource = self
+                                self.scifiCollectionView.dataSource = self
                             }
                         }
                     }
                 }
             }
         }.resume()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }
@@ -82,26 +106,28 @@ extension ViewController: UICollectionViewDataSource {
         if collectionView == self.dramaCollectionView {
             let dramaCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dramaCell", for: indexPath) as! CollectionViewCell
             
-            for i in 0...self.dramaList.count {
-                let imageURL = URL(string: self.dramaList[i].poster)
-                if let imageData = try? Data(contentsOf: imageURL!) {
-                    dramaCell.posterImage.image = UIImage(data: imageData)
-                }
+            let imageURL = URL(string: self.dramaList[(indexPath as NSIndexPath).item].poster)
+            if let imageData = try? Data(contentsOf: imageURL!) {
+                dramaCell.posterImage.image = UIImage(data: imageData)
             }
-            
-            dramaCell.posterImage.image = UIImage(named: "poster")
             
             return dramaCell
         } else if collectionView == self.horrorCollectionView {
             let horrorCell = collectionView.dequeueReusableCell(withReuseIdentifier: "horrorCell", for: indexPath) as! CollectionViewCell
             
-            horrorCell.posterImage.image = UIImage(named: "logo")
+            let imageURL = URL(string: self.horrorList[(indexPath as NSIndexPath).item].poster)
+            if let imageData = try? Data(contentsOf: imageURL!) {
+                horrorCell.posterImage.image = UIImage(data: imageData)
+            }
             
             return horrorCell
         } else {
             let scifiCell = collectionView.dequeueReusableCell(withReuseIdentifier: "scifiCell", for: indexPath) as! CollectionViewCell
             
-            scifiCell.posterImage.image = UIImage(named: "logoN")
+            let imageURL = URL(string: self.scifiList[(indexPath as NSIndexPath).item].poster)
+            if let imageData = try? Data(contentsOf: imageURL!) {
+                scifiCell.posterImage.image = UIImage(data: imageData)
+            }
             
             return scifiCell
         }

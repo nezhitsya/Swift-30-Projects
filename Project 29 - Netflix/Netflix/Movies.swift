@@ -19,6 +19,7 @@ struct Drama: Codable {
     var genre: String
     var poster: String
     var explain: String
+    var trailer: String
 }
 
 struct Horror: Codable {
@@ -27,6 +28,7 @@ struct Horror: Codable {
     var genre: String
     var poster: String
     var explain: String
+    var trailer: String
 }
 
 struct SciFi: Codable {
@@ -35,4 +37,5 @@ struct SciFi: Codable {
     var genre: String
     var poster: String
     var explain: String
+    var trailer: String
 }

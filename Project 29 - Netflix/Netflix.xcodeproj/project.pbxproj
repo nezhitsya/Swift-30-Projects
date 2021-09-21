@@ -15,7 +15,10 @@
 		0B103EDD26841003003D4DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B103EDC26841003003D4DAF /* Assets.xcassets */; };
 		0B103EE026841003003D4DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B103EDE26841003003D4DAF /* LaunchScreen.storyboard */; };
 		0B103EE8268424EE003D4DAF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B103EE7268424EE003D4DAF /* CollectionViewCell.swift */; };
+		0B3A12D726F9B3BB002CA2DD /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A12D626F9B3BB002CA2DD /* PlayerViewController.swift */; };
+		0B3A12D926F9B4F2002CA2DD /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A12D826F9B4F2002CA2DD /* PlayerView.swift */; };
 		0B6535D926F85D2300655E4C /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6535D826F85D2300655E4C /* Movies.swift */; };
+		0B6535DB26F8709700655E4C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6535DA26F8709700655E4C /* DetailViewController.swift */; };
 		0BA696CE26F7754A00A7489F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA696CD26F7754A00A7489F /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +33,10 @@
 		0B103EDF26841003003D4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B103EE126841003003D4DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B103EE7268424EE003D4DAF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0B3A12D626F9B3BB002CA2DD /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		0B3A12D826F9B4F2002CA2DD /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		0B6535D826F85D2300655E4C /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		0B6535DA26F8709700655E4C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0BA696CD26F7754A00A7489F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,9 @@
 				0B103EE7268424EE003D4DAF /* CollectionViewCell.swift */,
 				0BA696CD26F7754A00A7489F /* SearchViewController.swift */,
 				0B6535D826F85D2300655E4C /* Movies.swift */,
+				0B6535DA26F8709700655E4C /* DetailViewController.swift */,
+				0B3A12D626F9B3BB002CA2DD /* PlayerViewController.swift */,
+				0B3A12D826F9B4F2002CA2DD /* PlayerView.swift */,
 			);
 			path = Netflix;
 			sourceTree = "<group>";
@@ -152,10 +161,13 @@
 				0B103EE8268424EE003D4DAF /* CollectionViewCell.swift in Sources */,
 				0BA696CE26F7754A00A7489F /* SearchViewController.swift in Sources */,
 				0B6535D926F85D2300655E4C /* Movies.swift in Sources */,
+				0B3A12D926F9B4F2002CA2DD /* PlayerView.swift in Sources */,
 				0B103ED526841002003D4DAF /* ViewController.swift in Sources */,
 				0B103ED126841002003D4DAF /* AppDelegate.swift in Sources */,
+				0B3A12D726F9B3BB002CA2DD /* PlayerViewController.swift in Sources */,
 				0B103EDB26841002003D4DAF /* Netflix.xcdatamodeld in Sources */,
 				0B103ED326841002003D4DAF /* SceneDelegate.swift in Sources */,
+				0B6535DB26F8709700655E4C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
