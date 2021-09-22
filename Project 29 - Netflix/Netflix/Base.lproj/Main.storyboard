@@ -414,6 +414,9 @@
                                 <state key="normal" title="재생" image="arrowtriangle.right.fill" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="111-9Z-8fg" eventType="touchUpInside" id="e3g-iV-gqM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxq-4I-NGb">
                                 <rect key="frame" x="20" y="539" width="224" height="35"/>
@@ -475,7 +478,7 @@
         <!--Player View Controller-->
         <scene sceneID="A1K-t1-1pY">
             <objects>
-                <viewController storyboardIdentifier="PlayerViewController" id="n01-m9-OWd" customClass="PlayerViewController" customModule="Netflix" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n01-m9-OWd" customClass="PlayerViewController" customModule="Netflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ewG-Eh-uhp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

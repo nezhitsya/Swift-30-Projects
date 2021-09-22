@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var contentTitle: UILabel!
     @IBOutlet weak var contents: UILabel!
     @IBOutlet weak var casting: UILabel!
-    @IBOutlet weak var searchButton: UIButton!
     
     var dramaList: Drama!
     var horrorList: Horror!
@@ -68,12 +67,24 @@ class DetailViewController: UIViewController {
     */
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        let url = URL(string: dramaList.poster)!
-        let item = AVPlayerItem(url: url)
-        let sb = UIStoryboard(name: "Player", bundle: nil)
-        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
         
-//        vc.modalTransitionStyle = .fullScreen
+        var url: URL
+        if dramaList != nil {
+            url = URL(string: dramaList.trailer)!
+        } else if horrorList != nil {
+            url = URL(string: horrorList.trailer)!
+        } else {
+            url = URL(string: scifiList.trailer)!
+        }
+        
+//        let item = AVPlayerItem(url: url)
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
+        
+        let vc = PlayerViewController()
+        let item = AVPlayerItem(url: url)
+        
+        vc.modalPresentationStyle = .fullScreen
         vc.player.replaceCurrentItem(with: item)
         
         self.present(vc, animated: false, completion: nil)
