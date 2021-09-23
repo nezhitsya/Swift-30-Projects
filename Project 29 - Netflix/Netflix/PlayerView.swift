@@ -10,7 +10,7 @@ import AVFoundation
 
 class PlayerView: UIView {
     
-    var player: AVPlayer? {
+    var player: AVPlayer! {
         get {
             return playerLayer.player
         }

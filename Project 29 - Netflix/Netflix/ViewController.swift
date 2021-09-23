@@ -14,21 +14,18 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var horrorCollectionView: UICollectionView!
     @IBOutlet weak var scifiCollectionView: UICollectionView!
     
-    private var contentsList: Movies!
-    var dramaList = [Drama]()
-    var scifiList = [SciFi]()
-    var horrorList = [Horror]()
+    private var persistencyManager: PersistencyManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainPoster.addBlackGradientLayerInForeground(frame: mainPoster.frame, colors: [.clear, .black])
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        persistencyManager = PersistencyManager()
         
-        parseJSON()
+        mainPoster.addBlackGradientLayerInForeground(frame: mainPoster.frame, colors: [.clear, .black])
+        
+        self.dramaCollectionView.dataSource = self
+        self.horrorCollectionView.dataSource = self
+        self.scifiCollectionView.dataSource = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,52 +33,21 @@ class ViewController: UIViewController, UICollectionViewDelegate {
             if let cell = sender as? UICollectionViewCell,
                let indexPath = dramaCollectionView?.indexPath(for: cell),
                let detail = segue.destination as? DetailViewController {
-                detail.dramaList = self.dramaList[indexPath.row]
+                detail.dramaList = persistencyManager.dramaList[indexPath.row]
             }
         } else if segue.identifier == "horror" {
             if let cell = sender as? UICollectionViewCell,
                let indexPath = horrorCollectionView?.indexPath(for: cell),
                let detail = segue.destination as? DetailViewController {
-                detail.horrorList = self.horrorList[indexPath.row]
+                detail.horrorList = persistencyManager.horrorList[indexPath.row]
             }
         } else {
             if let cell = sender as? UICollectionViewCell,
                let indexPath = scifiCollectionView?.indexPath(for: cell),
                let detail = segue.destination as? DetailViewController {
-                detail.scifiList = self.scifiList[indexPath.row]
+                detail.scifiList = persistencyManager.scifiList[indexPath.row]
             }
         }
-    }
-    
-    func parseJSON() {
-
-        guard let url = URL(string: "https://raw.githubusercontent.com/nezhitsya/Swift-30-Projects/master/Project%2029%20-%20Netflix/movies.json") else {
-            print("api is down")
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error == nil && data != nil {
-                do {
-                    DispatchQueue.main.async {
-//                        print(String(data: data!, encoding: .utf8) ?? "")
-                        
-                        if let response = try? JSONDecoder().decode(Movies.self, from: data!) {
-                            DispatchQueue.main.async {
-                                self.contentsList = response
-                                self.dramaList = self.contentsList.Drama
-                                self.horrorList = self.contentsList.Horror
-                                self.scifiList = self.contentsList.SciFi
-                                
-                                self.dramaCollectionView.dataSource = self
-                                self.horrorCollectionView.dataSource = self
-                                self.scifiCollectionView.dataSource = self
-                            }
-                        }
-                    }
-                }
-            }
-        }.resume()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -94,11 +60,11 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.dramaCollectionView {
-            return self.dramaList.count
+            return persistencyManager.dramaList.count
         } else if collectionView == self.horrorCollectionView {
-            return self.horrorList.count
+            return persistencyManager.horrorList.count
         } else {
-            return self.scifiList.count
+            return persistencyManager.scifiList.count
         }
     }
     
@@ -106,7 +72,7 @@ extension ViewController: UICollectionViewDataSource {
         if collectionView == self.dramaCollectionView {
             let dramaCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dramaCell", for: indexPath) as! CollectionViewCell
             
-            let imageURL = URL(string: self.dramaList[(indexPath as NSIndexPath).item].poster)
+            let imageURL = URL(string: persistencyManager.dramaList[(indexPath as NSIndexPath).item].poster)
             if let imageData = try? Data(contentsOf: imageURL!) {
                 dramaCell.posterImage.image = UIImage(data: imageData)
             }
@@ -115,7 +81,7 @@ extension ViewController: UICollectionViewDataSource {
         } else if collectionView == self.horrorCollectionView {
             let horrorCell = collectionView.dequeueReusableCell(withReuseIdentifier: "horrorCell", for: indexPath) as! CollectionViewCell
             
-            let imageURL = URL(string: self.horrorList[(indexPath as NSIndexPath).item].poster)
+            let imageURL = URL(string: persistencyManager.horrorList[(indexPath as NSIndexPath).item].poster)
             if let imageData = try? Data(contentsOf: imageURL!) {
                 horrorCell.posterImage.image = UIImage(data: imageData)
             }
@@ -124,7 +90,7 @@ extension ViewController: UICollectionViewDataSource {
         } else {
             let scifiCell = collectionView.dequeueReusableCell(withReuseIdentifier: "scifiCell", for: indexPath) as! CollectionViewCell
             
-            let imageURL = URL(string: self.scifiList[(indexPath as NSIndexPath).item].poster)
+            let imageURL = URL(string: persistencyManager.scifiList[(indexPath as NSIndexPath).item].poster)
             if let imageData = try? Data(contentsOf: imageURL!) {
                 scifiCell.posterImage.image = UIImage(data: imageData)
             }

@@ -77,12 +77,10 @@ class DetailViewController: UIViewController {
             url = URL(string: scifiList.trailer)!
         }
         
-//        let item = AVPlayerItem(url: url)
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
-        
-        let vc = PlayerViewController()
         let item = AVPlayerItem(url: url)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
+//        let vc = PlayerViewController()
         
         vc.modalPresentationStyle = .fullScreen
         vc.player.replaceCurrentItem(with: item)

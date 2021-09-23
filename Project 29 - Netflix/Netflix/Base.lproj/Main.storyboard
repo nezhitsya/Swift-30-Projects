@@ -259,15 +259,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwe-eP-4Pw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Jwe-eP-4Pw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rir-VY-9Gv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rir-VY-9Gv">
+                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ja-pS-emV">
                                     <size key="itemSize" width="138" height="202"/>
@@ -276,33 +274,54 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="68L-Yq-HBS">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="202"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="68L-Yq-HBS" customClass="CollectionViewCell" customModule="Netflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BMo-dj-fuw">
-                                            <rect key="frame" x="0.0" y="0.0" width="138" height="202"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="25e-CO-YAo">
-                                                    <rect key="frame" x="4" y="4" width="130" height="194"/>
+                                                    <rect key="frame" x="2" y="2" width="121" height="191"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="187" id="9Am-vq-9qo"/>
+                                                        <constraint firstAttribute="width" constant="117" id="gp5-YT-aYe"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="25e-CO-YAo" secondAttribute="trailing" constant="4" id="5Zf-a7-fvd"/>
-                                                <constraint firstItem="25e-CO-YAo" firstAttribute="leading" secondItem="BMo-dj-fuw" secondAttribute="leading" constant="4" id="nNX-Gl-AKd"/>
-                                                <constraint firstItem="25e-CO-YAo" firstAttribute="top" secondItem="BMo-dj-fuw" secondAttribute="top" constant="4" id="siQ-d0-WqD"/>
-                                                <constraint firstAttribute="bottom" secondItem="25e-CO-YAo" secondAttribute="bottom" constant="4" id="vrn-4n-0TX"/>
+                                                <constraint firstAttribute="bottom" secondItem="25e-CO-YAo" secondAttribute="bottom" constant="2" id="FYE-el-e3v"/>
+                                                <constraint firstItem="25e-CO-YAo" firstAttribute="top" secondItem="BMo-dj-fuw" secondAttribute="top" constant="2" id="WHB-h1-qWF"/>
+                                                <constraint firstItem="25e-CO-YAo" firstAttribute="leading" secondItem="BMo-dj-fuw" secondAttribute="leading" constant="2" id="aEg-Ae-bis"/>
+                                                <constraint firstAttribute="trailing" secondItem="25e-CO-YAo" secondAttribute="trailing" constant="2" id="wVe-7u-n9V"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="138" height="202"/>
+                                        <size key="customSize" width="125" height="195"/>
+                                        <connections>
+                                            <outlet property="posterImage" destination="25e-CO-YAo" id="Ls9-0D-Nzj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m4h-Eg-pT3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rir-VY-9Gv" firstAttribute="trailing" secondItem="m4h-Eg-pT3" secondAttribute="trailing" id="1in-oF-acs"/>
+                            <constraint firstItem="Rir-VY-9Gv" firstAttribute="top" secondItem="Jwe-eP-4Pw" secondAttribute="bottom" id="82H-Rn-bYM"/>
+                            <constraint firstItem="Rir-VY-9Gv" firstAttribute="top" secondItem="Jwe-eP-4Pw" secondAttribute="bottom" id="8LW-3Z-qiy"/>
+                            <constraint firstItem="Rir-VY-9Gv" firstAttribute="bottom" secondItem="m4h-Eg-pT3" secondAttribute="bottom" id="C89-aQ-Vb1"/>
+                            <constraint firstItem="Jwe-eP-4Pw" firstAttribute="top" secondItem="m4h-Eg-pT3" secondAttribute="top" id="MeW-yN-O6U"/>
+                            <constraint firstItem="Rir-VY-9Gv" firstAttribute="leading" secondItem="m4h-Eg-pT3" secondAttribute="leading" id="d2M-0M-kvT"/>
+                            <constraint firstItem="Jwe-eP-4Pw" firstAttribute="trailing" secondItem="m4h-Eg-pT3" secondAttribute="trailing" id="mqp-ZJ-5Pb"/>
+                            <constraint firstItem="Jwe-eP-4Pw" firstAttribute="leading" secondItem="m4h-Eg-pT3" secondAttribute="leading" id="qqS-ex-drY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="niG-OV-Mcz"/>
+                    <connections>
+                        <outlet property="resultCollectionView" destination="Rir-VY-9Gv" id="6Pb-MO-yF9"/>
+                        <outlet property="searchBar" destination="Jwe-eP-4Pw" id="eLL-dQ-XS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gi-SV-VVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +502,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-MO-GjB" customClass="PlayerView" customModule="MyNetflix" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-MO-GjB" customClass="PlayerView" customModule="Netflix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
