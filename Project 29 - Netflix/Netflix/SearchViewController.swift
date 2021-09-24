@@ -13,16 +13,28 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var resultCollectionView: UICollectionView!
     
     private var persistencyManager: PersistencyManager!
+    var filteredMovies = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         persistencyManager = PersistencyManager()
+        filteredMovies = persistencyManager.allMovies
         
         resultCollectionView.dataSource = self
+        searchBar.delegate = self
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredMovies = persistencyManager.allMovies.filter { movie in
+            return movie.key.lowercased().contains(searchText.lowercased()) || searchText == ""
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -39,14 +51,15 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
 extension SearchViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return persistencyManager.allMovies.count
+        return filteredMovies.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         
         var urls = [String]()
-        for movie in persistencyManager.allMovies {
+        
+        for movie in filteredMovies {
             urls.append(movie.value)
         }
         
@@ -58,4 +71,23 @@ extension SearchViewController: UICollectionViewDataSource {
         return cell
     }
 
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    private func dismisskeyboard() {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("start")
+        
+        dismisskeyboard()
+        
+        guard let searchTerm = searchBar.text, searchTerm.isEmpty == false else { return }
+        print("search \(searchTerm)")
+        
+        filterContentForSearchText(searchTerm)
+        self.resultCollectionView.reloadData()
+    }
 }
