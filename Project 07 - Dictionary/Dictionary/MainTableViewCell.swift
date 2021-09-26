@@ -33,7 +33,7 @@ class MainTableViewCell: UITableViewCell {
     private func setupUI(_ type: String, name: String) {
         animalName.text = name
         animalType.text = type
-//        animalImage.image = UIImage(named: "default")
+        animalImage.image = UIImage(named: "default")
         
         indicator = UIActivityIndicatorView()
         indicator.center = CGPoint(x: animalImage.bounds.midX, y: animalImage.bounds.midY)

@@ -22,8 +22,10 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-//        refreshUI()
+        refreshUI()
         super.viewDidLoad()
+        
+        delegate = self
     }
     
     func refreshUI() {
