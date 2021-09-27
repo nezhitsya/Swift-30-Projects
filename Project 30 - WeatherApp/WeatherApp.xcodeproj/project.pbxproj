@@ -17,6 +17,9 @@
 		0B26247A27006C7E005FD8CC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247927006C7E005FD8CC /* APIError.swift */; };
 		0B26247C27006CB8005FD8CC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247B27006CB8005FD8CC /* APIRequest.swift */; };
 		0B26247E27006D2D005FD8CC /* APICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247D27006D2D005FD8CC /* APICenter.swift */; };
+		0B7E9CD42701926700F3F0C2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD32701926700F3F0C2 /* APIResponse.swift */; };
+		0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD62701959400F3F0C2 /* Weather.swift */; };
+		0B7E9CD9270196F800F3F0C2 /* FiveDayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD8270196F800F3F0C2 /* FiveDayWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		0B26247927006C7E005FD8CC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0B26247B27006CB8005FD8CC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		0B26247D27006D2D005FD8CC /* APICenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICenter.swift; sourceTree = "<group>"; };
+		0B7E9CD32701926700F3F0C2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		0B7E9CD62701959400F3F0C2 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		0B7E9CD8270196F800F3F0C2 /* FiveDayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 				0B2624682700685B005FD8CC /* Assets.xcassets */,
 				0B26247427006938005FD8CC /* Base */,
 				0B26247527006974005FD8CC /* Controller */,
+				0B7E9CD52701957400F3F0C2 /* Model */,
 				0B262476270069BE005FD8CC /* Networking */,
 			);
 			path = WeatherApp;
@@ -99,8 +106,18 @@
 				0B26247927006C7E005FD8CC /* APIError.swift */,
 				0B26247B27006CB8005FD8CC /* APIRequest.swift */,
 				0B26247D27006D2D005FD8CC /* APICenter.swift */,
+				0B7E9CD32701926700F3F0C2 /* APIResponse.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		0B7E9CD52701957400F3F0C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7E9CD62701959400F3F0C2 /* Weather.swift */,
+				0B7E9CD8270196F800F3F0C2 /* FiveDayWeather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +194,12 @@
 				0B26247E27006D2D005FD8CC /* APICenter.swift in Sources */,
 				0B2624602700685A005FD8CC /* AppDelegate.swift in Sources */,
 				0B26247827006A22005FD8CC /* BaseURL.swift in Sources */,
+				0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */,
 				0B26247A27006C7E005FD8CC /* APIError.swift in Sources */,
+				0B7E9CD42701926700F3F0C2 /* APIResponse.swift in Sources */,
 				0B26247C27006CB8005FD8CC /* APIRequest.swift in Sources */,
 				0B2624622700685A005FD8CC /* SceneDelegate.swift in Sources */,
+				0B7E9CD9270196F800F3F0C2 /* FiveDayWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
