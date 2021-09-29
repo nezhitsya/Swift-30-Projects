@@ -50,6 +50,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="AAV-fh-N2n"/>
                                     <barButtonItem title="Item" image="text.justify" catalog="system" id="1y3-PC-ozc">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="listButtonClicked:" destination="x1g-SK-XIS" id="1sT-uT-0Qu"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -146,10 +149,18 @@
                                                     <constraint firstItem="0jn-is-N6E" firstAttribute="leading" secondItem="83Q-AG-jcX" secondAttribute="leading" id="tGV-0o-Du5"/>
                                                 </constraints>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-MW-7ZP">
+                                                <rect key="frame" x="183.5" y="25.5" width="47" height="44.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="AIt-MW-7ZP" firstAttribute="centerX" secondItem="uo0-Kz-PhM" secondAttribute="centerX" id="Civ-7O-Rzu"/>
                                             <constraint firstAttribute="bottom" secondItem="83Q-AG-jcX" secondAttribute="bottom" id="D1h-cG-rPR"/>
+                                            <constraint firstItem="AIt-MW-7ZP" firstAttribute="centerY" secondItem="uo0-Kz-PhM" secondAttribute="centerY" id="EIh-d4-0Cu"/>
                                             <constraint firstAttribute="bottom" secondItem="HyZ-Ek-SrO" secondAttribute="bottom" id="IRO-2q-3mU"/>
                                             <constraint firstItem="83Q-AG-jcX" firstAttribute="leading" secondItem="uo0-Kz-PhM" secondAttribute="leading" constant="4" id="PES-A1-l4x"/>
                                             <constraint firstItem="83Q-AG-jcX" firstAttribute="leading" secondItem="uo0-Kz-PhM" secondAttribute="leading" constant="4" id="auX-N8-SKK"/>
@@ -189,6 +200,15 @@
                             <constraint firstItem="Je1-9P-a6P" firstAttribute="top" secondItem="4Ch-5S-aEl" secondAttribute="top" id="vy9-DI-Lgx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="hTA-ah-x1y" id="tPW-cN-apE"/>
+                        <outlet property="dayLabel" destination="0jn-is-N6E" id="IAo-WF-dK6"/>
+                        <outlet property="maxTempLabel" destination="9kS-o5-Wc7" id="8Bd-ap-sJM"/>
+                        <outlet property="minTempLabel" destination="3xN-Qt-9xU" id="TIA-Yc-PjH"/>
+                        <outlet property="pageControl" destination="lbI-G4-fhu" id="dka-Yv-HGq"/>
+                        <outlet property="tableView" destination="IWa-iF-hnS" id="rDz-Nm-9Vr"/>
+                        <outlet property="weatherStatusLabel" destination="RRz-be-QYi" id="4Yn-c8-Zfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IQ-q9-hOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
