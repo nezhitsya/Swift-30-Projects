@@ -178,7 +178,7 @@ extension CurrentViewController: UITableViewDelegate, UITableViewDataSource {
             guard let weatherData = currentWeatherData?.weather else {
                 return UITableViewCell()
             }
-            
+            cell.weatherList = weatherData
             return cell
         } else if cellType.cellType == DetailTableViewCell.self {
             let cell: DetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
@@ -193,7 +193,8 @@ extension CurrentViewController: UITableViewDelegate, UITableViewDataSource {
                   let fahrenheitOrCelsiusData = fahrenheitOrCelsius else {
                 return UITableViewCell()
             }
-            
+            cell.config(weather: list[indexPath.row - 2],
+                        fahrenheitOrCelsius: fahrenheitOrCelsiusData)
             return cell
         }
     }

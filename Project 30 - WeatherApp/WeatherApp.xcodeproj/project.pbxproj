@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1DE5B6270B1D9E00B3DB22 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1DE5B4270B1D9E00B3DB22 /* TimeCollectionViewCell.swift */; };
+		0B1DE5B7270B1D9E00B3DB22 /* TimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1DE5B5270B1D9E00B3DB22 /* TimeCollectionViewCell.xib */; };
+		0B1DE5B9270B1E8300B3DB22 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1DE5B8270B1E8300B3DB22 /* Extension+UICollectionView.swift */; };
 		0B23930127040AE900BA6CCA /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B23930027040AE900BA6CCA /* Coordinate.swift */; };
 		0B23930627040BAB00BA6CCA /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B23930527040BAB00BA6CCA /* Extension+Date.swift */; };
 		0B2393082704103300BA6CCA /* Enum+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2393072704103300BA6CCA /* Enum+Week.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1DE5B4270B1D9E00B3DB22 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B1DE5B5270B1D9E00B3DB22 /* TimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCollectionViewCell.xib; sourceTree = "<group>"; };
+		0B1DE5B8270B1E8300B3DB22 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
 		0B23930027040AE900BA6CCA /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		0B23930527040BAB00BA6CCA /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		0B2393072704103300BA6CCA /* Enum+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+Week.swift"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				0B23930527040BAB00BA6CCA /* Extension+Date.swift */,
 				0B2393112704141B00BA6CCA /* Extension+Double.swift */,
 				0B2393212704188D00BA6CCA /* Extension+UITableView.swift */,
+				0B1DE5B8270B1E8300B3DB22 /* Extension+UICollectionView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -183,6 +190,8 @@
 				0B23931A2704169800BA6CCA /* DetailTableViewCell.xib */,
 				0B23931D270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.swift */,
 				0B23931E270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.xib */,
+				0B1DE5B4270B1D9E00B3DB22 /* TimeCollectionViewCell.swift */,
+				0B1DE5B5270B1D9E00B3DB22 /* TimeCollectionViewCell.xib */,
 			);
 			path = CurrentWeather;
 			sourceTree = "<group>";
@@ -312,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B26246C2700685B005FD8CC /* LaunchScreen.storyboard in Resources */,
+				0B1DE5B7270B1D9E00B3DB22 /* TimeCollectionViewCell.xib in Resources */,
 				0B239320270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.xib in Resources */,
 				0B2624692700685B005FD8CC /* Assets.xcassets in Resources */,
 				0B2624672700685A005FD8CC /* Main.storyboard in Resources */,
@@ -332,6 +342,8 @@
 				0B7D25F12702BB410079A6C9 /* CurrentViewController.swift in Sources */,
 				0B26247E27006D2D005FD8CC /* APICenter.swift in Sources */,
 				0B2624602700685A005FD8CC /* AppDelegate.swift in Sources */,
+				0B1DE5B9270B1E8300B3DB22 /* Extension+UICollectionView.swift in Sources */,
+				0B1DE5B6270B1D9E00B3DB22 /* TimeCollectionViewCell.swift in Sources */,
 				0B26247827006A22005FD8CC /* BaseURL.swift in Sources */,
 				0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */,
 				0B2393172704167300BA6CCA /* DaysTableViewCell.swift in Sources */,
