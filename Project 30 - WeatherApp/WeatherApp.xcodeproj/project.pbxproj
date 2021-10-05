@@ -41,6 +41,10 @@
 		0B7E9CD42701926700F3F0C2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD32701926700F3F0C2 /* APIResponse.swift */; };
 		0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD62701959400F3F0C2 /* Weather.swift */; };
 		0B7E9CD9270196F800F3F0C2 /* FiveDayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD8270196F800F3F0C2 /* FiveDayWeather.swift */; };
+		0B81071B270C28F100390AF8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071A270C28F100390AF8 /* PageViewController.swift */; };
+		0B81071D270C2BD500390AF8 /* Extension+Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */; };
+		0B81071F270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */; };
+		0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B810720270C2C1B00390AF8 /* NotificationKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		0B7E9CD32701926700F3F0C2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		0B7E9CD62701959400F3F0C2 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0B7E9CD8270196F800F3F0C2 /* FiveDayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeather.swift; sourceTree = "<group>"; };
+		0B81071A270C28F100390AF8 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.Name.swift"; sourceTree = "<group>"; };
+		0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol+SelectedFahrenheitOrCelsius.swift"; sourceTree = "<group>"; };
+		0B810720270C2C1B00390AF8 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			children = (
 				0B2393232704191B00BA6CCA /* Protocol+ReusableCell.swift */,
 				0B2393252704193A00BA6CCA /* Protocol+NibLoadable.swift */,
+				0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 				0B2393112704141B00BA6CCA /* Extension+Double.swift */,
 				0B2393212704188D00BA6CCA /* Extension+UITableView.swift */,
 				0B1DE5B8270B1E8300B3DB22 /* Extension+UICollectionView.swift */,
+				0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -214,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7D25F02702BB410079A6C9 /* CurrentViewController.swift */,
+				0B81071A270C28F100390AF8 /* PageViewController.swift */,
 			);
 			path = CurrentWeather;
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 				0B23930327040B5200BA6CCA /* Enum */,
 				0B23930227040B4B00BA6CCA /* Protocol */,
 				0B23930B270411AD00BA6CCA /* UserInfo.swift */,
+				0B810720270C2C1B00390AF8 /* NotificationKeys.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -344,6 +356,8 @@
 				0B2624602700685A005FD8CC /* AppDelegate.swift in Sources */,
 				0B1DE5B9270B1E8300B3DB22 /* Extension+UICollectionView.swift in Sources */,
 				0B1DE5B6270B1D9E00B3DB22 /* TimeCollectionViewCell.swift in Sources */,
+				0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */,
+				0B81071B270C28F100390AF8 /* PageViewController.swift in Sources */,
 				0B26247827006A22005FD8CC /* BaseURL.swift in Sources */,
 				0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */,
 				0B2393172704167300BA6CCA /* DaysTableViewCell.swift in Sources */,
@@ -363,7 +377,9 @@
 				0B2393242704191B00BA6CCA /* Protocol+ReusableCell.swift in Sources */,
 				0B23930C270411AD00BA6CCA /* UserInfo.swift in Sources */,
 				0B23931B2704169800BA6CCA /* DetailTableViewCell.swift in Sources */,
+				0B81071D270C2BD500390AF8 /* Extension+Notification.Name.swift in Sources */,
 				0B7E9CD9270196F800F3F0C2 /* FiveDayWeather.swift in Sources */,
+				0B81071F270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

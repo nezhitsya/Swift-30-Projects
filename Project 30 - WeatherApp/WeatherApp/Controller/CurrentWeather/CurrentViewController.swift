@@ -49,6 +49,7 @@ class CurrentViewController: UIViewController {
         // Do any additional setup after loading the view.
         fetchData()
         setupTableView()
+        registerNib()
         fetchFahrenheitOrCelsius()
     }
     
@@ -67,6 +68,12 @@ class CurrentViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func registerNib() {
+        tableView.register(CurrentWeatherTimesTableViewCell.self)
+        tableView.register(DaysTableViewCell.self)
+        tableView.register(DetailTableViewCell.self)
     }
     
     private func get5DayWeatherByCoordinate(latitude lat: Double, longitude lon: Double) {
@@ -185,7 +192,7 @@ extension CurrentViewController: UITableViewDelegate, UITableViewDataSource {
             guard let weatherData = currentWeatherData else {
                 return UITableViewCell()
             }
-            
+            cell.weatherDetailData = weatherData
             return cell
         } else {
             let cell: DaysTableViewCell = tableView.dequeueReusableCell(for: indexPath)
