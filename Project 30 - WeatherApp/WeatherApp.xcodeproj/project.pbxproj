@@ -45,6 +45,8 @@
 		0B81071D270C2BD500390AF8 /* Extension+Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */; };
 		0B81071F270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */; };
 		0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B810720270C2C1B00390AF8 /* NotificationKeys.swift */; };
+		0BEA81DC270EC48500276965 /* SearchCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA81DB270EC48500276965 /* SearchCity.storyboard */; };
+		0BEA81DE270EC4EE00276965 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.Name.swift"; sourceTree = "<group>"; };
 		0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol+SelectedFahrenheitOrCelsius.swift"; sourceTree = "<group>"; };
 		0B810720270C2C1B00390AF8 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
+		0BEA81DB270EC48500276965 /* SearchCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchCity.storyboard; sourceTree = "<group>"; };
+		0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 		0B7D25E92702AE7D0079A6C9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0BEA81DB270EC48500276965 /* SearchCity.storyboard */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 		0B7D25EF2702BB190079A6C9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				0B7D25EC2702AEE10079A6C9 /* CurrentWeather.storyboard in Resources */,
 				0B23931C2704169800BA6CCA /* DetailTableViewCell.xib in Resources */,
 				0B2393182704167300BA6CCA /* DaysTableViewCell.xib in Resources */,
+				0BEA81DC270EC48500276965 /* SearchCity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +387,7 @@
 				0B81071D270C2BD500390AF8 /* Extension+Notification.Name.swift in Sources */,
 				0B7E9CD9270196F800F3F0C2 /* FiveDayWeather.swift in Sources */,
 				0B81071F270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift in Sources */,
+				0BEA81DE270EC4EE00276965 /* SearchCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
