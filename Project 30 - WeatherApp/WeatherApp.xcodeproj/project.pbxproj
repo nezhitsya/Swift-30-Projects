@@ -36,6 +36,8 @@
 		0B26247A27006C7E005FD8CC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247927006C7E005FD8CC /* APIError.swift */; };
 		0B26247C27006CB8005FD8CC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247B27006CB8005FD8CC /* APIRequest.swift */; };
 		0B26247E27006D2D005FD8CC /* APICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26247D27006D2D005FD8CC /* APICenter.swift */; };
+		0B74FF26271024C400CDAF86 /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74FF24271024C400CDAF86 /* SearchListTableViewCell.swift */; };
+		0B74FF27271024C400CDAF86 /* SearchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74FF25271024C400CDAF86 /* SearchListTableViewCell.xib */; };
 		0B7D25EC2702AEE10079A6C9 /* CurrentWeather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D25EB2702AEE10079A6C9 /* CurrentWeather.storyboard */; };
 		0B7D25F12702BB410079A6C9 /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D25F02702BB410079A6C9 /* CurrentViewController.swift */; };
 		0B7E9CD42701926700F3F0C2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9CD32701926700F3F0C2 /* APIResponse.swift */; };
@@ -81,6 +83,8 @@
 		0B26247927006C7E005FD8CC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0B26247B27006CB8005FD8CC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		0B26247D27006D2D005FD8CC /* APICenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICenter.swift; sourceTree = "<group>"; };
+		0B74FF24271024C400CDAF86 /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
+		0B74FF25271024C400CDAF86 /* SearchListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListTableViewCell.xib; sourceTree = "<group>"; };
 		0B7D25EB2702AEE10079A6C9 /* CurrentWeather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentWeather.storyboard; sourceTree = "<group>"; };
 		0B7D25F02702BB410079A6C9 /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
 		0B7E9CD32701926700F3F0C2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				0BEA81DB270EC48500276965 /* SearchCity.storyboard */,
+				0B74FF24271024C400CDAF86 /* SearchListTableViewCell.swift */,
+				0B74FF25271024C400CDAF86 /* SearchListTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				0B239320270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.xib in Resources */,
 				0B2624692700685B005FD8CC /* Assets.xcassets in Resources */,
 				0B2624672700685A005FD8CC /* Main.storyboard in Resources */,
+				0B74FF27271024C400CDAF86 /* SearchListTableViewCell.xib in Resources */,
 				0B7D25EC2702AEE10079A6C9 /* CurrentWeather.storyboard in Resources */,
 				0B23931C2704169800BA6CCA /* DetailTableViewCell.xib in Resources */,
 				0B2393182704167300BA6CCA /* DaysTableViewCell.xib in Resources */,
@@ -370,6 +377,7 @@
 				0B2393172704167300BA6CCA /* DaysTableViewCell.swift in Sources */,
 				0B2393262704193A00BA6CCA /* Protocol+NibLoadable.swift in Sources */,
 				0B23930127040AE900BA6CCA /* Coordinate.swift in Sources */,
+				0B74FF26271024C400CDAF86 /* SearchListTableViewCell.swift in Sources */,
 				0B23930A270410D200BA6CCA /* Enum+FahrenheitOrCelsius.swift in Sources */,
 				0B23931F270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.swift in Sources */,
 				0B2393082704103300BA6CCA /* Enum+Week.swift in Sources */,
