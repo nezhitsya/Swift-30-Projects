@@ -47,6 +47,8 @@
 		0B81071D270C2BD500390AF8 /* Extension+Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */; };
 		0B81071F270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */; };
 		0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B810720270C2C1B00390AF8 /* NotificationKeys.swift */; };
+		0B9659C22711D1B5008D3DAF /* WeatherList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */; };
+		0B9659C42711D219008D3DAF /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9659C32711D219008D3DAF /* WeatherListViewController.swift */; };
 		0BEA81DC270EC48500276965 /* SearchCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA81DB270EC48500276965 /* SearchCity.storyboard */; };
 		0BEA81DE270EC4EE00276965 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		0B81071C270C2BD500390AF8 /* Extension+Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.Name.swift"; sourceTree = "<group>"; };
 		0B81071E270C2BF900390AF8 /* Protocol+SelectedFahrenheitOrCelsius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol+SelectedFahrenheitOrCelsius.swift"; sourceTree = "<group>"; };
 		0B810720270C2C1B00390AF8 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
+		0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherList.storyboard; sourceTree = "<group>"; };
+		0B9659C32711D219008D3DAF /* WeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewController.swift; sourceTree = "<group>"; };
 		0BEA81DB270EC48500276965 /* SearchCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchCity.storyboard; sourceTree = "<group>"; };
 		0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +231,7 @@
 		0B7D25EA2702AE850079A6C9 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 		0B7D25EE2702BB140079A6C9 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				0B9659C32711D219008D3DAF /* WeatherListViewController.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				0B26246C2700685B005FD8CC /* LaunchScreen.storyboard in Resources */,
 				0B1DE5B7270B1D9E00B3DB22 /* TimeCollectionViewCell.xib in Resources */,
 				0B239320270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.xib in Resources */,
+				0B9659C22711D1B5008D3DAF /* WeatherList.storyboard in Resources */,
 				0B2624692700685B005FD8CC /* Assets.xcassets in Resources */,
 				0B2624672700685A005FD8CC /* Main.storyboard in Resources */,
 				0B74FF27271024C400CDAF86 /* SearchListTableViewCell.xib in Resources */,
@@ -373,6 +380,7 @@
 				0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */,
 				0B81071B270C28F100390AF8 /* PageViewController.swift in Sources */,
 				0B26247827006A22005FD8CC /* BaseURL.swift in Sources */,
+				0B9659C42711D219008D3DAF /* WeatherListViewController.swift in Sources */,
 				0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */,
 				0B2393172704167300BA6CCA /* DaysTableViewCell.swift in Sources */,
 				0B2393262704193A00BA6CCA /* Protocol+NibLoadable.swift in Sources */,
