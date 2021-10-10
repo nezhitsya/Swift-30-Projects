@@ -7,10 +7,40 @@
 
 import UIKit
 import WebKit
+import CoreLocation
 
 class WeatherListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private let locationManager: CLLocationManager = CLLocationManager()
+    private var currentLocation: CLLocation?
+    private var allowPermission: Bool = false
+    private var weather: [WeatherInfo] = [WeatherInfo]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var fahrenheitOrCelsius: FahrenheitOrCelsius? = UserInfo.getFahrenheitOrCelsius() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var myCities: [Coordinate] = [Coordinate]() {
+        didSet {
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.myCities),
+                                      forKey: UserInfo.cities)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
