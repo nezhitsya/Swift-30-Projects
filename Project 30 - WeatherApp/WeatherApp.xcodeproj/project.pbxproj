@@ -49,6 +49,10 @@
 		0B810721270C2C1B00390AF8 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B810720270C2C1B00390AF8 /* NotificationKeys.swift */; };
 		0B9659C22711D1B5008D3DAF /* WeatherList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */; };
 		0B9659C42711D219008D3DAF /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9659C32711D219008D3DAF /* WeatherListViewController.swift */; };
+		0BE77C1327143A650088EB32 /* WeatherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE77C1127143A650088EB32 /* WeatherListTableViewCell.swift */; };
+		0BE77C1427143A650088EB32 /* WeatherListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE77C1227143A650088EB32 /* WeatherListTableViewCell.xib */; };
+		0BE77C1727143A780088EB32 /* WeatherListSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE77C1527143A780088EB32 /* WeatherListSettingTableViewCell.swift */; };
+		0BE77C1827143A780088EB32 /* WeatherListSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE77C1627143A780088EB32 /* WeatherListSettingTableViewCell.xib */; };
 		0BEA81DC270EC48500276965 /* SearchCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA81DB270EC48500276965 /* SearchCity.storyboard */; };
 		0BEA81DE270EC4EE00276965 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +102,10 @@
 		0B810720270C2C1B00390AF8 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherList.storyboard; sourceTree = "<group>"; };
 		0B9659C32711D219008D3DAF /* WeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewController.swift; sourceTree = "<group>"; };
+		0BE77C1127143A650088EB32 /* WeatherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewCell.swift; sourceTree = "<group>"; };
+		0BE77C1227143A650088EB32 /* WeatherListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherListTableViewCell.xib; sourceTree = "<group>"; };
+		0BE77C1527143A780088EB32 /* WeatherListSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListSettingTableViewCell.swift; sourceTree = "<group>"; };
+		0BE77C1627143A780088EB32 /* WeatherListSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherListSettingTableViewCell.xib; sourceTree = "<group>"; };
 		0BEA81DB270EC48500276965 /* SearchCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchCity.storyboard; sourceTree = "<group>"; };
 		0BEA81DD270EC4EE00276965 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,6 +240,10 @@
 			isa = PBXGroup;
 			children = (
 				0B9659C12711D1B5008D3DAF /* WeatherList.storyboard */,
+				0BE77C1127143A650088EB32 /* WeatherListTableViewCell.swift */,
+				0BE77C1227143A650088EB32 /* WeatherListTableViewCell.xib */,
+				0BE77C1527143A780088EB32 /* WeatherListSettingTableViewCell.swift */,
+				0BE77C1627143A780088EB32 /* WeatherListSettingTableViewCell.xib */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -354,6 +366,8 @@
 				0B1DE5B7270B1D9E00B3DB22 /* TimeCollectionViewCell.xib in Resources */,
 				0B239320270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.xib in Resources */,
 				0B9659C22711D1B5008D3DAF /* WeatherList.storyboard in Resources */,
+				0BE77C1827143A780088EB32 /* WeatherListSettingTableViewCell.xib in Resources */,
+				0BE77C1427143A650088EB32 /* WeatherListTableViewCell.xib in Resources */,
 				0B2624692700685B005FD8CC /* Assets.xcassets in Resources */,
 				0B2624672700685A005FD8CC /* Main.storyboard in Resources */,
 				0B74FF27271024C400CDAF86 /* SearchListTableViewCell.xib in Resources */,
@@ -381,10 +395,12 @@
 				0B81071B270C28F100390AF8 /* PageViewController.swift in Sources */,
 				0B26247827006A22005FD8CC /* BaseURL.swift in Sources */,
 				0B9659C42711D219008D3DAF /* WeatherListViewController.swift in Sources */,
+				0BE77C1727143A780088EB32 /* WeatherListSettingTableViewCell.swift in Sources */,
 				0B7E9CD72701959400F3F0C2 /* Weather.swift in Sources */,
 				0B2393172704167300BA6CCA /* DaysTableViewCell.swift in Sources */,
 				0B2393262704193A00BA6CCA /* Protocol+NibLoadable.swift in Sources */,
 				0B23930127040AE900BA6CCA /* Coordinate.swift in Sources */,
+				0BE77C1327143A650088EB32 /* WeatherListTableViewCell.swift in Sources */,
 				0B74FF26271024C400CDAF86 /* SearchListTableViewCell.swift in Sources */,
 				0B23930A270410D200BA6CCA /* Enum+FahrenheitOrCelsius.swift in Sources */,
 				0B23931F270416BB00BA6CCA /* CurrentWeatherTimesTableViewCell.swift in Sources */,
